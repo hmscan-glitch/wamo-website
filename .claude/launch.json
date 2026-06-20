@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "wamo-website",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "wamo-website", "--listen", "3000", "--no-clipboard"],
+      "port": 3000
+    }
+  ]
+}

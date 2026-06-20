@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.wamo-restaurant.de)",
+      "mcp__visualize__read_me",
+      "WebFetch(domain:www.tiktok.com)",
+      "Bash(gh auth *)",
+      "Bash(git --version)",
+      "PowerShell(gh --version 2>$null)"
+    ]
+  }
+}
