@@ -44,11 +44,10 @@ nav.scrolled{background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);border-bo
 /* HERO */
 .hero{min-height:100vh;height:100svh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;padding-top:80px;padding-bottom:80px}
 .hero-bg{position:absolute;inset:0;z-index:0}
-.ember-canvas{position:absolute;inset:0;z-index:1}
-.grill-grid{position:absolute;inset:0;z-index:2;background:
-  repeating-linear-gradient(0deg,transparent,transparent 38px,rgba(0,0,0,.7) 38px,rgba(0,0,0,.7) 42px),
-  repeating-linear-gradient(90deg,transparent,transparent 38px,rgba(0,0,0,.7) 38px,rgba(0,0,0,.7) 42px);opacity:.5}
-.hero-overlay{position:absolute;inset:0;z-index:3;background:linear-gradient(to bottom,rgba(10,10,10,.3) 0%,rgba(10,10,10,.6) 50%,rgba(10,10,10,.95) 100%)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(.6) saturate(.8)}
+.ember-canvas{display:none}
+.grill-grid{display:none}
+.hero-overlay{position:absolute;inset:0;z-index:3;background:linear-gradient(to bottom,rgba(10,10,10,.2) 0%,rgba(10,10,10,.45) 50%,rgba(10,10,10,.92) 100%)}
 .hero-content{position:relative;z-index:4;text-align:center;padding:0 1.5rem}
 .hero-badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:.72rem;letter-spacing:4px;text-transform:uppercase;padding:.4rem 1.4rem;margin-bottom:2rem;animation:fadeInDown .8s ease both}
 .hero-title{font-family:'Playfair Display',serif;font-size:clamp(3rem,10vw,9rem);font-weight:900;line-height:.95;margin-bottom:1.5rem;animation:fadeInUp .8s .2s ease both}
@@ -140,6 +139,23 @@ section{padding:6rem 0}
 .music-note{font-size:5rem;margin-bottom:1rem;display:block;filter:drop-shadow(0 0 20px rgba(201,168,76,.3))}
 
 /* À LA CARTE */
+.alacarte{position:relative;overflow:hidden;background:var(--dark2)}
+.alc-bg{position:absolute;inset:0;z-index:0}
+.alc-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease;filter:brightness(.4) saturate(.75)}
+.alc-bg-img.visible{opacity:1}
+.alc-bg-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(17,17,17,.92) 0%,rgba(17,17,17,.72) 40%,rgba(17,17,17,.88) 100%)}
+.alc-tabs{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+.alc-tab{background:rgba(10,10,10,.55);border:1px solid var(--border);color:var(--text-muted);padding:.7rem 1.4rem;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;font-family:'Inter',sans-serif;cursor:pointer;transition:all .3s}
+.alc-tab:hover{border-color:var(--gold);color:var(--text)}
+.alc-tab.active{background:var(--gold);border-color:var(--gold);color:#0a0a0a;font-weight:600}
+.alc-panel{display:none;animation:panelIn .5s ease both}
+.alc-panel.active{display:block}
+@keyframes panelIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.alc-row{display:flex;align-items:baseline;justify-content:space-between;gap:2rem;padding:1.2rem 1.4rem;background:rgba(10,10,10,.55);border:1px solid var(--border);margin-bottom:.8rem;backdrop-filter:blur(4px);transition:border-color .3s}
+.alc-row:hover{border-color:var(--gold)}
+.alc-row-name{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--text)}
+.alc-row-desc{color:var(--text-muted);font-size:.82rem;line-height:1.6;margin-top:.3rem}
+.alc-row-price{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--gold);font-weight:700;white-space:nowrap}
 .alc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .alc-card{background:var(--dark);border:1px solid var(--border);position:relative;overflow:hidden;display:flex;flex-direction:column;transition:border-color .4s,transform .4s}
 .alc-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:0;transition:opacity .4s}
@@ -162,11 +178,30 @@ section{padding:6rem 0}
 .alc-tier-price{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--gold);font-weight:700}
 .alc-tiers-single .alc-tier{padding:.8rem 1rem}
 .alc-price-big{font-size:1.4rem}
+.mcb-kids{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:2rem}
+.mcb-kids-item{font-size:.78rem;color:var(--text-muted);border:1px solid var(--border);padding:.5rem .9rem;background:var(--dark4)}
+.mcb-kids-item strong{color:var(--gold);font-weight:600;margin-left:.3rem}
 @media(max-width:900px){.alc-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.alc-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.alc-grid,.alc-panel .alc-grid{grid-template-columns:1fr !important}.alc-row{flex-direction:column;gap:.5rem}}
+
+/* FRÜHSTÜCK */
+#fruehstueck{background:var(--dark);position:relative;overflow:hidden}
+#fruehstueck::before{content:'';position:absolute;top:-30%;right:-20%;width:60%;height:120%;background:radial-gradient(ellipse at center,rgba(201,168,76,.07) 0%,transparent 65%);pointer-events:none}
+.brunch-bg{position:absolute;inset:0;z-index:0}
+.brunch-bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.35) saturate(.8)}
+.brunch-bg-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,10,10,.92) 0%,rgba(10,10,10,.6) 100%)}
+.brunch-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1}
+.brunch-card{backdrop-filter:blur(4px)}
+.brunch-facts{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+.brunch-fact{border:1px solid var(--border);padding:1rem 1.4rem;flex:1;min-width:130px;text-align:center}
+.brunch-fact-value{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold);font-weight:700}
+.brunch-fact-label{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-top:.3rem}
+.brunch-card{background:var(--dark3);border:1px solid var(--border);padding:2.5rem;position:relative}
+.brunch-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,var(--gold),transparent)}
+@media(max-width:900px){.brunch-grid{grid-template-columns:1fr;gap:3rem}}
 
 /* HOURS */
-#hours{background:var(--dark)}
+#hours{background:var(--dark2)}
 .hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .hours-table{width:100%}
 .hours-row{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;border-bottom:1px solid var(--border)}
@@ -288,6 +323,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:4rem 0
     <li><a href="#concept">Konzept</a></li>
     <li><a href="#menu">Menü</a></li>
     <li><a href="#burger">À la Carte</a></li>
+    <li><a href="#fruehstueck">Frühstück</a></li>
     <li><a href="#hours">Öffnungszeiten</a></li>
     <li><a href="#reviews">Bewertungen</a></li>
   </ul>
@@ -302,7 +338,8 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:4rem 0
   <button class="mobile-close" id="mobileClose">&#x2715;</button>
   <a href="#concept" class="mobile-link">Konzept</a>
   <a href="#menu" class="mobile-link">Menü</a>
-  <a href="#livemusic" class="mobile-link">Live Musik</a>
+  <a href="#burger" class="mobile-link">À la Carte</a>
+  <a href="#fruehstueck" class="mobile-link">Frühstück</a>
   <a href="#hours" class="mobile-link">Öffnungszeiten</a>
   <a href="#reviews" class="mobile-link">Bewertungen</a>
   <a href="#reservation" class="mobile-link" style="color:var(--gold)">Reservieren</a>
@@ -311,6 +348,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:4rem 0
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg">
+    <img src="images/interior.jpg" class="hero-img" alt="WAMO Restaurant Innenraum">
     <canvas class="ember-canvas" id="emberCanvas"></canvas>
     <div class="grill-grid"></div>
   </div>
@@ -346,7 +384,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:4rem 0
           WAMO ist kein gewöhnliches Restaurant – wir haben uns dem ultimativen Steak-Erlebnis verschrieben. Seit März 2025 bieten wir in Dortmund das einzigartige <strong style="color:var(--text)">All In Steak</strong>-Konzept: saftiges Premium-Rumpsteak, so viel du willst, in 90 Minuten purer Fleischlust.
         </p>
         <p style="color:var(--text-muted);line-height:1.9">
-          Dazu hausgemachte Pasta frisch aus dem Parmesanlaib, unsere legendäre grüne WAMO-Sauce, knusprige Pommes – und an Wochenenden Live-Musik, die dein Dinner zum Event macht.
+          Dazu hausgemachte Pasta frisch aus dem Parmesanlaib, unsere legendäre grüne WAMO-Sauce, knusprige Pommes – und am Wochenende starten wir schon morgens mit unserem großen Frühstück.
         </p>
         <div class="concept-stats">
           <div class="stat-card reveal-scale">
@@ -389,34 +427,50 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:4rem 0
     </div>
     <div class="reveal">
       <div class="menu-card-big">
-        <div class="menu-badge">All You Can Eat · 35,– € p.P.</div>
+        <div class="menu-badge">All You Can Eat · 42,90 € p.P.</div>
         <div class="menu-name" style="font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.6rem">Steak &amp; Hähnchen – du wählst, du wechselst</div>
-        <p style="color:var(--text-muted);line-height:1.8;max-width:680px;margin-bottom:2.5rem">Ein Konzept – unbegrenzte Freiheit. Du bestellst so viel Rumpsteak und Mais-Hähnchen wie du willst, in 90 Minuten. Wechsel jederzeit zwischen beiden – kein Limit, kein Kompromiss.</p>
+        <p style="color:var(--text-muted);line-height:1.8;max-width:680px;margin-bottom:2.5rem">Ein Konzept – unbegrenzte Freiheit. Du bestellst so viel Rumpsteak und Mais-Hähnchen wie du willst, in 90 Minuten. Wechsel jederzeit zwischen beiden – kein Limit, kein Kompromiss. Als Vorspeise gibt's Bruschetta mit Brot &amp; hausgemachten Dips inklusive.</p>
 
         <div class="mcb-choices">
           <div class="mcb-choice">
-            <div class="mcb-choice-label">🥩 Rumpsteak</div>
-            <p style="color:var(--text-muted);font-size:.88rem;line-height:1.6">Premium Rumpsteak, frisch vom Grill – so oft du willst, perfekt auf den Punkt.</p>
+            <div class="mcb-choice-label">🥩 Premium Rumpsteak</div>
+            <p style="color:var(--text-muted);font-size:.88rem;line-height:1.6">Frisch vom Grill, serviert mit unserer grünen WAMO-Steaksoße – so oft du willst.</p>
           </div>
-          <div class="mcb-divider">oder</div>
+          <div class="mcb-divider">und / oder</div>
           <div class="mcb-choice">
             <div class="mcb-choice-label">🍗 Mais-Hähnchen</div>
-            <p style="color:var(--text-muted);font-size:.88rem;line-height:1.6">Zartes Mais-Hähnchen mit türkischem Reis und gegrilltem Gemüse.</p>
+            <p style="color:var(--text-muted);font-size:.88rem;line-height:1.6">Zartes Mais-Hähnchen, serviert in cremiger Champignonrahmsoße.</p>
           </div>
         </div>
 
         <div class="mcb-toppings">
-          <div class="mcb-toppings-label">Dazu inklusive</div>
+          <div class="mcb-toppings-label">Beilagen zur Wahl</div>
           <div class="mcb-toppings-grid">
-            <div class="mcb-topping">🧀 Parmesan-Pasta aus dem Laib</div>
-            <div class="mcb-topping">🍟 Knusprige Pommes Frites</div>
-            <div class="mcb-topping">🥣 Legendäre grüne WAMO-Sauce</div>
-            <div class="mcb-topping">🫙 Cremige Sauce</div>
+            <div class="mcb-topping">🍝 Pasta mit Champignonrahmsoße</div>
+            <div class="mcb-topping">🍚 Türkischer Reis</div>
+            <div class="mcb-topping">🍟 Pommes Frites</div>
+            <div class="mcb-topping">🥦 Grillgemüse</div>
           </div>
         </div>
 
+        <div class="mcb-toppings" style="margin-top:1.5rem">
+          <div class="mcb-toppings-label">Soßen auf Wunsch</div>
+          <div class="mcb-toppings-grid">
+            <div class="mcb-topping">🥣 Grüne WAMO-Steaksoße</div>
+            <div class="mcb-topping">🧈 Kräuterbutter</div>
+            <div class="mcb-topping">🍄 Champignonrahmsoße</div>
+          </div>
+        </div>
+
+        <div class="mcb-kids">
+          <span class="mcb-kids-item">Erwachsene <strong>42,90 €</strong></span>
+          <span class="mcb-kids-item">Teenager 11–13 J. <strong>26,90 €</strong></span>
+          <span class="mcb-kids-item">Kinder 7–11 J. <strong>16,90 €</strong></span>
+          <span class="mcb-kids-item">Kindermenü 3–6 J. <strong>8,90 €</strong></span>
+        </div>
+
         <div class="menu-footer" style="margin-top:2rem;padding-top:1.5rem">
-          <div class="menu-price">35,– <small>€ p.P. · 90 Min. · Unlimited</small></div>
+          <div class="menu-price">42,90 <small>€ p.P. · 90 Min. · Unlimited</small></div>
           <div class="halal-badge"><div class="halal-dot"></div> 100% Halal</div>
         </div>
       </div>
@@ -448,97 +502,289 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:4rem 0
 </section>
 
 <!-- À LA CARTE -->
-<section id="burger" style="background:var(--dark2)">
-  <div class="container">
+<section id="burger" class="alacarte">
+  <div class="alc-bg">
+    <img id="alcBgA" class="alc-bg-img visible" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=60&auto=format" alt="">
+    <img id="alcBgB" class="alc-bg-img" src="" alt="">
+    <div class="alc-bg-overlay"></div>
+  </div>
+  <div class="container" style="position:relative;z-index:2">
     <div class="menu-intro reveal">
       <span class="section-label">À la Carte</span>
       <h2 class="section-title">Mehr als nur Steak</h2>
       <div class="section-line" style="margin:1.5rem auto"></div>
-      <p style="color:var(--text-muted);line-height:1.7">Burger, Pasta, Loaded Fries – alles frisch, alles 100% Halal.</p>
+      <p style="color:var(--text-muted);line-height:1.7">Die komplette Karte – alles frisch, alles 100% Halal.</p>
     </div>
 
-    <div class="alc-grid">
+    <div class="alc-tabs reveal" role="tablist">
+      <button class="alc-tab active" data-panel="steak" data-bg="https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=60&auto=format">🥩 Steak &amp; Hähnchen</button>
+      <button class="alc-tab" data-panel="burgertab" data-bg="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1600&q=60&auto=format">🍔 Burger</button>
+      <button class="alc-tab" data-panel="pasta" data-bg="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=1600&q=60&auto=format">🍝 Pasta</button>
+      <button class="alc-tab" data-panel="fries" data-bg="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=1600&q=60&auto=format">🍟 Fries &amp; Salate</button>
+      <button class="alc-tab" data-panel="desserts" data-bg="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=1600&q=60&auto=format">🍰 Desserts</button>
+    </div>
 
-      <!-- Cheeseburger -->
-      <div class="alc-card reveal" style="transition-delay:.05s">
-        <div class="alc-img-wrap">
-          <img class="alc-img" src="images/cheeseburger.jpg" alt="WAMO Cheeseburger">
-          <div class="alc-img-overlay"></div>
+    <!-- STEAK & HÄHNCHEN -->
+    <div class="alc-panel active" id="panel-steak">
+      <div class="alc-row">
+        <div class="alc-row-text">
+          <div class="alc-row-name">Rumpsteak 260–280 g</div>
+          <div class="alc-row-desc">Mit einer Beilage nach Wahl: Pasta, Steak Pommes, Reis oder Gemüse – dazu hausgemachte Steaksauce</div>
         </div>
-        <div class="alc-body">
-          <div class="alc-name">WAMO Cheeseburger</div>
-          <div class="alc-desc">Mit Cheddar Käse und hausgemachter Burgersauce – serviert mit Pommes</div>
-          <div class="alc-tiers">
-            <div class="alc-tier"><span class="alc-tier-label">Single</span><span class="alc-tier-price">13,90 €</span></div>
-            <div class="alc-tier"><span class="alc-tier-label">Double</span><span class="alc-tier-price">19,40 €</span></div>
-            <div class="alc-tier"><span class="alc-tier-label">Triple</span><span class="alc-tier-price">22,80 €</span></div>
+        <div class="alc-row-price">32,90 €</div>
+      </div>
+      <div class="alc-row">
+        <div class="alc-row-text">
+          <div class="alc-row-name">Mais-Hähnchen</div>
+          <div class="alc-row-desc">Saftig gegrillt mit einer Beilage nach Wahl: Pasta, Steak Pommes, Reis oder Gemüse</div>
+        </div>
+        <div class="alc-row-price">28,90 €</div>
+      </div>
+      <div class="alc-row">
+        <div class="alc-row-text">
+          <div class="alc-row-name">Bruschetta Salat mit Brot</div>
+          <div class="alc-row-desc">Frische Tomaten mit Brot und hausgemachten Dips</div>
+        </div>
+        <div class="alc-row-price">7,90 €</div>
+      </div>
+    </div>
+
+    <!-- BURGER -->
+    <div class="alc-panel" id="panel-burgertab">
+      <div class="alc-grid" style="grid-template-columns:1fr 1fr">
+        <div class="alc-card alc-featured">
+          <div class="alc-featured-tag">Signature</div>
+          <div class="alc-img-wrap">
+            <img class="alc-img" src="images/signature-burger.jpg" alt="WAMO Signature Burger">
+            <div class="alc-img-overlay"></div>
+          </div>
+          <div class="alc-body">
+            <div class="alc-name">WAMO Signature Burger</div>
+            <div class="alc-desc">Geschnittener Burger im heißen Gusseisen, gebettet auf cremiger Cheddar-Käsesoße – serviert mit Pommes</div>
+            <div class="alc-tiers">
+              <div class="alc-tier"><span class="alc-tier-label">Single</span><span class="alc-tier-price">14,90 €</span></div>
+              <div class="alc-tier"><span class="alc-tier-label">Double</span><span class="alc-tier-price">20,40 €</span></div>
+              <div class="alc-tier"><span class="alc-tier-label">Triple</span><span class="alc-tier-price">23,80 €</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="alc-card">
+          <div class="alc-img-wrap">
+            <img class="alc-img" src="images/cheeseburger.jpg" alt="WAMO Cheeseburger">
+            <div class="alc-img-overlay"></div>
+          </div>
+          <div class="alc-body">
+            <div class="alc-name">WAMO Cheeseburger</div>
+            <div class="alc-desc">Mit Cheddar Käse und hausgemachter Burgersauce – serviert mit Pommes</div>
+            <div class="alc-tiers">
+              <div class="alc-tier"><span class="alc-tier-label">Single</span><span class="alc-tier-price">13,90 €</span></div>
+              <div class="alc-tier"><span class="alc-tier-label">Double</span><span class="alc-tier-price">19,40 €</span></div>
+              <div class="alc-tier"><span class="alc-tier-label">Triple</span><span class="alc-tier-price">22,80 €</span></div>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Signature Burger -->
-      <div class="alc-card alc-featured reveal" style="transition-delay:.1s">
-        <div class="alc-featured-tag">Signature</div>
-        <div class="alc-img-wrap">
-          <img class="alc-img" src="images/signature-burger.jpg" alt="WAMO Signature Burger">
-          <div class="alc-img-overlay"></div>
+      <div class="alc-row" style="margin-top:1.5rem">
+        <div class="alc-row-text">
+          <div class="alc-row-name">Extras</div>
+          <div class="alc-row-desc">Jalapeños · Extra Käse · Trüffelmayo · Kräuterbutter</div>
         </div>
-        <div class="alc-body">
-          <div class="alc-name">WAMO Signature Burger</div>
-          <div class="alc-desc">Geschnittener Burger im heißen Gusseisen, gebettet auf cremiger Cheddar-Käsesoße – serviert mit Pommes</div>
-          <div class="alc-tiers">
-            <div class="alc-tier"><span class="alc-tier-label">Single</span><span class="alc-tier-price">17,90 €</span></div>
-            <div class="alc-tier"><span class="alc-tier-label">Double</span><span class="alc-tier-price">23,40 €</span></div>
-            <div class="alc-tier"><span class="alc-tier-label">Triple</span><span class="alc-tier-price">26,80 €</span></div>
+        <div class="alc-row-price">je 1,00 €</div>
+      </div>
+    </div>
+
+    <!-- PASTA -->
+    <div class="alc-panel" id="panel-pasta">
+      <div class="alc-grid" style="grid-template-columns:1fr 1fr;margin-bottom:1.5rem">
+        <div class="alc-card">
+          <div class="alc-img-wrap">
+            <img class="alc-img" src="images/trueffel-ravioli.jpg" alt="Trüffel Ravioli">
+            <div class="alc-img-overlay"></div>
+          </div>
+          <div class="alc-body">
+            <div class="alc-name">Trüffel Ravioli</div>
+            <div class="alc-desc">Gefüllte Ravioli in cremiger Trüffelsoße mit frischen saisonalen Pilzen</div>
+            <div class="alc-tiers alc-tiers-single">
+              <div class="alc-tier"><span class="alc-tier-label">Preis</span><span class="alc-tier-price alc-price-big">18,90 €</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="alc-card">
+          <div class="alc-body" style="justify-content:center">
+            <div class="alc-name">Trüffel Pasta</div>
+            <div class="alc-desc">Frische Pasta in samtiger Trüffelrahmsoße mit frischen saisonalen Pilzen und frisch geriebenem Parmesan</div>
+            <div class="alc-tiers alc-tiers-single">
+              <div class="alc-tier"><span class="alc-tier-label">Preis</span><span class="alc-tier-price alc-price-big">18,90 €</span></div>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Loaded Chili Fries -->
-      <div class="alc-card reveal" style="transition-delay:.15s">
-        <div class="alc-img-wrap">
-          <img class="alc-img" src="images/loaded-chili-fries.jpg" alt="Loaded Chili Fries">
-          <div class="alc-img-overlay"></div>
+      <div class="alc-row">
+        <div class="alc-row-text">
+          <div class="alc-row-name">Pesto Cream Pasta</div>
+          <div class="alc-row-desc">Mit Basilikum-Pesto, Sahne und frischen Tomaten</div>
         </div>
-        <div class="alc-body">
-          <div class="alc-name">Loaded Chili Fries</div>
-          <div class="alc-desc">Knusprige Steak Pommes mit würzigem Chili con Carne, cremiger Soße und goldbraun im Ofen überbacken</div>
-          <div class="alc-tiers alc-tiers-single">
-            <div class="alc-tier"><span class="alc-tier-label">Preis</span><span class="alc-tier-price alc-price-big">8,90 €</span></div>
+        <div class="alc-row-price">13,90 €</div>
+      </div>
+      <div class="alc-row">
+        <div class="alc-row-text">
+          <div class="alc-row-name">Champignon Rahm Pasta</div>
+          <div class="alc-row-desc">Mit cremiger Champignonsoße</div>
+        </div>
+        <div class="alc-row-price">13,90 €</div>
+      </div>
+    </div>
+
+    <!-- FRIES & SALATE -->
+    <div class="alc-panel" id="panel-fries">
+      <div class="alc-grid" style="grid-template-columns:1fr;max-width:420px;margin:0 auto 1.5rem">
+        <div class="alc-card">
+          <div class="alc-img-wrap">
+            <img class="alc-img" src="images/loaded-chili-fries.jpg" alt="Loaded Chili Fries">
+            <div class="alc-img-overlay"></div>
+          </div>
+          <div class="alc-body">
+            <div class="alc-name">Loaded Chili Fries</div>
+            <div class="alc-desc">Knusprige Steak Pommes mit würzigem Chili con Carne, cremiger Soße und goldbraun im Ofen überbacken</div>
+            <div class="alc-tiers alc-tiers-single">
+              <div class="alc-tier"><span class="alc-tier-label">Preis</span><span class="alc-tier-price alc-price-big">8,90 €</span></div>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Trüffel Pasta -->
-      <div class="alc-card reveal" style="transition-delay:.2s">
-        <div class="alc-img-wrap">
-          <img class="alc-img" src="images/trueffel-pasta.jpg" alt="Trüffel Pasta">
-          <div class="alc-img-overlay"></div>
+      <div class="alc-row">
+        <div class="alc-row-text">
+          <div class="alc-row-name">Steak Pommes</div>
+          <div class="alc-row-desc">Mit Mayo und Ketchup</div>
         </div>
-        <div class="alc-body">
-          <div class="alc-name">Trüffel Pasta</div>
-          <div class="alc-desc">Frische Pasta in samtiger Trüffelrahmsoße mit frisch geriebenem Parmesan</div>
-          <div class="alc-tiers alc-tiers-single">
-            <div class="alc-tier"><span class="alc-tier-label">Preis</span><span class="alc-tier-price alc-price-big">18,90 €</span></div>
+        <div class="alc-row-price">4,90 €</div>
+      </div>
+      <div class="alc-row">
+        <div class="alc-row-text">
+          <div class="alc-row-name">Parmesan Tomato Fries</div>
+          <div class="alc-row-desc">Mit Parmesan, Tomaten und Zwiebeln</div>
+        </div>
+        <div class="alc-row-price">7,90 €</div>
+      </div>
+      <div class="alc-row">
+        <div class="alc-row-text">
+          <div class="alc-row-name">Crispy Chicken Salat</div>
+          <div class="alc-row-desc">Gemischter grüner Salat, Tomaten, Gurken, Mais und Paprika mit Crispy Chicken</div>
+        </div>
+        <div class="alc-row-price">12,90 €</div>
+      </div>
+      <div class="alc-row">
+        <div class="alc-row-text">
+          <div class="alc-row-name">Hähnchen Salat</div>
+          <div class="alc-row-desc">Gemischter grüner Salat, Tomaten, Gurken und Mais mit gebratenem Hähnchen, Paprika und Champignons</div>
+        </div>
+        <div class="alc-row-price">13,90 €</div>
+      </div>
+      <div class="alc-row">
+        <div class="alc-row-text">
+          <div class="alc-row-name">Beef Salat</div>
+          <div class="alc-row-desc">Gemischter grüner Salat, Tomaten, Gurken, Mais und Paprika mit Rindfleisch</div>
+        </div>
+        <div class="alc-row-price">14,90 €</div>
+      </div>
+    </div>
+
+    <!-- DESSERTS -->
+    <div class="alc-panel" id="panel-desserts">
+      <div class="alc-row">
+        <div class="alc-row-text">
+          <div class="alc-row-name">Tiramisu</div>
+          <div class="alc-row-desc">Hausgemachtes Tiramisu ohne Alkohol – klassisch italienisch mit cremiger Mascarpone und feinen Kaffeearomen</div>
+        </div>
+        <div class="alc-row-price">6,90 €</div>
+      </div>
+      <div class="alc-row">
+        <div class="alc-row-text">
+          <div class="alc-row-name">San Sebastián Cheesecake</div>
+          <div class="alc-row-desc">Hausgemacht mit Schokoladenüberzug – cremig, zart gebacken und mit feiner Schokolade veredelt</div>
+        </div>
+        <div class="alc-row-price">7,90 €</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FRÜHSTÜCK -->
+<section id="fruehstueck">
+  <div class="brunch-bg">
+    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=1600&q=60&auto=format" alt="" loading="lazy">
+    <div class="brunch-bg-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="brunch-grid">
+      <div class="reveal-left">
+        <span class="section-label">Neu · Nur am Wochenende</span>
+        <h2 class="section-title">Frühstück &amp; Brunch bei WAMO</h2>
+        <div class="section-line"></div>
+        <p style="color:var(--text-muted);line-height:1.9;margin-bottom:1rem">
+          Samstags und sonntags starten wir für dich schon um 09:00 Uhr – mit einer großen Frühstücksplatte, warmen Gerichten wie Rührei mit Sucuk, frischem Brot und allem, was ein perfekter Wochenendmorgen braucht.
+        </p>
+        <p style="color:var(--text-muted);line-height:1.9">
+          Natürlich wie alles bei uns: <strong style="color:var(--text)">100% Halal</strong>.
+        </p>
+        <div class="brunch-facts">
+          <div class="brunch-fact">
+            <div class="brunch-fact-value">Sa &amp; So</div>
+            <div class="brunch-fact-label">09:00 – 15:00 Uhr</div>
+          </div>
+          <div class="brunch-fact">
+            <div class="brunch-fact-value">19,90 €</div>
+            <div class="brunch-fact-label">Premium Frühstück p.P.</div>
+          </div>
+          <div class="brunch-fact">
+            <div class="brunch-fact-value">100%</div>
+            <div class="brunch-fact-label">Halal</div>
+          </div>
+        </div>
+        <a href="#reservation" class="btn-primary" style="margin-top:2rem">Brunch-Tisch reservieren</a>
+      </div>
+      <div class="reveal-right">
+        <div class="brunch-card">
+          <div class="brunch-card-header">
+            <span class="menu-badge">Wochenend-Brunch</span>
+            <div class="menu-name" style="margin-top:.8rem">Premium Frühstück</div>
+            <p style="color:var(--text-muted);font-size:.88rem;line-height:1.7;margin-top:.5rem">Reichhaltig gedeckt auf der Holzplatte – süß &amp; herzhaft</p>
+          </div>
+          <ul class="menu-includes" style="margin:1.5rem 0">
+            <li>3 Sorten Käse, Pastrami &amp; Salami</li>
+            <li>2 Sorten Marmelade, Nutella, Honig &amp; Butter</li>
+            <li>Gefüllte Paprika, Oliven, Tomaten &amp; Gurken</li>
+            <li>Warmes Gericht nach Wahl: Menemen oder Rührei – auf Wunsch mit Sucuk</li>
+            <li>Brotkorb mit Brötchen, Simit &amp; Croissant</li>
+            <li>Türkischer Çay inklusive</li>
+          </ul>
+          <div class="alc-tiers" style="margin-bottom:1.5rem">
+            <div class="alc-tier"><span class="alc-tier-label">1 Person</span><span class="alc-tier-price">19,90 €</span></div>
+            <div class="alc-tier"><span class="alc-tier-label">2 Personen</span><span class="alc-tier-price">37,90 €</span></div>
+            <div class="alc-tier"><span class="alc-tier-label">3 Personen</span><span class="alc-tier-price">53,90 €</span></div>
+            <div class="alc-tier"><span class="alc-tier-label">4 Personen</span><span class="alc-tier-price">67,90 €</span></div>
+          </div>
+          <div class="alc-row" style="margin-bottom:.6rem;padding:.8rem 1rem">
+            <div class="alc-row-text">
+              <div class="alc-row-name" style="font-size:.95rem">Rührei Frühstück</div>
+              <div class="alc-row-desc">Mit Brotkorb &amp; Butter · Sucuk +1,00 €</div>
+            </div>
+            <div class="alc-row-price" style="font-size:1rem">6,90 €</div>
+          </div>
+          <div class="alc-row" style="margin-bottom:1.5rem;padding:.8rem 1rem">
+            <div class="alc-row-text">
+              <div class="alc-row-name" style="font-size:.95rem">Menemen Frühstück</div>
+              <div class="alc-row-desc">Mit Brotkorb &amp; Butter · Sucuk +1,00 €</div>
+            </div>
+            <div class="alc-row-price" style="font-size:1rem">7,90 €</div>
+          </div>
+          <div class="menu-footer">
+            <div class="menu-price">ab 19,90 <small>€ p.P. · Sa &amp; So 09–15 Uhr</small></div>
+            <div class="halal-badge"><div class="halal-dot"></div> 100% Halal</div>
           </div>
         </div>
       </div>
-
-      <!-- Trüffel Ravioli -->
-      <div class="alc-card reveal" style="transition-delay:.25s">
-        <div class="alc-img-wrap">
-          <img class="alc-img" src="images/trueffel-ravioli.jpg" alt="Trüffel Ravioli">
-          <div class="alc-img-overlay"></div>
-        </div>
-        <div class="alc-body">
-          <div class="alc-name">Trüffel Ravioli</div>
-          <div class="alc-desc">Gefüllte Ravioli in cremiger Trüffelsoße</div>
-          <div class="alc-tiers alc-tiers-single">
-            <div class="alc-tier"><span class="alc-tier-label">Preis</span><span class="alc-tier-price alc-price-big">18,90 €</span></div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -567,14 +813,15 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:4rem 0
           <div class="hours-row">
             <span class="hours-day">Samstag</span>
             <div style="text-align:right">
-              <div class="hours-time">09:00 – 03:00</div>
+              <div class="hours-time">09:00 – 24:00</div>
+              <div class="hours-note">☕ Frühstück 09:00–15:00</div>
             </div>
           </div>
           <div class="hours-row">
             <span class="hours-day">Sonntag</span>
             <div style="text-align:right">
               <div class="hours-time">09:00 – 22:00</div>
-              <div class="hours-note">Frühstück 09:00–03:00 · Steak ab 16:00</div>
+              <div class="hours-note">☕ Frühstück 09:00–15:00 · Steak ab 16:00</div>
             </div>
           </div>
         </div>
@@ -785,6 +1032,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:4rem 0
           <li><a href="#concept">Konzept</a></li>
           <li><a href="#menu">Menü</a></li>
           <li><a href="#burger">À la Carte</a></li>
+    <li><a href="#fruehstueck">Frühstück</a></li>
           <li><a href="#hours">Öffnungszeiten</a></li>
           <li><a href="#reservation">Reservieren</a></li>
         </ul>
@@ -1076,6 +1324,33 @@ reveals.forEach(el=>observer.observe(el));
     requestAnimationFrame(drawFrame);
   }
   drawFrame();
+})();
+
+/* ─── À LA CARTE TABS + BG CROSSFADE ─── */
+(function(){
+  const tabs=document.querySelectorAll('.alc-tab');
+  const bgA=document.getElementById('alcBgA');
+  const bgB=document.getElementById('alcBgB');
+  let showingA=true;
+  tabs.forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      tabs.forEach(t=>t.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelectorAll('.alc-panel').forEach(p=>p.classList.remove('active'));
+      document.getElementById('panel-'+tab.dataset.panel).classList.add('active');
+      const nextImg=showingA?bgB:bgA;
+      const curImg=showingA?bgA:bgB;
+      const url=tab.dataset.bg;
+      const pre=new Image();
+      pre.onload=()=>{
+        nextImg.src=url;
+        nextImg.classList.add('visible');
+        curImg.classList.remove('visible');
+        showingA=!showingA;
+      };
+      pre.src=url;
+    });
+  });
 })();
 
 /* ─── SET MIN DATE FOR RESERVATION ─── */
