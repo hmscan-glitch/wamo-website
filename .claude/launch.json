@@ -4,7 +4,7 @@
     {
       "name": "wamo-website",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "wamo-website", "--listen", "3000", "--no-clipboard"],
+      "runtimeArgs": ["serve", ".", "--listen", "3000", "--no-clipboard"],
       "port": 3000
     }
   ]
