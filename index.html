@@ -206,7 +206,7 @@ body.menu-open .menu .menu-foot{opacity:1}
    HERO
    ============================================================ */
 .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;
-  padding-top:calc(var(--nav-h) + 3rem);padding-bottom:0;overflow:hidden}
+  padding-top:calc(var(--nav-h) + 3rem);padding-bottom:clamp(3rem,6vh,4.5rem);overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
 .blob{position:absolute;border-radius:50%;filter:blur(110px);will-change:transform;opacity:.55}
 .blob-a{width:52vw;height:52vw;min-width:420px;min-height:420px;background:radial-gradient(circle,rgba(205,255,69,.20),transparent 65%);
@@ -237,20 +237,35 @@ body.menu-open .menu .menu-foot{opacity:1}
   font-size:clamp(1rem,1.6vw,1.18rem);line-height:1.7}
 .hero-sub strong{color:var(--txt);font-weight:500}
 .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:clamp(2rem,4.5vh,3rem)}
-.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;
-  margin-top:clamp(3.4rem,8vh,5.5rem);padding:1.8rem 0;border-top:1px solid var(--line-soft)}
-.stat b{display:block;font-family:var(--font-display);font-size:clamp(1.5rem,3.4vw,2.3rem);
-  font-weight:600;letter-spacing:-.02em;color:var(--txt);font-variant-numeric:tabular-nums}
-.stat b i{font-style:normal;color:var(--acc)}
-.stat span{font-size:.8rem;color:var(--mut2);letter-spacing:.04em}
-.scroll-hint{position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);z-index:2;
-  display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--mut2);
-  font-size:.68rem;letter-spacing:.28em;text-transform:uppercase}
-.scroll-hint::after{content:"";width:1px;height:44px;background:linear-gradient(var(--acc),transparent);
-  animation:drip 2s var(--ease) infinite}
-@keyframes drip{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}
-  55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-@media(max-width:700px){.scroll-hint{display:none}}
+.hero-stats{display:flex;flex-direction:column;margin-top:clamp(3.2rem,7vh,5rem);border-top:1px solid var(--line-soft)}
+.stat{display:flex;align-items:baseline;gap:1.1rem;padding:.95rem 0}
+.stat + .stat{border-top:1px solid var(--line-soft)}
+.stat b{font-family:var(--font-display);font-size:clamp(1.7rem,6vw,2.5rem);font-weight:600;
+  letter-spacing:-.02em;line-height:1;color:var(--txt);font-variant-numeric:tabular-nums;min-width:4.5ch}
+.stat b i{font-style:italic;font-family:var(--font-serif);font-weight:400;color:var(--acc);
+  font-size:1.02em;margin-left:.05em}
+.stat > span{font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--mut2)}
+@media(min-width:760px){
+  .hero-stats{flex-direction:row}
+  .stat{flex-direction:column;align-items:flex-start;gap:.6rem;padding:1.9rem 3.4rem 0}
+  .stat:first-child{padding-left:0}
+  .stat + .stat{border-top:0;border-left:1px solid var(--line-soft)}
+  .stat b{min-width:0}
+}
+/* rotierender Scroll-Badge unten rechts im Hero */
+.scroll-orb{position:absolute;bottom:2.2rem;right:2.6rem;z-index:2;width:96px;height:96px;
+  display:flex;align-items:center;justify-content:center}
+.scroll-orb::before{content:"";position:absolute;inset:27px;border:1px solid var(--line);
+  border-radius:50%;transition:border-color .35s,background .35s}
+.scroll-orb:hover::before{border-color:var(--acc);background:var(--acc-dim)}
+.orb-ring{position:absolute;inset:0;overflow:visible;animation:orbit 18s linear infinite}
+.orb-ring text{font-family:var(--font-display);font-size:8.4px;font-weight:600;
+  letter-spacing:.36em;fill:var(--mut2);transition:fill .35s}
+.scroll-orb:hover .orb-ring text{fill:var(--txt)}
+.orb-arrow{position:relative;width:18px;height:18px;color:var(--acc);animation:dip 2.4s var(--ease) infinite}
+@keyframes orbit{to{transform:rotate(1turn)}}
+@keyframes dip{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
+@media(max-width:700px){.scroll-orb{display:none}}
 
 /* ============================================================
    MARQUEE
@@ -639,12 +654,18 @@ footer{border-top:1px solid var(--line-soft);padding:3rem 0 2.2rem;background:va
         </a>
       </div>
       <div class="hero-stats h-rev" style="--d:.85s">
-        <div class="stat"><b><span data-count="40">0</span><i>+</i></b><span>umgesetzte Projekte</span></div>
-        <div class="stat"><b><span data-count="100">0</span><i>%</i></b><span>individuelle Gestaltung</span></div>
-        <div class="stat"><b><span data-count="48">0</span><i>h</i></b><span>Antwort auf Anfragen</span></div>
+        <div class="stat"><b><span data-count="130">0</span><i>+</i></b><span>Projekte umgesetzt</span></div>
+        <div class="stat"><b><span data-count="100">0</span><i>%</i></b><span>Maßarbeit, kein Baukasten</span></div>
+        <div class="stat"><b><span data-count="48">0</span><i>h</i></b><span>Antwortzeit garantiert</span></div>
       </div>
     </div>
-    <div class="scroll-hint" aria-hidden="true">Scroll</div>
+    <a class="scroll-orb" href="#leistungen" data-scroll aria-label="Weiter zu Leistungen scrollen">
+      <svg class="orb-ring" viewBox="0 0 100 100" aria-hidden="true">
+        <defs><path id="orbit" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0"/></defs>
+        <text><textPath href="#orbit">SCROLL&#160;·&#160;ENTDECKEN&#160;·&#160;SCROLL&#160;·&#160;ENTDECKEN&#160;·</textPath></text>
+      </svg>
+      <svg class="orb-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+    </a>
   </section>
 
   <!-- ============ MARQUEE ============ -->
