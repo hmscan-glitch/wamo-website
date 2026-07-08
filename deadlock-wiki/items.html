@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gegenstände – Deadlock Wiki</title>
-<meta name="description" content="Die Item-Datenbank des Deadlock Wiki: Waffen-, Vitalitäts- und Geist-Gegenstände mit Seelenkosten und Tiers.">
+<meta name="description" content="Die komplette Item-Datenbank des Deadlock Wiki: alle 173 Waffen-, Vitalitäts- und Geist-Gegenstände mit Seelenkosten, Tiers und Einsteiger-Guide.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,8 +24,8 @@
       <a href="index.html">Hauptseite</a>
       <a href="helden.html">Helden</a>
       <a href="items.html" aria-current="page">Items</a>
-      <a href="#" class="redlink" title="Diese Seite existiert noch nicht – hilf mit, sie zu schreiben!">Gameplay</a>
-      <a href="#" class="redlink" title="Diese Seite existiert noch nicht – hilf mit, sie zu schreiben!">Karte</a>
+      <a href="gameplay.html">Gameplay</a>
+      <a href="karte.html">Karte</a>
       <a href="#" class="redlink" title="Diese Seite existiert noch nicht – hilf mit, sie zu schreiben!">Community</a>
       <span class="nav-stats">1.284 Artikel &middot; 4.107 Dateien</span>
     </div>
@@ -37,13 +37,13 @@
     <div class="article-actions">
       <a class="aa-btn aa-btn--primary" href="#">Bearbeiten</a>
       <a class="aa-btn" href="#">Versionsgeschichte</a>
-      <a class="aa-btn" href="#">Diskussion (9)</a>
-      <span class="aa-meta">Zuletzt bearbeitet von <a href="#">ZiplineZoe</a> heute um 11:12</span>
+      <a class="aa-btn" href="#">Diskussion (23)</a>
+      <span class="aa-meta">Zuletzt bearbeitet von <a href="#">ZiplineZoe</a> heute um 16:40</span>
     </div>
 
     <p class="page-sub">Spielmechanik</p>
     <h1 class="page-title">Gegenstände</h1>
-    <p class="lead">Gegenstände (Items) werden im <a href="#" class="redlink" title="Diese Seite existiert noch nicht">Kuriositätenladen</a> gegen <strong>Seelen</strong> gekauft und verbessern Waffe, Überlebensfähigkeit oder Fähigkeiten deines Helden. Jedes Item gehört zu einer von drei Kategorien und einem von vier Tiers.</p>
+    <p class="lead">Gegenstände (Items) werden im <a href="karte.html">Kuriositätenladen</a> gegen <strong>Seelen</strong> gekauft und verbessern Waffe, Überlebensfähigkeit oder Fähigkeiten deines Helden. Diese Datenbank listet <strong>alle 173 Items</strong> des aktuellen Patches — 56 Waffen-, 61 Vitalitäts- und 56 Geist-Items, sortiert nach Tier.</p>
 
     <div class="wikitable-wrap">
       <table class="wikitable">
@@ -59,64 +59,403 @@
       </table>
     </div>
 
-    <div class="notice">
-      <span aria-hidden="true" style="color:var(--brass);font-weight:700;">✦</span>
-      <span><strong>Im Aufbau:</strong> Diese Übersicht zeigt eine Auswahl der Datenbank. Die vollständigen Item-Artikel mit allen Werten entstehen gerade — hilf mit!</span>
+    <div class="starter-box" id="einsteiger">
+      <h2>Neu in Deadlock? Deine ersten Einkäufe</h2>
+      <p>Du stehst zum ersten Mal im Laden und 173 Items starren zurück? Keine Panik — mit diesen acht Käufen machst du auf fast jedem Helden nichts falsch:</p>
+      <div class="starter-grid">
+        <div class="starter-item">
+          <img src="assets/items/extended-magazine.webp" alt="Icon: Extended Magazine" loading="lazy">
+          <span><span class="si-name">Extended Magazine · <span class="stat-weapon">Waffe</span></span>
+          <span class="si-why">Mehr Munition pro Magazin = mehr Last Hits und mehr Druck in der Lane. Der sicherste erste Kauf auf fast jedem Helden.</span></span>
+        </div>
+        <div class="starter-item">
+          <img src="assets/items/extra-health.webp" alt="Icon: Extra Health" loading="lazy">
+          <span><span class="si-name">Extra Health · <span class="stat-vitality">Vitalität</span></span>
+          <span class="si-why">Ein dickeres Lebenspolster verzeiht Anfängerfehler und gewinnt knappe Duelle in der Lane.</span></span>
+        </div>
+        <div class="starter-item">
+          <img src="assets/items/extra-regen.webp" alt="Icon: Extra Regen" loading="lazy">
+          <span><span class="si-name">Extra Regen · <span class="stat-vitality">Vitalität</span></span>
+          <span class="si-why">Regeneriert dich zwischen den Wellen — du bleibst länger in der Lane, statt zur Basis zu laufen.</span></span>
+        </div>
+        <div class="starter-item">
+          <img src="assets/items/close-quarters.webp" alt="Icon: Close Quarters" loading="lazy">
+          <span><span class="si-name">Close Quarters · <span class="stat-weapon">Waffe</span></span>
+          <span class="si-why">Bonus-Schaden auf kurze Distanz. Stark auf Brawlern wie Abrams oder Pocket, die nah ran müssen.</span></span>
+        </div>
+        <div class="starter-item">
+          <img src="assets/items/extra-spirit.webp" alt="Icon: Extra Spirit" loading="lazy">
+          <span><span class="si-name">Extra Spirit · <span class="stat-spirit">Geist</span></span>
+          <span class="si-why">Mehr Geist-Kraft für Fähigkeiten-Helden wie Seven oder Lady Geist — deine Abilities treffen spürbar härter.</span></span>
+        </div>
+        <div class="starter-item">
+          <img src="assets/items/extra-charge.webp" alt="Icon: Extra Charge" loading="lazy">
+          <span><span class="si-name">Extra Charge · <span class="stat-spirit">Geist</span></span>
+          <span class="si-why">Eine zusätzliche Ladung für deine beste Fähigkeit — simpel und auf vielen Helden Gold wert.</span></span>
+        </div>
+        <div class="starter-item">
+          <img src="assets/items/bullet-lifesteal.webp" alt="Icon: Bullet Lifesteal" loading="lazy">
+          <span><span class="si-name">Bullet Lifesteal · <span class="stat-vitality">Vitalität</span></span>
+          <span class="si-why">Deine Kugeln heilen dich. Ab dem Mittelspiel der Klassiker, um Kämpfe durchzustehen (Tier II).</span></span>
+        </div>
+        <div class="starter-item">
+          <img src="assets/items/fleetfoot.webp" alt="Icon: Fleetfoot" loading="lazy">
+          <span><span class="si-name">Fleetfoot · <span class="stat-weapon">Waffe</span></span>
+          <span class="si-why">Kein Tempoverlust beim Schießen plus aktiver Geschwindigkeits-Schub — Mobilität rettet Leben (Tier II).</span></span>
+        </div>
+      </div>
+      <ul class="tip-list">
+        <li><strong>Kauf früh und oft:</strong> Ab 800 Seelen lohnt der erste Einkauf — ungenutzte Seelen sind verlorene Stärke.</li>
+        <li><strong>Ausgewogen bauen:</strong> Eine Faustregel für den Anfang ist etwas aus jeder Kategorie: Schaden, Leben, Fähigkeiten.</li>
+        <li><strong>Aktive Items</strong> (mit „Aktiv“-Kennzeichnung) haben einen Knopfdruck-Effekt — vergiss nicht, sie auch zu benutzen!</li>
+        <li>Mehr Grundlagen findest du im <a href="gameplay.html#einsteiger">Gameplay-Guide für Einsteiger</a>.</li>
+      </ul>
     </div>
+
+    <label for="item-filter" style="display:block;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:34px;">Item suchen</label>
+    <input type="search" class="item-search" id="item-filter" placeholder="z. B. Lifesteal, Armor, Refresher …" aria-label="Items filtern">
 
     <section aria-labelledby="h-weapon">
       <div class="slot-head slot-head--weapon">
         <span class="slot-swatch" aria-hidden="true"></span>
         <h2 id="h-weapon" class="stat-weapon">Waffen-Items</h2>
-        <span class="slot-count">85 Items in der Kategorie</span>
+        <span class="slot-count">56 Items in der Kategorie</span>
       </div>
       <p>Erhöhen Feuerrate, Magazingröße und Kugelschaden — alles, was die Waffe deines Helden gefährlicher macht.</p>
+      <h3 class="tier-head">Tier I — <span class="tier-cost">800 Seelen</span></h3>
       <ul class="item-grid item-grid--weapon">
-        <li class="item-tile">
+        <li class="item-tile" data-name="close quarters">
           <img src="assets/items/close-quarters.webp" alt="Icon: Close Quarters" loading="lazy">
           <span class="item-name">Close Quarters</span>
           <span class="item-cost">800</span>
           <span class="item-tier">Tier I</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="extended magazine">
           <img src="assets/items/extended-magazine.webp" alt="Icon: Extended Magazine" loading="lazy">
           <span class="item-name">Extended Magazine</span>
           <span class="item-cost">800</span>
           <span class="item-tier">Tier I</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="headshot booster">
+          <img src="assets/items/headshot-booster.webp" alt="Icon: Headshot Booster" loading="lazy">
+          <span class="item-name">Headshot Booster</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+        </li>
+        <li class="item-tile" data-name="high-velocity rounds">
+          <img src="assets/items/high-velocity-rounds.webp" alt="Icon: High-Velocity Rounds" loading="lazy">
+          <span class="item-name">High-Velocity Rounds</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+        </li>
+        <li class="item-tile" data-name="monster rounds">
+          <img src="assets/items/monster-rounds.webp" alt="Icon: Monster Rounds" loading="lazy">
+          <span class="item-name">Monster Rounds</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+        </li>
+        <li class="item-tile" data-name="rapid rounds">
+          <img src="assets/items/rapid-rounds.webp" alt="Icon: Rapid Rounds" loading="lazy">
+          <span class="item-name">Rapid Rounds</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+        </li>
+        <li class="item-tile" data-name="restorative shot">
+          <img src="assets/items/restorative-shot.webp" alt="Icon: Restorative Shot" loading="lazy">
+          <span class="item-name">Restorative Shot</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+        </li>
+      </ul>
+      <h3 class="tier-head">Tier II — <span class="tier-cost">1.600 Seelen</span></h3>
+      <ul class="item-grid item-grid--weapon">
+        <li class="item-tile" data-name="active reload">
           <img src="assets/items/active-reload.webp" alt="Icon: Active Reload" loading="lazy">
           <span class="item-name">Active Reload</span>
           <span class="item-cost">1.600</span>
           <span class="item-tier">Tier II</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="fleetfoot">
           <img src="assets/items/fleetfoot.webp" alt="Icon: Fleetfoot" loading="lazy">
           <span class="item-name">Fleetfoot</span>
           <span class="item-cost">1.600</span>
           <span class="item-tier">Tier II</span>
+          <span class="chip-active">Aktiv</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="intensifying magazine">
+          <img src="assets/items/intensifying-magazine.webp" alt="Icon: Intensifying Magazine" loading="lazy">
+          <span class="item-name">Intensifying Magazine</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="kinetic dash">
+          <img src="assets/items/kinetic-dash.webp" alt="Icon: Kinetic Dash" loading="lazy">
+          <span class="item-name">Kinetic Dash</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="long range">
+          <img src="assets/items/long-range.webp" alt="Icon: Long Range" loading="lazy">
+          <span class="item-name">Long Range</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="melee charge">
+          <img src="assets/items/melee-charge.webp" alt="Icon: Melee Charge" loading="lazy">
+          <span class="item-name">Melee Charge</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="mystic shot">
+          <img src="assets/items/mystic-shot.webp" alt="Icon: Mystic Shot" loading="lazy">
+          <span class="item-name">Mystic Shot</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="opening rounds">
+          <img src="assets/items/opening-rounds.webp" alt="Icon: Opening Rounds" loading="lazy">
+          <span class="item-name">Opening Rounds</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="recharging rush">
+          <img src="assets/items/recharging-rush.webp" alt="Icon: Recharging Rush" loading="lazy">
+          <span class="item-name">Recharging Rush</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="slowing bullets">
+          <img src="assets/items/slowing-bullets.webp" alt="Icon: Slowing Bullets" loading="lazy">
+          <span class="item-name">Slowing Bullets</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="spirit shredder bullets">
+          <img src="assets/items/spirit-shredder-bullets.webp" alt="Icon: Spirit Shredder Bullets" loading="lazy">
+          <span class="item-name">Spirit Shredder Bullets</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="split shot">
+          <img src="assets/items/split-shot.webp" alt="Icon: Split Shot" loading="lazy">
+          <span class="item-name">Split Shot</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="stalker">
+          <img src="assets/items/stalker.webp" alt="Icon: Stalker" loading="lazy">
+          <span class="item-name">Stalker</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="swift striker">
+          <img src="assets/items/swift-striker.webp" alt="Icon: Swift Striker" loading="lazy">
+          <span class="item-name">Swift Striker</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="titanic magazine">
+          <img src="assets/items/titanic-magazine.webp" alt="Icon: Titanic Magazine" loading="lazy">
+          <span class="item-name">Titanic Magazine</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="weakening headshot">
+          <img src="assets/items/weakening-headshot.webp" alt="Icon: Weakening Headshot" loading="lazy">
+          <span class="item-name">Weakening Headshot</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+      </ul>
+      <h3 class="tier-head">Tier III — <span class="tier-cost">3.200 Seelen</span></h3>
+      <ul class="item-grid item-grid--weapon">
+        <li class="item-tile" data-name="alchemical fire">
           <img src="assets/items/alchemical-fire.webp" alt="Icon: Alchemical Fire" loading="lazy">
           <span class="item-name">Alchemical Fire</span>
           <span class="item-cost">3.200</span>
           <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="ballistic enchantment">
           <img src="assets/items/ballistic-enchantment.webp" alt="Icon: Ballistic Enchantment" loading="lazy">
           <span class="item-name">Ballistic Enchantment</span>
           <span class="item-cost">3.200</span>
           <span class="item-tier">Tier III</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="berserker">
+          <img src="assets/items/berserker.webp" alt="Icon: Berserker" loading="lazy">
+          <span class="item-name">Berserker</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="blood tribute">
+          <img src="assets/items/blood-tribute.webp" alt="Icon: Blood Tribute" loading="lazy">
+          <span class="item-name">Blood Tribute</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="burst fire">
+          <img src="assets/items/burst-fire.webp" alt="Icon: Burst Fire" loading="lazy">
+          <span class="item-name">Burst Fire</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="cultist sacrifice">
+          <img src="assets/items/cultist-sacrifice.webp" alt="Icon: Cultist Sacrifice" loading="lazy">
+          <span class="item-name">Cultist Sacrifice</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="escalating resilience">
+          <img src="assets/items/escalating-resilience.webp" alt="Icon: Escalating Resilience" loading="lazy">
+          <span class="item-name">Escalating Resilience</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="express shot">
+          <img src="assets/items/express-shot.webp" alt="Icon: Express Shot" loading="lazy">
+          <span class="item-name">Express Shot</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="headhunter">
+          <img src="assets/items/headhunter.webp" alt="Icon: Headhunter" loading="lazy">
+          <span class="item-name">Headhunter</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="heroic aura">
+          <img src="assets/items/heroic-aura.webp" alt="Icon: Heroic Aura" loading="lazy">
+          <span class="item-name">Heroic Aura</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="hollow point">
+          <img src="assets/items/hollow-point.webp" alt="Icon: Hollow Point" loading="lazy">
+          <span class="item-name">Hollow Point</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="hunter&#x27;s aura">
+          <img src="assets/items/hunter-s-aura.webp" alt="Icon: Hunter&#x27;s Aura" loading="lazy">
+          <span class="item-name">Hunter&#x27;s Aura</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="point blank">
+          <img src="assets/items/point-blank.webp" alt="Icon: Point Blank" loading="lazy">
+          <span class="item-name">Point Blank</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="shadow weave">
+          <img src="assets/items/shadow-weave.webp" alt="Icon: Shadow Weave" loading="lazy">
+          <span class="item-name">Shadow Weave</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="sharpshooter">
+          <img src="assets/items/sharpshooter.webp" alt="Icon: Sharpshooter" loading="lazy">
+          <span class="item-name">Sharpshooter</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="spirit rend">
+          <img src="assets/items/spirit-rend.webp" alt="Icon: Spirit Rend" loading="lazy">
+          <span class="item-name">Spirit Rend</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="tesla bullets">
+          <img src="assets/items/tesla-bullets.webp" alt="Icon: Tesla Bullets" loading="lazy">
+          <span class="item-name">Tesla Bullets</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="toxic bullets">
+          <img src="assets/items/toxic-bullets.webp" alt="Icon: Toxic Bullets" loading="lazy">
+          <span class="item-name">Toxic Bullets</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="weighted shots">
+          <img src="assets/items/weighted-shots.webp" alt="Icon: Weighted Shots" loading="lazy">
+          <span class="item-name">Weighted Shots</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+      </ul>
+      <h3 class="tier-head">Tier IV — <span class="tier-cost">6.400 Seelen</span></h3>
+      <ul class="item-grid item-grid--weapon">
+        <li class="item-tile" data-name="armor piercing rounds">
           <img src="assets/items/armor-piercing-rounds.webp" alt="Icon: Armor Piercing Rounds" loading="lazy">
           <span class="item-name">Armor Piercing Rounds</span>
           <span class="item-cost">6.400</span>
           <span class="item-tier">Tier IV</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="capacitor">
           <img src="assets/items/capacitor.webp" alt="Icon: Capacitor" loading="lazy">
           <span class="item-name">Capacitor</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="crippling headshot">
+          <img src="assets/items/crippling-headshot.webp" alt="Icon: Crippling Headshot" loading="lazy">
+          <span class="item-name">Crippling Headshot</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="crushing fists">
+          <img src="assets/items/crushing-fists.webp" alt="Icon: Crushing Fists" loading="lazy">
+          <span class="item-name">Crushing Fists</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="frenzy">
+          <img src="assets/items/frenzy.webp" alt="Icon: Frenzy" loading="lazy">
+          <span class="item-name">Frenzy</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="glass cannon">
+          <img src="assets/items/glass-cannon.webp" alt="Icon: Glass Cannon" loading="lazy">
+          <span class="item-name">Glass Cannon</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="lucky shot">
+          <img src="assets/items/lucky-shot.webp" alt="Icon: Lucky Shot" loading="lazy">
+          <span class="item-name">Lucky Shot</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="ricochet">
+          <img src="assets/items/ricochet.webp" alt="Icon: Ricochet" loading="lazy">
+          <span class="item-name">Ricochet</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="silencer">
+          <img src="assets/items/silencer.webp" alt="Icon: Silencer" loading="lazy">
+          <span class="item-name">Silencer</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="spellslinger">
+          <img src="assets/items/spellslinger.webp" alt="Icon: Spellslinger" loading="lazy">
+          <span class="item-name">Spellslinger</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="spiritual overflow">
+          <img src="assets/items/spiritual-overflow.webp" alt="Icon: Spiritual Overflow" loading="lazy">
+          <span class="item-name">Spiritual Overflow</span>
           <span class="item-cost">6.400</span>
           <span class="item-tier">Tier IV</span>
         </li>
@@ -127,55 +466,359 @@
       <div class="slot-head slot-head--vitality">
         <span class="slot-swatch" aria-hidden="true"></span>
         <h2 id="h-vitality" class="stat-vitality">Vitalitäts-Items</h2>
-        <span class="slot-count">87 Items in der Kategorie</span>
+        <span class="slot-count">61 Items in der Kategorie</span>
       </div>
       <p>Gesundheit, Rüstung, Lebensraub und Heilung — die Kategorie für alle, die im Gefecht stehen bleiben wollen.</p>
+      <h3 class="tier-head">Tier I — <span class="tier-cost">800 Seelen</span></h3>
       <ul class="item-grid item-grid--vitality">
-        <li class="item-tile">
+        <li class="item-tile" data-name="extra health">
           <img src="assets/items/extra-health.webp" alt="Icon: Extra Health" loading="lazy">
           <span class="item-name">Extra Health</span>
           <span class="item-cost">800</span>
           <span class="item-tier">Tier I</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="extra regen">
           <img src="assets/items/extra-regen.webp" alt="Icon: Extra Regen" loading="lazy">
           <span class="item-name">Extra Regen</span>
           <span class="item-cost">800</span>
           <span class="item-tier">Tier I</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="extra stamina">
+          <img src="assets/items/extra-stamina.webp" alt="Icon: Extra Stamina" loading="lazy">
+          <span class="item-name">Extra Stamina</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+        </li>
+        <li class="item-tile" data-name="grit">
+          <img src="assets/items/grit.webp" alt="Icon: Grit" loading="lazy">
+          <span class="item-name">Grit</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="healing rite">
+          <img src="assets/items/healing-rite.webp" alt="Icon: Healing Rite" loading="lazy">
+          <span class="item-name">Healing Rite</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="melee lifesteal">
+          <img src="assets/items/melee-lifesteal.webp" alt="Icon: Melee Lifesteal" loading="lazy">
+          <span class="item-name">Melee Lifesteal</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+        </li>
+        <li class="item-tile" data-name="rebuttal">
+          <img src="assets/items/rebuttal.webp" alt="Icon: Rebuttal" loading="lazy">
+          <span class="item-name">Rebuttal</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+        </li>
+        <li class="item-tile" data-name="sprint boots">
+          <img src="assets/items/sprint-boots.webp" alt="Icon: Sprint Boots" loading="lazy">
+          <span class="item-name">Sprint Boots</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+        </li>
+      </ul>
+      <h3 class="tier-head">Tier II — <span class="tier-cost">1.600 Seelen</span></h3>
+      <ul class="item-grid item-grid--vitality">
+        <li class="item-tile" data-name="battle vest">
           <img src="assets/items/battle-vest.webp" alt="Icon: Battle Vest" loading="lazy">
           <span class="item-name">Battle Vest</span>
           <span class="item-cost">1.600</span>
           <span class="item-tier">Tier II</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="bullet lifesteal">
           <img src="assets/items/bullet-lifesteal.webp" alt="Icon: Bullet Lifesteal" loading="lazy">
           <span class="item-name">Bullet Lifesteal</span>
           <span class="item-cost">1.600</span>
           <span class="item-tier">Tier II</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="debuff reducer">
+          <img src="assets/items/debuff-reducer.webp" alt="Icon: Debuff Reducer" loading="lazy">
+          <span class="item-name">Debuff Reducer</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="enchanter&#x27;s emblem">
+          <img src="assets/items/enchanter-s-emblem.webp" alt="Icon: Enchanter&#x27;s Emblem" loading="lazy">
+          <span class="item-name">Enchanter&#x27;s Emblem</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="enduring speed">
+          <img src="assets/items/enduring-speed.webp" alt="Icon: Enduring Speed" loading="lazy">
+          <span class="item-name">Enduring Speed</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="guardian ward">
+          <img src="assets/items/guardian-ward.webp" alt="Icon: Guardian Ward" loading="lazy">
+          <span class="item-name">Guardian Ward</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="healbane">
+          <img src="assets/items/healbane.webp" alt="Icon: Healbane" loading="lazy">
+          <span class="item-name">Healbane</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="healing booster">
+          <img src="assets/items/healing-booster.webp" alt="Icon: Healing Booster" loading="lazy">
+          <span class="item-name">Healing Booster</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="reactive barrier">
+          <img src="assets/items/reactive-barrier.webp" alt="Icon: Reactive Barrier" loading="lazy">
+          <span class="item-name">Reactive Barrier</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="restorative locket">
+          <img src="assets/items/restorative-locket.webp" alt="Icon: Restorative Locket" loading="lazy">
+          <span class="item-name">Restorative Locket</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="return fire">
+          <img src="assets/items/return-fire.webp" alt="Icon: Return Fire" loading="lazy">
+          <span class="item-name">Return Fire</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="spirit lifesteal">
+          <img src="assets/items/spirit-lifesteal.webp" alt="Icon: Spirit Lifesteal" loading="lazy">
+          <span class="item-name">Spirit Lifesteal</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="spirit shielding">
+          <img src="assets/items/spirit-shielding.webp" alt="Icon: Spirit Shielding" loading="lazy">
+          <span class="item-name">Spirit Shielding</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="trophy collector">
+          <img src="assets/items/trophy-collector.webp" alt="Icon: Trophy Collector" loading="lazy">
+          <span class="item-name">Trophy Collector</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="weapon shielding">
+          <img src="assets/items/weapon-shielding.webp" alt="Icon: Weapon Shielding" loading="lazy">
+          <span class="item-name">Weapon Shielding</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+      </ul>
+      <h3 class="tier-head">Tier III — <span class="tier-cost">3.200 Seelen</span></h3>
+      <ul class="item-grid item-grid--vitality">
+        <li class="item-tile" data-name="bullet resilience">
           <img src="assets/items/bullet-resilience.webp" alt="Icon: Bullet Resilience" loading="lazy">
           <span class="item-name">Bullet Resilience</span>
           <span class="item-cost">3.200</span>
           <span class="item-tier">Tier III</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="counterspell">
           <img src="assets/items/counterspell.webp" alt="Icon: Counterspell" loading="lazy">
           <span class="item-name">Counterspell</span>
           <span class="item-cost">3.200</span>
           <span class="item-tier">Tier III</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="dispel magic">
+          <img src="assets/items/dispel-magic.webp" alt="Icon: Dispel Magic" loading="lazy">
+          <span class="item-name">Dispel Magic</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="fortitude">
+          <img src="assets/items/fortitude.webp" alt="Icon: Fortitude" loading="lazy">
+          <span class="item-name">Fortitude</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="fury trance">
+          <img src="assets/items/fury-trance.webp" alt="Icon: Fury Trance" loading="lazy">
+          <span class="item-name">Fury Trance</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="healing nova">
+          <img src="assets/items/healing-nova.webp" alt="Icon: Healing Nova" loading="lazy">
+          <span class="item-name">Healing Nova</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="lifestrike">
+          <img src="assets/items/lifestrike.webp" alt="Icon: Lifestrike" loading="lazy">
+          <span class="item-name">Lifestrike</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="majestic leap">
+          <img src="assets/items/majestic-leap.webp" alt="Icon: Majestic Leap" loading="lazy">
+          <span class="item-name">Majestic Leap</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="metal skin">
+          <img src="assets/items/metal-skin.webp" alt="Icon: Metal Skin" loading="lazy">
+          <span class="item-name">Metal Skin</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="rescue beam">
+          <img src="assets/items/rescue-beam.webp" alt="Icon: Rescue Beam" loading="lazy">
+          <span class="item-name">Rescue Beam</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="spirit resilience">
+          <img src="assets/items/spirit-resilience.webp" alt="Icon: Spirit Resilience" loading="lazy">
+          <span class="item-name">Spirit Resilience</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="stamina mastery">
+          <img src="assets/items/stamina-mastery.webp" alt="Icon: Stamina Mastery" loading="lazy">
+          <span class="item-name">Stamina Mastery</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="veil walker">
+          <img src="assets/items/veil-walker.webp" alt="Icon: Veil Walker" loading="lazy">
+          <span class="item-name">Veil Walker</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="warp stone">
+          <img src="assets/items/warp-stone.webp" alt="Icon: Warp Stone" loading="lazy">
+          <span class="item-name">Warp Stone</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+      </ul>
+      <h3 class="tier-head">Tier IV — <span class="tier-cost">6.400 Seelen</span></h3>
+      <ul class="item-grid item-grid--vitality">
+        <li class="item-tile" data-name="cheat death">
           <img src="assets/items/cheat-death.webp" alt="Icon: Cheat Death" loading="lazy">
           <span class="item-name">Cheat Death</span>
           <span class="item-cost">6.400</span>
           <span class="item-tier">Tier IV</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="colossus">
           <img src="assets/items/colossus.webp" alt="Icon: Colossus" loading="lazy">
           <span class="item-name">Colossus</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="divine barrier">
+          <img src="assets/items/divine-barrier.webp" alt="Icon: Divine Barrier" loading="lazy">
+          <span class="item-name">Divine Barrier</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="diviner&#x27;s kevlar">
+          <img src="assets/items/diviner-s-kevlar.webp" alt="Icon: Diviner&#x27;s Kevlar" loading="lazy">
+          <span class="item-name">Diviner&#x27;s Kevlar</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="healing tempo">
+          <img src="assets/items/healing-tempo.webp" alt="Icon: Healing Tempo" loading="lazy">
+          <span class="item-name">Healing Tempo</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="indomitable">
+          <img src="assets/items/indomitable.webp" alt="Icon: Indomitable" loading="lazy">
+          <span class="item-name">Indomitable</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="infuser">
+          <img src="assets/items/infuser.webp" alt="Icon: Infuser" loading="lazy">
+          <span class="item-name">Infuser</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="inhibitor">
+          <img src="assets/items/inhibitor.webp" alt="Icon: Inhibitor" loading="lazy">
+          <span class="item-name">Inhibitor</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="juggernaut">
+          <img src="assets/items/juggernaut.webp" alt="Icon: Juggernaut" loading="lazy">
+          <span class="item-name">Juggernaut</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="leech">
+          <img src="assets/items/leech.webp" alt="Icon: Leech" loading="lazy">
+          <span class="item-name">Leech</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="phantom strike">
+          <img src="assets/items/phantom-strike.webp" alt="Icon: Phantom Strike" loading="lazy">
+          <span class="item-name">Phantom Strike</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="plated armor">
+          <img src="assets/items/plated-armor.webp" alt="Icon: Plated Armor" loading="lazy">
+          <span class="item-name">Plated Armor</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="siphon bullets">
+          <img src="assets/items/siphon-bullets.webp" alt="Icon: Siphon Bullets" loading="lazy">
+          <span class="item-name">Siphon Bullets</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="spellbreaker">
+          <img src="assets/items/spellbreaker.webp" alt="Icon: Spellbreaker" loading="lazy">
+          <span class="item-name">Spellbreaker</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="unstoppable">
+          <img src="assets/items/unstoppable.webp" alt="Icon: Unstoppable" loading="lazy">
+          <span class="item-name">Unstoppable</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="vampiric burst">
+          <img src="assets/items/vampiric-burst.webp" alt="Icon: Vampiric Burst" loading="lazy">
+          <span class="item-name">Vampiric Burst</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="witchmail">
+          <img src="assets/items/witchmail.webp" alt="Icon: Witchmail" loading="lazy">
+          <span class="item-name">Witchmail</span>
           <span class="item-cost">6.400</span>
           <span class="item-tier">Tier IV</span>
         </li>
@@ -186,57 +829,331 @@
       <div class="slot-head slot-head--spirit">
         <span class="slot-swatch" aria-hidden="true"></span>
         <h2 id="h-spirit" class="stat-spirit">Geist-Items</h2>
-        <span class="slot-count">79 Items in der Kategorie</span>
+        <span class="slot-count">56 Items in der Kategorie</span>
       </div>
       <p>Verstärken Geist-Kraft, verkürzen Abklingzeiten und schalten neue Effekte für die vier Signaturfähigkeiten frei.</p>
+      <h3 class="tier-head">Tier I — <span class="tier-cost">800 Seelen</span></h3>
       <ul class="item-grid item-grid--spirit">
-        <li class="item-tile">
+        <li class="item-tile" data-name="extra charge">
           <img src="assets/items/extra-charge.webp" alt="Icon: Extra Charge" loading="lazy">
           <span class="item-name">Extra Charge</span>
           <span class="item-cost">800</span>
           <span class="item-tier">Tier I</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="extra spirit">
           <img src="assets/items/extra-spirit.webp" alt="Icon: Extra Spirit" loading="lazy">
           <span class="item-name">Extra Spirit</span>
           <span class="item-cost">800</span>
           <span class="item-tier">Tier I</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="golden goose egg">
+          <img src="assets/items/golden-goose-egg.webp" alt="Icon: Golden Goose Egg" loading="lazy">
+          <span class="item-name">Golden Goose Egg</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="mystic burst">
+          <img src="assets/items/mystic-burst.webp" alt="Icon: Mystic Burst" loading="lazy">
+          <span class="item-name">Mystic Burst</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+        </li>
+        <li class="item-tile" data-name="mystic expansion">
+          <img src="assets/items/mystic-expansion.webp" alt="Icon: Mystic Expansion" loading="lazy">
+          <span class="item-name">Mystic Expansion</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+        </li>
+        <li class="item-tile" data-name="mystic regeneration">
+          <img src="assets/items/mystic-regeneration.webp" alt="Icon: Mystic Regeneration" loading="lazy">
+          <span class="item-name">Mystic Regeneration</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+        </li>
+        <li class="item-tile" data-name="rusted barrel">
+          <img src="assets/items/rusted-barrel.webp" alt="Icon: Rusted Barrel" loading="lazy">
+          <span class="item-name">Rusted Barrel</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="spirit strike">
+          <img src="assets/items/spirit-strike.webp" alt="Icon: Spirit Strike" loading="lazy">
+          <span class="item-name">Spirit Strike</span>
+          <span class="item-cost">800</span>
+          <span class="item-tier">Tier I</span>
+        </li>
+      </ul>
+      <h3 class="tier-head">Tier II — <span class="tier-cost">1.600 Seelen</span></h3>
+      <ul class="item-grid item-grid--spirit">
+        <li class="item-tile" data-name="arcane surge">
           <img src="assets/items/arcane-surge.webp" alt="Icon: Arcane Surge" loading="lazy">
           <span class="item-name">Arcane Surge</span>
           <span class="item-cost">1.600</span>
           <span class="item-tier">Tier II</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="bullet resist shredder">
           <img src="assets/items/bullet-resist-shredder.webp" alt="Icon: Bullet Resist Shredder" loading="lazy">
           <span class="item-name">Bullet Resist Shredder</span>
           <span class="item-cost">1.600</span>
           <span class="item-tier">Tier II</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="cold front">
+          <img src="assets/items/cold-front.webp" alt="Icon: Cold Front" loading="lazy">
+          <span class="item-name">Cold Front</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="compress cooldown">
+          <img src="assets/items/compress-cooldown.webp" alt="Icon: Compress Cooldown" loading="lazy">
+          <span class="item-name">Compress Cooldown</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="duration extender">
+          <img src="assets/items/duration-extender.webp" alt="Icon: Duration Extender" loading="lazy">
+          <span class="item-name">Duration Extender</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="improved spirit">
+          <img src="assets/items/improved-spirit.webp" alt="Icon: Improved Spirit" loading="lazy">
+          <span class="item-name">Improved Spirit</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="mystic slow">
+          <img src="assets/items/mystic-slow.webp" alt="Icon: Mystic Slow" loading="lazy">
+          <span class="item-name">Mystic Slow</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="mystic vulnerability">
+          <img src="assets/items/mystic-vulnerability.webp" alt="Icon: Mystic Vulnerability" loading="lazy">
+          <span class="item-name">Mystic Vulnerability</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="quicksilver reload">
+          <img src="assets/items/quicksilver-reload.webp" alt="Icon: Quicksilver Reload" loading="lazy">
+          <span class="item-name">Quicksilver Reload</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+        <li class="item-tile" data-name="slowing hex">
+          <img src="assets/items/slowing-hex.webp" alt="Icon: Slowing Hex" loading="lazy">
+          <span class="item-name">Slowing Hex</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="spirit sap">
+          <img src="assets/items/spirit-sap.webp" alt="Icon: Spirit Sap" loading="lazy">
+          <span class="item-name">Spirit Sap</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="suppressor">
+          <img src="assets/items/suppressor.webp" alt="Icon: Suppressor" loading="lazy">
+          <span class="item-name">Suppressor</span>
+          <span class="item-cost">1.600</span>
+          <span class="item-tier">Tier II</span>
+        </li>
+      </ul>
+      <h3 class="tier-head">Tier III — <span class="tier-cost">3.200 Seelen</span></h3>
+      <ul class="item-grid item-grid--spirit">
+        <li class="item-tile" data-name="decay">
           <img src="assets/items/decay.webp" alt="Icon: Decay" loading="lazy">
           <span class="item-name">Decay</span>
           <span class="item-cost">3.200</span>
           <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="disarming hex">
           <img src="assets/items/disarming-hex.webp" alt="Icon: Disarming Hex" loading="lazy">
           <span class="item-name">Disarming Hex</span>
           <span class="item-cost">3.200</span>
           <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="greater expansion">
+          <img src="assets/items/greater-expansion.webp" alt="Icon: Greater Expansion" loading="lazy">
+          <span class="item-name">Greater Expansion</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="knockdown">
+          <img src="assets/items/knockdown.webp" alt="Icon: Knockdown" loading="lazy">
+          <span class="item-name">Knockdown</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="radiant regeneration">
+          <img src="assets/items/radiant-regeneration.webp" alt="Icon: Radiant Regeneration" loading="lazy">
+          <span class="item-name">Radiant Regeneration</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="rapid recharge">
+          <img src="assets/items/rapid-recharge.webp" alt="Icon: Rapid Recharge" loading="lazy">
+          <span class="item-name">Rapid Recharge</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="silence wave">
+          <img src="assets/items/silence-wave.webp" alt="Icon: Silence Wave" loading="lazy">
+          <span class="item-name">Silence Wave</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="spirit snatch">
+          <img src="assets/items/spirit-snatch.webp" alt="Icon: Spirit Snatch" loading="lazy">
+          <span class="item-name">Spirit Snatch</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="superior cooldown">
+          <img src="assets/items/superior-cooldown.webp" alt="Icon: Superior Cooldown" loading="lazy">
+          <span class="item-name">Superior Cooldown</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="superior duration">
+          <img src="assets/items/superior-duration.webp" alt="Icon: Superior Duration" loading="lazy">
+          <span class="item-name">Superior Duration</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="surge of power">
+          <img src="assets/items/surge-of-power.webp" alt="Icon: Surge of Power" loading="lazy">
+          <span class="item-name">Surge of Power</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="tankbuster">
+          <img src="assets/items/tankbuster.webp" alt="Icon: Tankbuster" loading="lazy">
+          <span class="item-name">Tankbuster</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+        <li class="item-tile" data-name="torment pulse">
+          <img src="assets/items/torment-pulse.webp" alt="Icon: Torment Pulse" loading="lazy">
+          <span class="item-name">Torment Pulse</span>
+          <span class="item-cost">3.200</span>
+          <span class="item-tier">Tier III</span>
+        </li>
+      </ul>
+      <h3 class="tier-head">Tier IV — <span class="tier-cost">6.400 Seelen</span></h3>
+      <ul class="item-grid item-grid--spirit">
+        <li class="item-tile" data-name="arctic blast">
           <img src="assets/items/arctic-blast.webp" alt="Icon: Arctic Blast" loading="lazy">
           <span class="item-name">Arctic Blast</span>
           <span class="item-cost">6.400</span>
           <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
         </li>
-        <li class="item-tile">
+        <li class="item-tile" data-name="boundless spirit">
           <img src="assets/items/boundless-spirit.webp" alt="Icon: Boundless Spirit" loading="lazy">
           <span class="item-name">Boundless Spirit</span>
           <span class="item-cost">6.400</span>
           <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="cursed relic">
+          <img src="assets/items/cursed-relic.webp" alt="Icon: Cursed Relic" loading="lazy">
+          <span class="item-name">Cursed Relic</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="echo shard">
+          <img src="assets/items/echo-shard.webp" alt="Icon: Echo Shard" loading="lazy">
+          <span class="item-name">Echo Shard</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="escalating exposure">
+          <img src="assets/items/escalating-exposure.webp" alt="Icon: Escalating Exposure" loading="lazy">
+          <span class="item-name">Escalating Exposure</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="ethereal shift">
+          <img src="assets/items/ethereal-shift.webp" alt="Icon: Ethereal Shift" loading="lazy">
+          <span class="item-name">Ethereal Shift</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="focus lens">
+          <img src="assets/items/focus-lens.webp" alt="Icon: Focus Lens" loading="lazy">
+          <span class="item-name">Focus Lens</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="lightning scroll">
+          <img src="assets/items/lightning-scroll.webp" alt="Icon: Lightning Scroll" loading="lazy">
+          <span class="item-name">Lightning Scroll</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="magic carpet">
+          <img src="assets/items/magic-carpet.webp" alt="Icon: Magic Carpet" loading="lazy">
+          <span class="item-name">Magic Carpet</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="mercurial magnum">
+          <img src="assets/items/mercurial-magnum.webp" alt="Icon: Mercurial Magnum" loading="lazy">
+          <span class="item-name">Mercurial Magnum</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="mystic reverb">
+          <img src="assets/items/mystic-reverb.webp" alt="Icon: Mystic Reverb" loading="lazy">
+          <span class="item-name">Mystic Reverb</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="refresher">
+          <img src="assets/items/refresher.webp" alt="Icon: Refresher" loading="lazy">
+          <span class="item-name">Refresher</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="scourge">
+          <img src="assets/items/scourge.webp" alt="Icon: Scourge" loading="lazy">
+          <span class="item-name">Scourge</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
+        </li>
+        <li class="item-tile" data-name="spirit burn">
+          <img src="assets/items/spirit-burn.webp" alt="Icon: Spirit Burn" loading="lazy">
+          <span class="item-name">Spirit Burn</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="transcendent cooldown">
+          <img src="assets/items/transcendent-cooldown.webp" alt="Icon: Transcendent Cooldown" loading="lazy">
+          <span class="item-name">Transcendent Cooldown</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+        </li>
+        <li class="item-tile" data-name="vortex web">
+          <img src="assets/items/vortex-web.webp" alt="Icon: Vortex Web" loading="lazy">
+          <span class="item-name">Vortex Web</span>
+          <span class="item-cost">6.400</span>
+          <span class="item-tier">Tier IV</span>
+          <span class="chip-active">Aktiv</span>
         </li>
       </ul>
     </section>
@@ -244,7 +1161,7 @@
     <div class="cat-footer">
       <span class="cat-label">Kategorien:</span>
       <a class="cat-pill" href="items.html">Gegenstände</a>
-      <a class="cat-pill redlink" href="#" title="Diese Seite existiert noch nicht">Spielmechanik</a>
+      <a class="cat-pill" href="gameplay.html">Spielmechanik</a>
       <a class="cat-pill redlink" href="#" title="Diese Seite existiert noch nicht">Wirtschaft</a>
     </div>
   </main>
@@ -254,9 +1171,29 @@
   <div class="wikifoot-inner">
     <p><strong>Deadlock Wiki</strong> ist ein inoffizielles Fan-Projekt und steht in keiner Verbindung zur Valve Corporation.</p>
     <p>Deadlock sowie alle zugehörigen Grafiken und Namen sind Eigentum der Valve Corporation. Inhalte der Community stehen unter CC&nbsp;BY-SA, sofern nicht anders angegeben.</p>
-    <p><a href="index.html">Hauptseite</a> · <a href="helden.html">Helden</a> · <a href="items.html">Items</a> · <a href="#">Impressum</a></p>
+    <p><a href="index.html">Hauptseite</a> · <a href="helden.html">Helden</a> · <a href="items.html">Items</a> · <a href="gameplay.html">Gameplay</a> · <a href="karte.html">Karte</a> · <a href="#">Impressum</a></p>
   </div>
 </footer>
+
+<script>
+(function () {
+  var input = document.getElementById("item-filter");
+  var tiles = document.querySelectorAll(".item-tile[data-name]");
+  var tierHeads = document.querySelectorAll(".tier-head");
+  input.addEventListener("input", function () {
+    var q = input.value.trim().toLowerCase();
+    tiles.forEach(function (t) {
+      t.style.display = !q || t.dataset.name.indexOf(q) !== -1 ? "" : "none";
+    });
+    document.querySelectorAll(".item-grid").forEach(function (grid) {
+      var any = Array.prototype.some.call(grid.children, function (c) { return c.style.display !== "none"; });
+      grid.style.display = any ? "" : "none";
+      var head = grid.previousElementSibling;
+      if (head && head.classList.contains("tier-head")) head.style.display = any ? "" : "none";
+    });
+  });
+})();
+</script>
 
 </body>
 </html>

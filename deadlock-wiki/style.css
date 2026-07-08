@@ -989,3 +989,268 @@ p { margin: 0 0 14px; max-width: 72ch; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* --------------------------------------------------------------------------
+   Interaktive Karte
+   -------------------------------------------------------------------------- */
+
+.map-stage {
+  position: relative;
+  max-width: 720px;
+  margin: 20px auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--night-deep);
+  box-shadow: var(--shadow);
+}
+.map-stage > img { width: 100%; display: block; }
+
+.hotspot {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.hotspot::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: var(--brass);
+  border: 2px solid rgba(13, 10, 7, 0.9);
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 2px rgba(217, 160, 60, 0.35), 0 0 12px rgba(217, 160, 60, 0.6);
+  transition: transform 0.15s ease;
+}
+.hotspot:hover::before,
+.hotspot:focus-visible::before { transform: rotate(45deg) scale(1.35); background: var(--brass-bright); }
+
+.hotspot--objective::before { background: var(--vitality); box-shadow: 0 0 0 2px rgba(132,199,97,.3), 0 0 12px rgba(132,199,97,.55); }
+.hotspot--danger::before { background: var(--redlink); box-shadow: 0 0 0 2px rgba(208,106,85,.3), 0 0 12px rgba(208,106,85,.55); }
+
+.map-tip {
+  position: absolute;
+  z-index: 30;
+  width: 240px;
+  background: var(--panel);
+  border: 1px solid var(--brass-dim);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  padding: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+.map-tip.visible { opacity: 1; }
+.map-tip .tip-img {
+  height: 120px;
+  border-bottom: 1px solid var(--line);
+  background-image: url("assets/map/minimap.png");
+  background-size: 340% auto;
+  background-repeat: no-repeat;
+  border-radius: 4px 4px 0 0;
+}
+.map-tip .tip-body { padding: 10px 12px 11px; }
+.map-tip .tip-title { font-weight: 700; font-size: 14px; display: block; color: var(--brass-bright); }
+.map-tip .tip-desc { font-size: 12.5px; color: var(--muted); line-height: 1.5; display: block; margin-top: 3px; }
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13.5px;
+  color: var(--muted);
+  justify-content: center;
+}
+.map-legend .lg-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  transform: rotate(45deg);
+  margin-right: 7px;
+  background: var(--brass);
+}
+.map-legend .lg-dot--objective { background: var(--vitality); }
+.map-legend .lg-dot--danger { background: var(--redlink); }
+
+/* --------------------------------------------------------------------------
+   Build-Browser
+   -------------------------------------------------------------------------- */
+
+.build-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  margin: 14px 0;
+  overflow: hidden;
+}
+.build-card summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  padding: 13px 18px;
+}
+.build-card summary::-webkit-details-marker { display: none; }
+.build-card summary:hover { background: var(--panel-raised); }
+.build-card summary::after {
+  content: "▾";
+  margin-left: auto;
+  color: var(--faint);
+  transition: transform 0.15s ease;
+}
+.build-card[open] summary::after { transform: rotate(180deg); }
+
+.build-rank {
+  font-family: var(--font-display);
+  color: var(--brass);
+  font-size: 15px;
+  flex: none;
+}
+.build-name { font-weight: 700; font-size: 15.5px; }
+.build-fav {
+  color: var(--brass);
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.build-fav::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--brass);
+  transform: rotate(45deg);
+  margin-right: 6px;
+}
+.build-meta { color: var(--faint); font-size: 12.5px; white-space: nowrap; }
+
+.build-body { border-top: 1px solid var(--line-soft); padding: 6px 18px 14px; }
+.build-desc {
+  font-size: 13.5px;
+  color: var(--muted);
+  font-style: italic;
+  margin: 10px 0 4px;
+}
+
+.build-cat { margin-top: 12px; }
+.build-cat-name {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass);
+  display: block;
+  margin-bottom: 7px;
+}
+.build-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.build-items li {
+  width: 44px;
+  height: 44px;
+  background: var(--night-deep);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  padding: 4px;
+}
+.build-items img { width: 100%; height: 100%; object-fit: contain; }
+
+/* --------------------------------------------------------------------------
+   Einsteiger-Guide (Items)
+   -------------------------------------------------------------------------- */
+
+.starter-box {
+  background:
+    linear-gradient(115deg, rgba(217, 160, 60, 0.1), transparent 60%),
+    var(--panel);
+  border: 1px solid var(--brass-dim);
+  border-radius: 5px;
+  padding: 22px 24px 20px;
+  margin: 26px 0;
+}
+.starter-box h2 { border: 0; margin: 0 0 6px; padding: 0; }
+.starter-box > p { color: var(--muted); font-size: 14.5px; }
+
+.starter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+.starter-item {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  background: rgba(13, 10, 7, 0.45);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+.starter-item img { width: 46px; height: 46px; object-fit: contain; }
+.starter-item .si-name { font-weight: 700; font-size: 13.5px; display: block; }
+.starter-item .si-why { font-size: 12.5px; color: var(--muted); display: block; line-height: 1.45; }
+
+.tip-list { margin: 14px 0 0; padding-left: 20px; font-size: 14.5px; }
+.tip-list li { margin-bottom: 6px; }
+
+/* Item-Suche & Tier-Gruppen */
+.item-search {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  background: var(--night-deep);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--paper);
+  font: inherit;
+  font-size: 14.5px;
+  padding: 10px 14px;
+  margin: 4px 0 6px;
+}
+.item-search:focus { outline: none; border-color: var(--brass); }
+
+.tier-head {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 22px 0 0;
+}
+.tier-head .tier-cost { color: var(--brass); }
+
+.chip-active {
+  display: inline-block;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border: 1px solid var(--brass-dim);
+  color: var(--brass);
+  border-radius: 3px;
+  padding: 0 5px;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-tip { transition: none; }
+}

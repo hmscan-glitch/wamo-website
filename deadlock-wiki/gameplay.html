@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gameplay – Deadlock Wiki</title>
+<meta name="description" content="Der große Gameplay-Guide zu Deadlock: Seelen-Ökonomie, Lane-Phase, Mittelspiel, Spätspiel, Bewegung und Einsteiger-Tipps im Detail.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="index.html">DEADLOCK<span class="wm-wiki">&nbsp;WIKI</span></a>
+    <div class="wordmark-rule" aria-hidden="true"><span class="wm-diamond"></span></div>
+    <p class="tagline">Die von Fans geschriebene Enzyklopädie zur okkulten Unterwelt von New York.</p>
+    <form class="searchform" action="helden.html" role="search">
+      <input type="search" name="q" placeholder="Deadlock Wiki durchsuchen …" aria-label="Wiki durchsuchen">
+      <button type="submit">Suchen</button>
+    </form>
+  </div>
+  <nav class="localnav" aria-label="Wiki-Navigation">
+    <div class="localnav-inner">
+      <a href="index.html">Hauptseite</a>
+      <a href="helden.html">Helden</a>
+      <a href="items.html">Items</a>
+      <a href="gameplay.html" aria-current="page">Gameplay</a>
+      <a href="karte.html">Karte</a>
+      <a href="#" class="redlink" title="Diese Seite existiert noch nicht – hilf mit, sie zu schreiben!">Community</a>
+      <span class="nav-stats">1.284 Artikel &middot; 4.107 Dateien</span>
+    </div>
+  </nav>
+</header>
+
+<div class="shell">
+  <main>
+    <div class="article-actions">
+      <a class="aa-btn aa-btn--primary" href="#">Bearbeiten</a>
+      <a class="aa-btn" href="#">Versionsgeschichte</a>
+      <a class="aa-btn" href="#">Diskussion (34)</a>
+      <span class="aa-meta">Zuletzt bearbeitet von <a href="#">LaneLurker</a> heute um 13:58</span>
+    </div>
+
+    <p class="page-sub">Spielmechanik</p>
+    <h1 class="page-title">Gameplay</h1>
+    <p class="lead"><em>Deadlock</em> ist ein Shooter-MOBA: Zwei Teams aus je sechs Helden kämpfen darum, den gegnerischen <strong>Patron</strong> zu zerstören. Der Weg dorthin führt über Seelen, Lanes, Objectives — und über die Frage, wer die Karte besser liest. Dieser Guide erklärt jede Phase des Spiels im Detail.</p>
+
+    <nav class="toc" aria-label="Inhaltsverzeichnis">
+      <div class="toc-title">Inhaltsverzeichnis</div>
+      <ol>
+        <li><a href="#ziel">Das Ziel des Spiels</a></li>
+        <li><a href="#seelen">Seelen: die Währung von allem</a></li>
+        <li><a href="#lane-phase">Die Lane-Phase (ca. Minute 0–8)</a></li>
+        <li><a href="#mittelspiel">Das Mittelspiel (ca. Minute 8–25)</a></li>
+        <li><a href="#spaetspiel">Das Spätspiel</a></li>
+        <li><a href="#bewegung">Bewegung: Dash, Slide &amp; Zipline</a></li>
+        <li><a href="#einsteiger">Tipps für die ersten Matches</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="ziel"><span class="h-deco" aria-hidden="true"></span>Das Ziel des Spiels</h2>
+    <p>Beide Basen werden von einer Kette aus Objectives geschützt, die in fester Reihenfolge fallen müssen: <strong class="stat-vitality">Guardian → Walker → Schreine → Patron</strong>. Jede der drei <a href="karte.html">Lanes</a> hat ihren eigenen Guardian und Walker; die Schreine und der Patron stehen in der Basis. Erst wenn mindestens ein Schrein zerstört ist, wird der Patron verwundbar — und selbst dann wehrt er sich: Angeschlagen zieht er sich als <em>geschwächter Patron</em> ins Zentrum der Basis zurück, wo der finale Kampf stattfindet.</p>
+    <p>Zerstörte Objectives bringen mehr als Kartenfortschritt: Jedes davon schaltet deinem Team einen <strong>Flex-Slot</strong> frei — einen zusätzlichen Item-Platz, der in jeder Kategorie genutzt werden kann. Ein Team, das Objectives ignoriert, verschenkt also buchstäblich Ausrüstung.</p>
+
+    <h2 id="seelen"><span class="h-deco" aria-hidden="true"></span>Seelen: die Währung von allem</h2>
+    <p>Seelen sind Erfahrung und Gold in einem: Sie leveln deine Fähigkeiten <em>und</em> bezahlen deine <a href="items.html">Items</a>. Die wichtigsten Quellen:</p>
+    <ul>
+      <li><strong>Trooper (Creeps):</strong> Die Fußsoldaten beider Teams marschieren pausenlos die Lanes entlang. Der Todesstoß (Last Hit) gibt dir einen Teil der Seelen direkt — der Rest steigt als <strong>Seelenkugel</strong> auf.</li>
+      <li><strong>Seelenkugeln sichern &amp; verwehren:</strong> Nach dem Last Hit schwebt für einen Moment eine leuchtende Kugel über dem Trooper. Schieße sie ab, um die restlichen Seelen zu <em>sichern</em> — bist du zu langsam, kann der Gegner die Kugel abschießen und dir die Seelen <em>verwehren</em> (Deny). Dieses Mini-Duell um jede Kugel ist das Herzstück der Lane-Phase.</li>
+      <li><strong>Helden-Kills und Assists</strong> — je weiter das Spiel, desto wertvoller.</li>
+      <li><strong>Neutrale Camps</strong> im Niemandsland zwischen den Lanes, <strong>Seelen-Kisten</strong> in Gassen und auf Dächern sowie <strong>Sünderopfer</strong> (die Urne).</li>
+      <li><strong>Objectives:</strong> Guardians, Walker und Schreine schütten beim Fall Team-Seelen aus.</li>
+    </ul>
+    <p>Wichtig für Duo-Lanes: Trooper-Seelen in der Lane werden geteilt, ihr nehmt euch gegenseitig also nichts weg — konzentriert euch lieber gemeinsam auf Last Hits und Denies.</p>
+
+    <h2 id="lane-phase"><span class="h-deco" aria-hidden="true"></span>Die Lane-Phase (ca. Minute 0–8)</h2>
+    <p>Zum Start verteilen sich die zwölf Spieler auf die drei Lanes. Die Phase entscheidet, wer mit einem Seelen-Vorsprung ins Mittelspiel geht — und sie folgt einem klaren Rhythmus:</p>
+    <h3>Welle für Welle</h3>
+    <ul>
+      <li><strong>Last Hits über alles:</strong> Ein verpasster Todesstoß ist verlorenes Einkommen. Übe, den Schaden deiner Waffe einzuschätzen, statt blind auf Trooper zu halten.</li>
+      <li><strong>Denies gewinnen Lanes:</strong> Jede gegnerische Seelenkugel, die du wegschießt, ist doppelter Gewinn — der Gegner verliert, was du ihm nimmst. Gute Spieler zielen schon auf die Kugel, bevor sie erscheint.</li>
+      <li><strong>Poke mit Maß:</strong> Zwischen den Wellen tauscht man Schaden. Achte auf deine Munition und regeneriere hinter Deckung — wer bei 30 % Leben weiter tradet, lädt zum Kill ein.</li>
+      <li><strong>Ausdauer-Disziplin:</strong> Dashes und Sprünge kosten Ausdauer. Wer alles offensiv verballert, hat nichts mehr zum Fliehen übrig.</li>
+    </ul>
+    <h3>Der Guardian als Anker</h3>
+    <p>Dein Guardian bestraft Gegner, die unter ihm angreifen — nutze ihn als Rückzugsraum, wenn die Lane kippt. Umgekehrt gilt: Tauche nur unter den gegnerischen Guardian, wenn du den Kill sicher hast oder der Turm abgelenkt ist.</p>
+    <h3>Einkaufen ohne Heimweg</h3>
+    <p>Ab 800 Seelen lohnt der erste Einkauf (siehe <a href="items.html#einsteiger">Einsteiger-Guide</a>). Renn dafür nicht in die Basis: <a href="karte.html">Kuriositätenläden im Niemandsland</a> liegen oft nur eine Gasse entfernt. Wer zuerst zwei, drei Items trägt, gewinnt die nächsten Duelle fast von allein.</p>
+
+    <h2 id="mittelspiel"><span class="h-deco" aria-hidden="true"></span>Das Mittelspiel (ca. Minute 8–25)</h2>
+    <p>Sobald die ersten Guardians fallen, löst sich die starre Lane-Ordnung auf. Jetzt zählt Kartenbewegung:</p>
+    <ul>
+      <li><strong>Rotationen:</strong> Nutze Ziplines und Seitengassen, um Überzahl-Situationen zu schaffen — vier gegen zwei gewinnt fast immer. Wer nach einem Kill sofort zum nächsten Objective weiterzieht, verwandelt Vorteile in Kartenfortschritt.</li>
+      <li><strong>Walker fällen:</strong> Walker sind zäh und wehren sich mit Stampfern. Bring eine Trooper-Welle mit und geh nur mit mehreren Teammitgliedern ran. Belohnung: Team-Seelen und ein Flex-Slot.</li>
+      <li><strong>Farmen nicht vergessen:</strong> Zwischen den Kämpfen wollen Camps, Kisten und Lane-Wellen weiter eingesammelt werden. Die stärksten Spieler halten ihre Seelen-Kurve auch im Chaos hoch.</li>
+      <li><strong>Sünderopfer (Urne):</strong> Die Urne bringt dem Team einen dicken Seelen-Schub, macht den Träger aber sichtbar. Trage sie nie allein durch unkontrolliertes Gebiet — und fange umgekehrt gegnerische Träger auf ihrer <a href="karte.html">festen Route</a> ab.</li>
+      <li><strong>Mid-Boss als Wendepunkt:</strong> Ab dem Mittelspiel wartet der Mid-Boss in seiner Grube. Sein <strong>Rejuvenator</strong> verleiht dem gesamten Team einen minutenlangen Stärkungseffekt — ideal, um einen entscheidenden Push einzuleiten oder einen Rückstand zu drehen. Aber: Der Kampf ist laut und einsehbar; ein gutes gegnerisches Team kommt genau dann, wenn der Boss fast liegt.</li>
+    </ul>
+
+    <h2 id="spaetspiel"><span class="h-deco" aria-hidden="true"></span>Das Spätspiel</h2>
+    <p>Jetzt sind die Todes-Timer lang und jeder Fehler kann das Match beenden:</p>
+    <ul>
+      <li><strong>Kämpfe nur mit Grund:</strong> Ein gewonnener Teamkampf sollte immer in ein Objective münden — Schrein, Patron oder Mid-Boss. Ein Kill ohne Folgeaktion ist verschenkt.</li>
+      <li><strong>Schreine knacken:</strong> Die beiden Schreine in der Basis sind schnell zerstört, wenn das gegnerische Team tot ist — und erst sie machen den Patron verwundbar.</li>
+      <li><strong>Der finale Kampf:</strong> Der geschwächte Patron ist das letzte Bollwerk. Verteidiger haben Spawn-Vorteil — als Angreifer brauchst du einen klaren Zahlenvorteil oder den Rejuvenator im Rücken.</li>
+      <li><strong>Nicht überziehen:</strong> Viele Matches kippen, weil das führende Team nach einem gewonnenen Kampf zu gierig weiterdrückt. Sichere den Vorteil, kauf ein, stell die Wellen neu auf.</li>
+    </ul>
+
+    <h2 id="bewegung"><span class="h-deco" aria-hidden="true"></span>Bewegung: Dash, Slide &amp; Zipline</h2>
+    <p>Kein anderes MOBA belohnt Bewegung so sehr wie Deadlock — die Mechaniken im Überblick:</p>
+    <div class="wikitable-wrap">
+      <table class="wikitable">
+        <thead>
+          <tr><th scope="col">Technik</th><th scope="col">Kosten</th><th scope="col">Wofür</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Dash</strong> (Boden/Luft)</td><td>1 Ausdauer</td><td>Schnelles Ausweichen, Distanz schließen oder öffnen</td></tr>
+          <tr><td><strong>Dash-Jump</strong></td><td>1 Ausdauer</td><td>Dash + Sprung im richtigen Moment: weiter und schneller als beides einzeln</td></tr>
+          <tr><td><strong>Slide</strong></td><td>kostenlos</td><td>Beim Sprinten ducken: erhält Tempo, macht dich zum kleinen Ziel — du kannst dabei schießen und nachladen</td></tr>
+          <tr><td><strong>Zipline</strong></td><td>kostenlos</td><td>Schnellster Weg die Lane entlang; nach dem Respawn kurz geboostet. Achtung: Treffer holen dich herunter</td></tr>
+          <tr><td><strong>Seile &amp; Mauern</strong></td><td>–</td><td>Klettern und Mantling öffnen Dächer und Flanken — die Karte ist in drei Dimensionen gebaut</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Faustregel: Halte immer <strong>mindestens einen Ausdauer-Balken als Fluchtreserve</strong> zurück. Und beobachte, wie viele Dashes dein Duell-Gegner schon verbraucht hat — wer leer ist, ist ein leichtes Ziel.</p>
+
+    <h2 id="einsteiger"><span class="h-deco" aria-hidden="true"></span>Tipps für die ersten Matches</h2>
+    <ul>
+      <li>Spiele zuerst <a href="helden.html">Helden mit ★-Komplexität</a> — Abrams, Seven oder Infernus verzeihen Fehler und bringen dir die Grundlagen bei.</li>
+      <li>Fokussiere dich die ersten zehn Matches nur auf <strong>Last Hits und Seelenkugeln</strong>. Mechanik kommt vor Taktik.</li>
+      <li>Kauf regelmäßig ein! Der häufigste Anfängerfehler ist, mit 5.000 ungenutzten Seelen herumzulaufen. Der <a href="items.html#einsteiger">Einsteiger-Guide der Item-Seite</a> zeigt sichere erste Käufe.</li>
+      <li>Stirb nicht für Kills. Ein Trade 1-gegen-1 lohnt fast nie — dein Todes-Timer ist verlorene Farm-Zeit.</li>
+      <li>Schau auf die Minimap, bevor du vorrückst: Wenn drei Gegner „fehlen“, warten sie meist genau auf dich.</li>
+    </ul>
+
+    <div class="notice">
+      <span aria-hidden="true" style="color:var(--brass);font-weight:700;">✦</span>
+      <span><strong>Hinweis:</strong> Deadlock befindet sich in aktiver Entwicklung — Timings, Objectives und Mechaniken ändern sich mit jedem größeren Patch. Melde veraltete Angaben auf der Diskussionsseite.</span>
+    </div>
+
+    <div class="cat-footer">
+      <span class="cat-label">Kategorien:</span>
+      <a class="cat-pill" href="gameplay.html">Spielmechanik</a>
+      <a class="cat-pill" href="items.html">Gegenstände</a>
+      <a class="cat-pill" href="karte.html">Spielwelt</a>
+      <a class="cat-pill redlink" href="#" title="Diese Seite existiert noch nicht">Guides</a>
+    </div>
+  </main>
+</div>
+
+<footer class="wikifoot">
+  <div class="wikifoot-inner">
+    <p><strong>Deadlock Wiki</strong> ist ein inoffizielles Fan-Projekt und steht in keiner Verbindung zur Valve Corporation.</p>
+    <p>Deadlock sowie alle zugehörigen Grafiken und Namen sind Eigentum der Valve Corporation. Inhalte der Community stehen unter CC&nbsp;BY-SA, sofern nicht anders angegeben.</p>
+    <p><a href="index.html">Hauptseite</a> · <a href="helden.html">Helden</a> · <a href="items.html">Items</a> · <a href="gameplay.html">Gameplay</a> · <a href="karte.html">Karte</a> · <a href="#">Impressum</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karte – Deadlock Wiki</title>
+<meta name="description" content="Die interaktive Karte von Deadlock: Lanes, Kuriositätenläden, Mid-Boss-Grube, Urnen-Route und alle wichtigen Orte des okkulten New York.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="index.html">DEADLOCK<span class="wm-wiki">&nbsp;WIKI</span></a>
+    <div class="wordmark-rule" aria-hidden="true"><span class="wm-diamond"></span></div>
+    <p class="tagline">Die von Fans geschriebene Enzyklopädie zur okkulten Unterwelt von New York.</p>
+    <form class="searchform" action="helden.html" role="search">
+      <input type="search" name="q" placeholder="Deadlock Wiki durchsuchen …" aria-label="Wiki durchsuchen">
+      <button type="submit">Suchen</button>
+    </form>
+  </div>
+  <nav class="localnav" aria-label="Wiki-Navigation">
+    <div class="localnav-inner">
+      <a href="index.html">Hauptseite</a>
+      <a href="helden.html">Helden</a>
+      <a href="items.html">Items</a>
+      <a href="gameplay.html">Gameplay</a>
+      <a href="karte.html" aria-current="page">Karte</a>
+      <a href="#" class="redlink" title="Diese Seite existiert noch nicht – hilf mit, sie zu schreiben!">Community</a>
+      <span class="nav-stats">1.284 Artikel &middot; 4.107 Dateien</span>
+    </div>
+  </nav>
+</header>
+
+<div class="shell">
+  <main>
+    <div class="article-actions">
+      <a class="aa-btn aa-btn--primary" href="#">Bearbeiten</a>
+      <a class="aa-btn" href="#">Versionsgeschichte</a>
+      <a class="aa-btn" href="#">Diskussion (11)</a>
+      <span class="aa-meta">Zuletzt bearbeitet von <a href="#">PatronSaint</a> heute um 10:31</span>
+    </div>
+
+    <p class="page-sub">Spielwelt</p>
+    <h1 class="page-title">Die Karte</h1>
+    <p class="lead">Gekämpft wird in den Straßen eines okkulten New York: Drei <strong>Lanes</strong> verbinden die beiden Basen, dazwischen liegen Seitengassen, Dächer, unterirdische Gänge — und eine Handvoll Orte, die jedes Match entscheiden können. <strong>Fahre mit der Maus über die Markierungen</strong> (oder tippe sie an), um Details und einen vergrößerten Kartenausschnitt zu sehen.</p>
+
+    <div class="map-stage" id="map-stage">
+      <img src="assets/map/minimap.png" alt="Übersichtskarte von Deadlock mit drei Lanes zwischen den beiden Basen" id="map-img">
+
+      <button class="hotspot hotspot--danger" style="left:45%;top:11%" data-title="Patron (Bernstein-Hand)" data-desc="Das oberste Ziel: Wer den gegnerischen Patron zerstört, gewinnt das Match. Er wehrt sich — angeschlagen zieht er sich geschwächt in die Basis zurück."></button>
+      <button class="hotspot" style="left:35%;top:5%" data-title="Basis &amp; Schreine" data-desc="Spawn, Basis-Shop und die beiden Schreine. Erst wenn mindestens ein Schrein fällt, wird der Patron verwundbar."></button>
+      <button class="hotspot hotspot--objective" style="left:25%;top:25%" data-title="Walker (linke Lane)" data-desc="Die zweite Verteidigungslinie jeder Lane. Ein zerstörter Walker schaltet einen Flex-Slot für dein Team frei und öffnet die gegnerische Kartenhälfte."></button>
+      <button class="hotspot hotspot--objective" style="left:45%;top:25%" data-title="Walker (mittlere Lane)" data-desc="Walker stampfen und schlagen zurück — unterschätze sie nicht ohne Trooper-Unterstützung."></button>
+      <button class="hotspot hotspot--objective" style="left:65%;top:25%" data-title="Walker (rechte Lane)" data-desc="Jede Lane hat ihren eigenen Walker. Fällt er, rückt die Front bis vor die gegnerische Basis."></button>
+      <button class="hotspot hotspot--objective" style="left:21%;top:41%" data-title="Guardian (linke Lane)" data-desc="Der erste Turm jeder Lane. Er bestraft Gegner, die unter ihm angreifen — dein sicherer Rückzugsort in der Lane-Phase. Sein Fall schaltet einen Flex-Slot frei."></button>
+      <button class="hotspot hotspot--objective" style="left:45%;top:41%" data-title="Guardian (mittlere Lane)" data-desc="Die Mitte ist die kürzeste Lane — hier fällt der erste Guardian oft am schnellsten."></button>
+      <button class="hotspot hotspot--objective" style="left:65%;top:41%" data-title="Guardian (rechte Lane)" data-desc="Gegner unter dem eigenen Guardian zu erledigen ist riskant für sie — nutze das aus."></button>
+      <button class="hotspot hotspot--danger" style="left:50%;top:46%" data-title="Mid-Boss-Grube" data-desc="Im Untergeschoss der Kartenmitte haust der Mid-Boss. Wer ihn besiegt, sichert seinem Team den Rejuvenator — einen mächtigen Team-Buff, der Matches dreht."></button>
+      <button class="hotspot" style="left:30%;top:47%" data-title="Kuriositätenladen (West)" data-desc="Einer der Läden im Niemandsland: Hier kaufst du Items, ohne in die Basis zurückzukehren. Merke dir die Positionen — sie sparen wertvolle Zeit."></button>
+      <button class="hotspot" style="left:70%;top:47%" data-title="Kuriositätenladen (Ost)" data-desc="Das östliche Gegenstück. Vorsicht: Gegner wissen auch, wo die Läden sind — und lauern dort gern."></button>
+      <button class="hotspot" style="left:84%;top:46%" data-title="Sünderopfer (Urne)" data-desc="Die Urne erscheint im Mittelspiel am Kartenrand. Wer sie aufnimmt, wird auf der Karte sichtbar und muss sie zum Altar auf der Gegenseite tragen — die Belohnung: Seelen fürs ganze Team."></button>
+      <button class="hotspot" style="left:16%;top:54%" data-title="Abgabe-Altar" data-desc="Hier wird die Urne abgeliefert. Der Träger ist auf dem Weg verwundbar — eskortiere ihn oder fange den gegnerischen Träger ab."></button>
+      <button class="hotspot" style="left:45%;top:88%" data-title="Zipline-Terminal" data-desc="Ziplines verlaufen entlang jeder Lane und bringen dich in Sekunden an die Front. Nach dem Tod erhältst du kurzzeitig einen Zipline-Boost."></button>
+      <button class="hotspot hotspot--danger" style="left:45%;top:82%" data-title="Patron (Saphir-Hand)" data-desc="Der eigene Patron. Verteidige ihn bis zuletzt — solange die Schreine stehen, ist er unverwundbar."></button>
+
+      <div class="map-tip" id="map-tip" role="status">
+        <div class="tip-img" id="tip-img"></div>
+        <div class="tip-body">
+          <span class="tip-title" id="tip-title"></span>
+          <span class="tip-desc" id="tip-desc"></span>
+        </div>
+      </div>
+    </div>
+
+    <ul class="map-legend">
+      <li><span class="lg-dot" aria-hidden="true"></span>Orte &amp; Einrichtungen</li>
+      <li><span class="lg-dot lg-dot--objective" aria-hidden="true"></span>Zerstörbare Objectives</li>
+      <li><span class="lg-dot lg-dot--danger" aria-hidden="true"></span>Bosse &amp; Patrone</li>
+    </ul>
+
+    <h2 id="lanes"><span class="h-deco" aria-hidden="true"></span>Die drei Lanes</h2>
+    <p>Seit der großen Kartenüberarbeitung kämpfen beide Teams auf <strong>drei Lanes</strong>, die von Ziplines gesäumt werden. Jede Lane folgt demselben Aufbau: vorn der <strong>Guardian</strong>, dahinter der <strong>Walker</strong>, am Ende die Basis mit <strong>Schreinen</strong> und <strong>Patron</strong>. Zwischen den Lanes liegt das Niemandsland aus Gassen, Läden und Camps — wer es kontrolliert, kontrolliert die Rotationen.</p>
+    <p>Die mittlere Lane ist die kürzeste Verbindung zwischen den Basen und gleichzeitig der schnellste Weg zur <strong>Mid-Boss-Grube</strong>. Die Außen-Lanes bieten dafür mehr Deckung und direkten Zugang zu Urnen-Route und Läden.</p>
+
+    <h2 id="orte"><span class="h-deco" aria-hidden="true"></span>Wichtige Orte im Detail</h2>
+
+    <h3>Der Kuriositätenladen</h3>
+    <p>In den Läden gibst du deine Seelen aus — im Spiel einfach das Shop-Terminal benutzen. Neben den Shops in der eigenen Basis gibt es <strong>Läden im Niemandsland</strong> (auf der Karte markiert): Sie ersparen dir den Rückweg und halten dich länger auf der Karte. Profis planen ihre Einkäufe um diese Positionen herum.</p>
+
+    <h3>Die Mid-Boss-Grube</h3>
+    <p>Ab dem Mittelspiel liegt hier das wertvollste neutrale Objective des Spiels. Der <strong>Mid-Boss</strong> ist zäh und der Kampf laut — rechne immer damit, dass das gegnerische Team den Kampf klaut. Die Belohnung, der <strong>Rejuvenator</strong>, gewährt dem gesamten Team einen mächtigen, minutenlangen Stärkungseffekt und leitet häufig den entscheidenden Push ein.</p>
+
+    <h3>Die Urnen-Route</h3>
+    <p>Das <strong>Sünderopfer</strong> („die Urne“) erscheint regelmäßig am Kartenrand und muss quer über die Karte zum Altar getragen werden. Der Träger ist für alle sichtbar — die Route führt gefährlich nah an der gegnerischen Hälfte vorbei. Als Team eskortiert bringt die Urne einen ordentlichen Seelen-Schub; unbegleitet ist sie eine Einladung zum Gank.</p>
+
+    <h3>Ziplines &amp; Untergrund</h3>
+    <p>Die <strong>Ziplines</strong> entlang der Lanes sind das schnellste Fortbewegungsmittel — aber du bist auf ihnen angreifbar und wirst heruntergeschossen, wenn du getroffen wirst. Ergänzend verbinden <strong>unterirdische Gänge und Seitengassen</strong> die Lanes miteinander; wer sie kennt, rotiert unbemerkt und entkommt aussichtslosen Kämpfen.</p>
+
+    <div class="notice">
+      <span aria-hidden="true" style="color:var(--brass);font-weight:700;">✦</span>
+      <span><strong>Hinweis:</strong> Valve baut die Karte regelmäßig um — Positionen von Läden, Camps und Urnen-Route können sich mit Patches verschieben. Die Markierungen zeigen den aktuellen Stand, Abweichungen bitte auf der Diskussionsseite melden.</span>
+    </div>
+
+    <div class="cat-footer">
+      <span class="cat-label">Kategorien:</span>
+      <a class="cat-pill" href="karte.html">Spielwelt</a>
+      <a class="cat-pill" href="gameplay.html">Spielmechanik</a>
+      <a class="cat-pill redlink" href="#" title="Diese Seite existiert noch nicht">Orte</a>
+    </div>
+  </main>
+</div>
+
+<footer class="wikifoot">
+  <div class="wikifoot-inner">
+    <p><strong>Deadlock Wiki</strong> ist ein inoffizielles Fan-Projekt und steht in keiner Verbindung zur Valve Corporation.</p>
+    <p>Deadlock sowie alle zugehörigen Grafiken und Namen sind Eigentum der Valve Corporation. Inhalte der Community stehen unter CC&nbsp;BY-SA, sofern nicht anders angegeben.</p>
+    <p><a href="index.html">Hauptseite</a> · <a href="helden.html">Helden</a> · <a href="items.html">Items</a> · <a href="gameplay.html">Gameplay</a> · <a href="karte.html">Karte</a> · <a href="#">Impressum</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var stage = document.getElementById("map-stage");
+  var tip = document.getElementById("map-tip");
+  var tipImg = document.getElementById("tip-img");
+  var tipTitle = document.getElementById("tip-title");
+  var tipDesc = document.getElementById("tip-desc");
+  var hotspots = stage.querySelectorAll(".hotspot");
+
+  function show(spot) {
+    var x = parseFloat(spot.style.left);
+    var y = parseFloat(spot.style.top);
+    tipTitle.textContent = spot.dataset.title;
+    tipDesc.textContent = spot.dataset.desc;
+    // Gezoomter Kartenausschnitt: background-position in % zentriert
+    // denselben Punkt der Karte im Vorschaufenster.
+    tipImg.style.backgroundPosition = x + "% " + y + "%";
+
+    var W = stage.clientWidth, H = stage.clientHeight;
+    var px = x / 100 * W, py = y / 100 * H;
+    var left = px + 18, top = py - 40;
+    if (left + 250 > W) left = px - 258;
+    if (top < 8) top = 8;
+    if (top + 200 > H) top = H - 200;
+    tip.style.left = left + "px";
+    tip.style.top = top + "px";
+    tip.classList.add("visible");
+  }
+  function hide() { tip.classList.remove("visible"); }
+
+  hotspots.forEach(function (spot) {
+    spot.addEventListener("mouseenter", function () { show(spot); });
+    spot.addEventListener("focus", function () { show(spot); });
+    spot.addEventListener("mouseleave", hide);
+    spot.addEventListener("blur", hide);
+    spot.addEventListener("click", function (e) { e.preventDefault(); show(spot); });
+  });
+  stage.addEventListener("mouseleave", hide);
+})();
+</script>
+
+</body>
+</html>
