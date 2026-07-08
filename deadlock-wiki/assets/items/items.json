@@ -1,218 +1,1559 @@
 [
  {
-  "slug": "close-quarters",
-  "name": "Close Quarters",
-  "slot": "weapon",
-  "tier": 1,
-  "cost": 800,
-  "active": false,
-  "ok": true
- },
- {
-  "slug": "extended-magazine",
+  "id": 1548066885,
   "name": "Extended Magazine",
+  "slug": "extended-magazine",
   "slot": "weapon",
   "tier": 1,
   "cost": 800,
-  "active": false,
-  "ok": true
+  "active": false
  },
  {
-  "slug": "active-reload",
-  "name": "Active Reload",
+  "id": 1009965641,
+  "name": "Monster Rounds",
+  "slug": "monster-rounds",
   "slot": "weapon",
-  "tier": 2,
-  "cost": 1600,
-  "active": false,
-  "ok": true
+  "tier": 1,
+  "cost": 800,
+  "active": false
  },
  {
-  "slug": "fleetfoot",
-  "name": "Fleetfoot",
-  "slot": "weapon",
-  "tier": 2,
-  "cost": 1600,
-  "active": true,
-  "ok": true
- },
- {
-  "slug": "alchemical-fire",
-  "name": "Alchemical Fire",
+  "id": 709540378,
+  "name": "Cultist Sacrifice",
+  "slug": "cultist-sacrifice",
   "slot": "weapon",
   "tier": 3,
   "cost": 3200,
-  "active": true,
-  "ok": true
+  "active": true
  },
  {
-  "slug": "ballistic-enchantment",
-  "name": "Ballistic Enchantment",
+  "id": 811521119,
+  "name": "Tesla Bullets",
+  "slug": "tesla-bullets",
   "slot": "weapon",
   "tier": 3,
   "cost": 3200,
-  "active": false,
-  "ok": true
+  "active": false
  },
  {
-  "slug": "armor-piercing-rounds",
-  "name": "Armor Piercing Rounds",
-  "slot": "weapon",
-  "tier": 4,
-  "cost": 6400,
-  "active": false,
-  "ok": true
- },
- {
-  "slug": "capacitor",
+  "id": 710436191,
   "name": "Capacitor",
+  "slug": "capacitor",
   "slot": "weapon",
   "tier": 4,
   "cost": 6400,
-  "active": true,
-  "ok": true
+  "active": true
  },
  {
-  "slug": "extra-health",
-  "name": "Extra Health",
-  "slot": "vitality",
-  "tier": 1,
-  "cost": 800,
-  "active": false,
-  "ok": true
- },
- {
-  "slug": "extra-regen",
-  "name": "Extra Regen",
-  "slot": "vitality",
-  "tier": 1,
-  "cost": 800,
-  "active": false,
-  "ok": true
- },
- {
-  "slug": "battle-vest",
-  "name": "Battle Vest",
-  "slot": "vitality",
-  "tier": 2,
-  "cost": 1600,
-  "active": false,
-  "ok": true
- },
- {
-  "slug": "bullet-lifesteal",
-  "name": "Bullet Lifesteal",
-  "slot": "vitality",
-  "tier": 2,
-  "cost": 1600,
-  "active": false,
-  "ok": true
- },
- {
-  "slug": "bullet-resilience",
-  "name": "Bullet Resilience",
-  "slot": "vitality",
+  "id": 2678489038,
+  "name": "Hollow Point",
+  "slug": "hollow-point",
+  "slot": "weapon",
   "tier": 3,
   "cost": 3200,
-  "active": false,
-  "ok": true
+  "active": false
  },
  {
-  "slug": "counterspell",
+  "id": 2064029594,
+  "name": "Opening Rounds",
+  "slug": "opening-rounds",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 3077079169,
+  "name": "High-Velocity Rounds",
+  "slug": "high-velocity-rounds",
+  "slot": "weapon",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 1437614329,
+  "name": "Melee Lifesteal",
+  "slug": "melee-lifesteal",
+  "slot": "vitality",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 4204808176,
+  "name": "Rebuttal",
+  "slug": "rebuttal",
+  "slot": "vitality",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 1414025773,
   "name": "Counterspell",
+  "slug": "counterspell",
   "slot": "vitality",
   "tier": 3,
   "cost": 3200,
-  "active": false,
-  "ok": true
+  "active": false
  },
  {
-  "slug": "cheat-death",
-  "name": "Cheat Death",
-  "slot": "vitality",
-  "tier": 4,
-  "cost": 6400,
-  "active": false,
-  "ok": true
+  "id": 3791587546,
+  "name": "Weighted Shots",
+  "slug": "weighted-shots",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
  },
  {
-  "slug": "colossus",
-  "name": "Colossus",
-  "slot": "vitality",
-  "tier": 4,
-  "cost": 6400,
-  "active": true,
-  "ok": true
- },
- {
-  "slug": "extra-charge",
-  "name": "Extra Charge",
-  "slot": "spirit",
+  "id": 1342610602,
+  "name": "Close Quarters",
+  "slug": "close-quarters",
+  "slot": "weapon",
   "tier": 1,
   "cost": 800,
-  "active": false,
-  "ok": true
+  "active": false
  },
  {
-  "slug": "extra-spirit",
+  "id": 3331811235,
+  "name": "Long Range",
+  "slug": "long-range",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 393974127,
+  "name": "Slowing Bullets",
+  "slug": "slowing-bullets",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 2037039379,
+  "name": "Inhibitor",
+  "slug": "inhibitor",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 1144549437,
+  "name": "Spirit Shredder Bullets",
+  "slug": "spirit-shredder-bullets",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 2108215830,
+  "name": "Heroic Aura",
+  "slug": "heroic-aura",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 619484391,
+  "name": "Silence Wave",
+  "slug": "silence-wave",
+  "slot": "spirit",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 1113837674,
+  "name": "Silencer",
+  "slug": "silencer",
+  "slot": "weapon",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 1414319208,
+  "name": "Berserker",
+  "slug": "berserker",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 339443430,
+  "name": "Frenzy",
+  "slug": "frenzy",
+  "slot": "weapon",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 1282141666,
+  "name": "Siphon Bullets",
+  "slug": "siphon-bullets",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 2010028405,
+  "name": "Headshot Booster",
+  "slug": "headshot-booster",
+  "slot": "weapon",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 1770441818,
+  "name": "Weakening Headshot",
+  "slug": "weakening-headshot",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 2152872419,
+  "name": "Sharpshooter",
+  "slug": "sharpshooter",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 4053935515,
+  "name": "Headhunter",
+  "slug": "headhunter",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 4075861416,
+  "name": "Spirit Rend",
+  "slug": "spirit-rend",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 3884003354,
+  "name": "Crippling Headshot",
+  "slug": "crippling-headshot",
+  "slot": "weapon",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 395867183,
+  "name": "Mystic Shot",
+  "slug": "mystic-shot",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 1396247347,
+  "name": "Lucky Shot",
+  "slug": "lucky-shot",
+  "slot": "weapon",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 2095565695,
+  "name": "Point Blank",
+  "slug": "point-blank",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 3696726732,
+  "name": "Toxic Bullets",
+  "slug": "toxic-bullets",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 2480592370,
+  "name": "Ricochet",
+  "slug": "ricochet",
+  "slot": "weapon",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 3633614685,
+  "name": "Extra Health",
+  "slug": "extra-health",
+  "slot": "vitality",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 499683006,
+  "name": "Bullet Lifesteal",
+  "slug": "bullet-lifesteal",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 1047818222,
+  "name": "Debuff Reducer",
+  "slug": "debuff-reducer",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 3731635960,
+  "name": "Dispel Magic",
+  "slug": "dispel-magic",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 2163598980,
+  "name": "Spirit Resilience",
+  "slug": "spirit-resilience",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 3140772621,
+  "name": "Bullet Resilience",
+  "slug": "bullet-resilience",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 1378931225,
+  "name": "Metal Skin",
+  "slug": "metal-skin",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 2566692615,
+  "name": "Healing Booster",
+  "slug": "healing-booster",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 3585132399,
+  "name": "Fortitude",
+  "slug": "fortitude",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 865846625,
+  "name": "Leech",
+  "slug": "leech",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 3399065363,
+  "name": "Sprint Boots",
+  "slug": "sprint-boots",
+  "slot": "vitality",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 3074274290,
+  "name": "Trophy Collector",
+  "slug": "trophy-collector",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 2447176615,
+  "name": "Enduring Speed",
+  "slug": "enduring-speed",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 334300056,
+  "name": "Stamina Mastery",
+  "slug": "stamina-mastery",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 668299740,
+  "name": "Rapid Rounds",
+  "slug": "rapid-rounds",
+  "slot": "weapon",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 4139877411,
+  "name": "Extra Stamina",
+  "slug": "extra-stamina",
+  "slot": "vitality",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 2481177645,
+  "name": "Hunter's Aura",
+  "slug": "hunter-s-aura",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 1672893796,
+  "name": "Grit",
+  "slug": "grit",
+  "slot": "vitality",
+  "tier": 1,
+  "cost": 800,
+  "active": true
+ },
+ {
+  "id": 805079544,
+  "name": "Weapon Shielding",
+  "slug": "weapon-shielding",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 112198670,
+  "name": "Spirit Shielding",
+  "slug": "spirit-shielding",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 1235347618,
+  "name": "Battle Vest",
+  "slug": "battle-vest",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 3970837787,
+  "name": "Enchanter's Emblem",
+  "slug": "enchanter-s-emblem",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 968099481,
   "name": "Extra Spirit",
+  "slug": "extra-spirit",
   "slot": "spirit",
   "tier": 1,
   "cost": 800,
-  "active": false,
-  "ok": true
+  "active": false
  },
  {
-  "slug": "arcane-surge",
-  "name": "Arcane Surge",
+  "id": 1439347412,
+  "name": "Mystic Regeneration",
+  "slug": "mystic-regeneration",
+  "slot": "spirit",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 7409189,
+  "name": "Improved Spirit",
+  "slug": "improved-spirit",
   "slot": "spirit",
   "tier": 2,
   "cost": 1600,
-  "active": false,
-  "ok": true
+  "active": false
  },
  {
-  "slug": "bullet-resist-shredder",
+  "id": 2226497419,
+  "name": "Spiritual Overflow",
+  "slug": "spiritual-overflow",
+  "slot": "weapon",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 3361075077,
+  "name": "Return Fire",
+  "slug": "return-fire",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": true
+ },
+ {
+  "id": 1193964439,
+  "name": "Greater Expansion",
+  "slug": "greater-expansion",
+  "slot": "spirit",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 754480263,
+  "name": "Mystic Expansion",
+  "slug": "mystic-expansion",
+  "slot": "spirit",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 3776945997,
+  "name": "Extra Charge",
+  "slug": "extra-charge",
+  "slot": "spirit",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 876563814,
+  "name": "Spirit Lifesteal",
+  "slug": "spirit-lifesteal",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 2971868509,
   "name": "Bullet Resist Shredder",
+  "slug": "bullet-resist-shredder",
   "slot": "spirit",
   "tier": 2,
   "cost": 1600,
-  "active": false,
-  "ok": true
+  "active": false
  },
  {
-  "slug": "decay",
-  "name": "Decay",
+  "id": 3577481646,
+  "name": "Mystic Reverb",
+  "slug": "mystic-reverb",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 1998374645,
+  "name": "Mystic Burst",
+  "slug": "mystic-burst",
+  "slot": "spirit",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 2121044373,
+  "name": "Tankbuster",
+  "slug": "tankbuster",
   "slot": "spirit",
   "tier": 3,
   "cost": 3200,
-  "active": true,
-  "ok": true
+  "active": false
  },
  {
-  "slug": "disarming-hex",
+  "id": 2081037738,
+  "name": "Mystic Vulnerability",
+  "slug": "mystic-vulnerability",
+  "slot": "spirit",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 2603935618,
+  "name": "Healbane",
+  "slug": "healbane",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 1102081447,
+  "name": "Mystic Slow",
+  "slug": "mystic-slow",
+  "slot": "spirit",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 3005970438,
+  "name": "Escalating Exposure",
+  "slug": "escalating-exposure",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 787198704,
+  "name": "Rapid Recharge",
+  "slug": "rapid-recharge",
+  "slot": "spirit",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 424779525,
+  "name": "Omnicharge Signet",
+  "slug": "omnicharge-signet",
+  "slot": "spirit",
+  "tier": 5,
+  "cost": 9999,
+  "active": false
+ },
+ {
+  "id": 380806748,
+  "name": "Compress Cooldown",
+  "slug": "compress-cooldown",
+  "slot": "spirit",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 3261353684,
+  "name": "Superior Cooldown",
+  "slug": "superior-cooldown",
+  "slot": "spirit",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 915014646,
+  "name": "Transcendent Cooldown",
+  "slug": "transcendent-cooldown",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 1813726886,
+  "name": "Slowing Hex",
+  "slug": "slowing-hex",
+  "slot": "spirit",
+  "tier": 2,
+  "cost": 1600,
+  "active": true
+ },
+ {
+  "id": 1219329868,
+  "name": "Spirit Sap",
+  "slug": "spirit-sap",
+  "slot": "spirit",
+  "tier": 2,
+  "cost": 1600,
+  "active": true
+ },
+ {
+  "id": 2142980412,
+  "name": "Focus Lens",
+  "slug": "focus-lens",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": true
+ },
+ {
+  "id": 2922054143,
+  "name": "Rusted Barrel",
+  "slug": "rusted-barrel",
+  "slot": "spirit",
+  "tier": 1,
+  "cost": 800,
+  "active": true
+ },
+ {
+  "id": 2061878743,
   "name": "Disarming Hex",
+  "slug": "disarming-hex",
   "slot": "spirit",
   "tier": 3,
   "cost": 3200,
-  "active": true,
-  "ok": true
+  "active": true
  },
  {
-  "slug": "arctic-blast",
+  "id": 1804594021,
+  "name": "Rescue Beam",
+  "slug": "rescue-beam",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 3144988365,
+  "name": "Decay",
+  "slug": "decay",
+  "slot": "spirit",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 2417568017,
+  "name": "Scourge",
+  "slug": "scourge",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": true
+ },
+ {
+  "id": 1254091416,
+  "name": "Knockdown",
+  "slug": "knockdown",
+  "slot": "spirit",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 1371725689,
+  "name": "Phantom Strike",
+  "slug": "phantom-strike",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": true
+ },
+ {
+  "id": 3270001687,
+  "name": "Warp Stone",
+  "slug": "warp-stone",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 1152158042,
+  "name": "Vortex Web",
+  "slug": "vortex-web",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": true
+ },
+ {
+  "id": 677738769,
+  "name": "Refresher",
+  "slug": "refresher",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": true
+ },
+ {
+  "id": 630839635,
+  "name": "Echo Shard",
+  "slug": "echo-shard",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": true
+ },
+ {
+  "id": 395944548,
+  "name": "Torment Pulse",
+  "slug": "torment-pulse",
+  "slot": "spirit",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 3361811174,
+  "name": "Cheat Death",
+  "slug": "cheat-death",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 1798666702,
+  "name": "Shadow Weave",
+  "slug": "shadow-weave",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 600033864,
+  "name": "Majestic Leap",
+  "slug": "majestic-leap",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 2956256701,
+  "name": "Healing Nova",
+  "slug": "healing-nova",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 2059712766,
+  "name": "Restorative Locket",
+  "slug": "restorative-locket",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": true
+ },
+ {
+  "id": 1710079648,
+  "name": "Healing Rite",
+  "slug": "healing-rite",
+  "slot": "vitality",
+  "tier": 1,
+  "cost": 800,
+  "active": true
+ },
+ {
+  "id": 4121584236,
+  "name": "Shrink Ray",
+  "slug": "shrink-ray",
+  "slot": "spirit",
+  "tier": 5,
+  "cost": 9999,
+  "active": true
+ },
+ {
+  "id": 1797283378,
+  "name": "Infuser",
+  "slug": "infuser",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": true
+ },
+ {
+  "id": 857669956,
+  "name": "Guardian Ward",
+  "slug": "guardian-ward",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": true
+ },
+ {
+  "id": 1662311306,
+  "name": "Divine Barrier",
+  "slug": "divine-barrier",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": true
+ },
+ {
+  "id": 1932939246,
+  "name": "Alchemical Fire",
+  "slug": "alchemical-fire",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 989206714,
+  "name": "Blood Tribute",
+  "slug": "blood-tribute",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 3403085434,
+  "name": "Fleetfoot",
+  "slug": "fleetfoot",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": true
+ },
+ {
+  "id": 3977876567,
+  "name": "Kinetic Dash",
+  "slug": "kinetic-dash",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 1150006784,
+  "name": "Arcane Surge",
+  "slug": "arcane-surge",
+  "slot": "spirit",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 3357231760,
+  "name": "Unstoppable",
+  "slug": "unstoppable",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": true
+ },
+ {
+  "id": 2407781327,
+  "name": "Colossus",
+  "slug": "colossus",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": true
+ },
+ {
+  "id": 1976391348,
+  "name": "Cold Front",
+  "slug": "cold-front",
+  "slot": "spirit",
+  "tier": 2,
+  "cost": 1600,
+  "active": true
+ },
+ {
+  "id": 3812615317,
   "name": "Arctic Blast",
+  "slug": "arctic-blast",
   "slot": "spirit",
   "tier": 4,
   "cost": 6400,
-  "active": true,
-  "ok": true
+  "active": true
  },
  {
-  "slug": "boundless-spirit",
-  "name": "Boundless Spirit",
+  "id": 2533252781,
+  "name": "Ethereal Shift",
+  "slug": "ethereal-shift",
   "slot": "spirit",
   "tier": 4,
   "cost": 6400,
-  "active": false,
-  "ok": true
+  "active": true
+ },
+ {
+  "id": 2617435668,
+  "name": "Cursed Relic",
+  "slug": "cursed-relic",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": true
+ },
+ {
+  "id": 2951612397,
+  "name": "Duration Extender",
+  "slug": "duration-extender",
+  "slot": "spirit",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 2717651715,
+  "name": "Superior Duration",
+  "slug": "superior-duration",
+  "slot": "spirit",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 365620721,
+  "name": "Glass Cannon",
+  "slug": "glass-cannon",
+  "slot": "weapon",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 1409190604,
+  "name": "Fury Trance",
+  "slug": "fury-trance",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": true
+ },
+ {
+  "id": 1055679805,
+  "name": "Vampiric Burst",
+  "slug": "vampiric-burst",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": true
+ },
+ {
+  "id": 1252627263,
+  "name": "Lifestrike",
+  "slug": "lifestrike",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 465043967,
+  "name": "Spirit Strike",
+  "slug": "spirit-strike",
+  "slot": "spirit",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 3190916303,
+  "name": "Spirit Snatch",
+  "slug": "spirit-snatch",
+  "slot": "spirit",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 26002154,
+  "name": "Melee Charge",
+  "slug": "melee-charge",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 800008313,
+  "name": "Crushing Fists",
+  "slug": "crushing-fists",
+  "slot": "weapon",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 2820116164,
+  "name": "Diviner's Kevlar",
+  "slug": "diviner-s-kevlar",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 2947183272,
+  "name": "Radiant Regeneration",
+  "slug": "radiant-regeneration",
+  "slot": "spirit",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 2519598785,
+  "name": "Boundless Spirit",
+  "slug": "boundless-spirit",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 2739107182,
+  "name": "Burst Fire",
+  "slug": "burst-fire",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 2829638276,
+  "name": "Extra Regen",
+  "slug": "extra-regen",
+  "slot": "vitality",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 1292979587,
+  "name": "Surge of Power",
+  "slug": "surge-of-power",
+  "slot": "spirit",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 1925087134,
+  "name": "Suppressor",
+  "slug": "suppressor",
+  "slot": "spirit",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 84321454,
+  "name": "Quicksilver Reload",
+  "slug": "quicksilver-reload",
+  "slot": "spirit",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 3919289022,
+  "name": "Mercurial Magnum",
+  "slug": "mercurial-magnum",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 2407033488,
+  "name": "Intensifying Magazine",
+  "slug": "intensifying-magazine",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 2463960640,
+  "name": "Escalating Resilience",
+  "slug": "escalating-resilience",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 4104549924,
+  "name": "Swift Striker",
+  "slug": "swift-striker",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 865958998,
+  "name": "Veil Walker",
+  "slug": "veil-walker",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 1644605047,
+  "name": "Reactive Barrier",
+  "slug": "reactive-barrier",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 951866250,
+  "name": "Indomitable",
+  "slug": "indomitable",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 3862866912,
+  "name": "Restorative Shot",
+  "slug": "restorative-shot",
+  "slot": "weapon",
+  "tier": 1,
+  "cost": 800,
+  "active": false
+ },
+ {
+  "id": 2356412290,
+  "name": "Titanic Magazine",
+  "slug": "titanic-magazine",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 3647584222,
+  "name": "Split Shot",
+  "slug": "split-shot",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": true
+ },
+ {
+  "id": 381961617,
+  "name": "Active Reload",
+  "slug": "active-reload",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 2800629741,
+  "name": "Magic Carpet",
+  "slug": "magic-carpet",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": true
+ },
+ {
+  "id": 343572757,
+  "name": "Spirit Burn",
+  "slug": "spirit-burn",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 493591231,
+  "name": "Lightning Scroll",
+  "slug": "lightning-scroll",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 3028234315,
+  "name": "Witchmail",
+  "slug": "witchmail",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 1427630806,
+  "name": "Healing Tempo",
+  "slug": "healing-tempo",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 673001892,
+  "name": "Armor Piercing Rounds",
+  "slug": "armor-piercing-rounds",
+  "slot": "weapon",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 3269957497,
+  "name": "Infinite Rounds",
+  "slug": "infinite-rounds",
+  "slot": "weapon",
+  "tier": 5,
+  "cost": 9999,
+  "active": false
+ },
+ {
+  "id": 3491236900,
+  "name": "Plated Armor",
+  "slug": "plated-armor",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 1955841979,
+  "name": "Spellbreaker",
+  "slug": "spellbreaker",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 1250307611,
+  "name": "Juggernaut",
+  "slug": "juggernaut",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 2221211450,
+  "name": "Spellslinger",
+  "slug": "spellslinger",
+  "slot": "weapon",
+  "tier": 4,
+  "cost": 6400,
+  "active": false
+ },
+ {
+  "id": 98582110,
+  "name": "Stalker",
+  "slug": "stalker",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 690458959,
+  "name": "Express Shot",
+  "slug": "express-shot",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 1736094134,
+  "name": "Seraphim Wings",
+  "slug": "seraphim-wings",
+  "slot": "vitality",
+  "tier": 5,
+  "cost": 9999,
+  "active": false
+ },
+ {
+  "id": 2054088113,
+  "name": "Mystical Piano",
+  "slug": "mystical-piano",
+  "slot": "spirit",
+  "tier": 5,
+  "cost": 9999,
+  "active": true
+ },
+ {
+  "id": 3949773228,
+  "name": "Nullification Burst",
+  "slug": "nullification-burst",
+  "slot": "vitality",
+  "tier": 5,
+  "cost": 9999,
+  "active": true
+ },
+ {
+  "id": 3729138568,
+  "name": "Celestial Blessing",
+  "slug": "celestial-blessing",
+  "slot": "vitality",
+  "tier": 5,
+  "cost": 9999,
+  "active": true
+ },
+ {
+  "id": 230297145,
+  "name": "Eternal Gift",
+  "slug": "eternal-gift",
+  "slot": "vitality",
+  "tier": 5,
+  "cost": 9999,
+  "active": false
+ },
+ {
+  "id": 4050602737,
+  "name": "Mystic Conduit",
+  "slug": "mystic-conduit",
+  "slot": "spirit",
+  "tier": 5,
+  "cost": 9999,
+  "active": false
+ },
+ {
+  "id": 3568217437,
+  "name": "Haunting Shot",
+  "slug": "haunting-shot",
+  "slot": "weapon",
+  "tier": 5,
+  "cost": 9999,
+  "active": false
+ },
+ {
+  "id": 3523480953,
+  "name": "Cloak of Opportunity",
+  "slug": "cloak-of-opportunity",
+  "slot": "vitality",
+  "tier": 5,
+  "cost": 9999,
+  "active": false
+ },
+ {
+  "id": 64550694,
+  "name": "Runed Gauntlets",
+  "slug": "runed-gauntlets",
+  "slot": "weapon",
+  "tier": 5,
+  "cost": 9999,
+  "active": false
+ },
+ {
+  "id": 1825399334,
+  "name": "Electric Slippers",
+  "slug": "electric-slippers",
+  "slot": "vitality",
+  "tier": 5,
+  "cost": 9999,
+  "active": false
+ },
+ {
+  "id": 1132564516,
+  "name": "Prism Blast",
+  "slug": "prism-blast",
+  "slot": "spirit",
+  "tier": 5,
+  "cost": 9999,
+  "active": true
+ },
+ {
+  "id": 1558545403,
+  "name": "Unstable Concoction",
+  "slug": "unstable-concoction",
+  "slot": "spirit",
+  "tier": 5,
+  "cost": 9999,
+  "active": true
+ },
+ {
+  "id": 2068250483,
+  "name": "Frostbite Charm",
+  "slug": "frostbite-charm",
+  "slot": "spirit",
+  "tier": 5,
+  "cost": 9999,
+  "active": false
+ },
+ {
+  "id": 2319629810,
+  "name": "Shadow Strike",
+  "slug": "shadow-strike",
+  "slot": "vitality",
+  "tier": 5,
+  "cost": 9999,
+  "active": false
+ },
+ {
+  "id": 3294954488,
+  "name": "Ballistic Enchantment",
+  "slug": "ballistic-enchantment",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": false
+ },
+ {
+  "id": 1763073141,
+  "name": "Recharging Rush",
+  "slug": "recharging-rush",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false
+ },
+ {
+  "id": 2462046703,
+  "name": "Golden Goose Egg",
+  "slug": "golden-goose-egg",
+  "slot": "spirit",
+  "tier": 1,
+  "cost": 800,
+  "active": true
  }
 ]
