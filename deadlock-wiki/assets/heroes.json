@@ -1,0 +1,572 @@
+[
+ {
+  "slug": "infernus",
+  "name": "Infernus",
+  "type": "marksman",
+  "complexity": 1,
+  "tags": [
+   "Arsonist",
+   "Explosive",
+   "Burn Rubber"
+  ],
+  "gun_tag": "Rapid Fire",
+  "role": "Lights up enemies and watches them burn",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "seven",
+  "name": "Seven",
+  "type": "mystic",
+  "complexity": 1,
+  "tags": [
+   "High Voltage",
+   "Merciless",
+   "Area Denial"
+  ],
+  "gun_tag": "Burst Fire",
+  "role": "Electrocutes crowds of enemies",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "vindicta",
+  "name": "Vindicta",
+  "type": "marksman",
+  "complexity": 1,
+  "tags": [
+   "Sniper",
+   "Soaring",
+   "One Shot Kill"
+  ],
+  "gun_tag": "Long Range",
+  "role": "Snipes the unsuspecting",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "lady-geist",
+  "name": "Lady Geist",
+  "type": "mystic",
+  "complexity": 2,
+  "tags": [
+   "Lifesteal",
+   "Self Damage",
+   "Fatale"
+  ],
+  "gun_tag": "Pistol",
+  "role": "Sacrifices health then drains it back",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "abrams",
+  "name": "Abrams",
+  "type": "brawler",
+  "complexity": 1,
+  "tags": [
+   "Tank",
+   "Brawler",
+   "Bull-Headed"
+  ],
+  "gun_tag": "Shotgun",
+  "role": "Charges into close combat",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "wraith",
+  "name": "Wraith",
+  "type": "marksman",
+  "complexity": 1,
+  "tags": [
+   "Duelist",
+   "Isolator",
+   "Telekinetic"
+  ],
+  "gun_tag": "Rapid Fire",
+  "role": "Melts isolated targets",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "mcginnis",
+  "name": "McGinnis",
+  "type": "mystic",
+  "complexity": 1,
+  "tags": [
+   "Inventor",
+   "Support",
+   "Disruption"
+  ],
+  "gun_tag": "Heavy Artillery",
+  "role": "Controls the battle with combat turrets",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "paradox",
+  "name": "Paradox",
+  "type": "marksman",
+  "complexity": 3,
+  "tags": [
+   "Calculated",
+   "Disruptor",
+   "Tactician"
+  ],
+  "gun_tag": "Burst Fire",
+  "role": "Manipulates Space and Time",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "dynamo",
+  "name": "Dynamo",
+  "type": "mystic",
+  "complexity": 2,
+  "tags": [
+   "Teamplay",
+   "Initiator",
+   "Clutch"
+  ],
+  "gun_tag": "Pistol",
+  "role": "Locks down the enemy team",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "kelvin",
+  "name": "Kelvin",
+  "type": "brawler",
+  "complexity": 2,
+  "tags": [
+   "Protector",
+   "Explorer",
+   "Ice Cold"
+  ],
+  "gun_tag": "Heavy Hitter",
+  "role": "Freezes enemies in their tracks",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "haze",
+  "name": "Haze",
+  "type": "assassin",
+  "complexity": 1,
+  "tags": [
+   "Assassin",
+   "Stealthy",
+   "Lethal"
+  ],
+  "gun_tag": "Rapid Fire",
+  "role": "Sneaks in and sprays bullets",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "holliday",
+  "name": "Holliday",
+  "type": "marksman",
+  "complexity": 3,
+  "tags": [
+   "Crackshot",
+   "Explosive",
+   "Apprehender"
+  ],
+  "gun_tag": "Pistol",
+  "role": "Bounces about dispensing trick shots",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "bebop",
+  "name": "Bebop",
+  "type": "brawler",
+  "complexity": 2,
+  "tags": [
+   "Hook",
+   "Bomb",
+   "Punch"
+  ],
+  "gun_tag": "Beam Weapon",
+  "role": "Hooks an enemy for a knockout combo",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "calico",
+  "name": "Calico",
+  "type": "assassin",
+  "complexity": 2,
+  "tags": [
+   "Tricksy",
+   "Slippery",
+   "Burst Damage"
+  ],
+  "gun_tag": "Spreadshot",
+  "role": "Wreaks havoc from the sidelines",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "grey-talon",
+  "name": "Grey Talon",
+  "type": "marksman",
+  "complexity": 2,
+  "tags": [
+   "Precision",
+   "Hunter",
+   "Area Denial"
+  ],
+  "gun_tag": "Bow",
+  "role": "Delivers long range skill-shots",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "mo-and-krill",
+  "name": "Mo & Krill",
+  "type": "brawler",
+  "complexity": 3,
+  "tags": [
+   "Tag-Team",
+   "Initiator",
+   "Burrower"
+  ],
+  "gun_tag": "Spreadshot",
+  "role": "Burrows underneath his enemies",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "shiv",
+  "name": "Shiv",
+  "type": "brawler",
+  "complexity": 3,
+  "tags": [
+   "Rage",
+   "Bleed",
+   "Repeat"
+  ],
+  "gun_tag": "Spreadshot",
+  "role": "Bleeds out foes, then goes in for a kill",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "ivy",
+  "name": "Ivy",
+  "type": "marksman",
+  "complexity": 3,
+  "tags": [
+   "Team-up",
+   "Disruptor",
+   "Rock Solid"
+  ],
+  "gun_tag": "Rapid Fire",
+  "role": "Sets up a power duo with a lucky ally",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "warden",
+  "name": "Warden",
+  "type": "brawler",
+  "complexity": 2,
+  "tags": [
+   "Initiator",
+   "Fearless",
+   "One Man Army"
+  ],
+  "gun_tag": "Heavy Hitter",
+  "role": "Weakens his enemies and chases them down",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "yamato",
+  "name": "Yamato",
+  "type": "assassin",
+  "complexity": 3,
+  "tags": [
+   "Relentless",
+   "Acrobatics",
+   "Pursuer"
+  ],
+  "gun_tag": "Spreadshot",
+  "role": "Delivers charged attacks with finesse",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "lash",
+  "name": "Lash",
+  "type": "assassin",
+  "complexity": 3,
+  "tags": [
+   "Initiator",
+   "High Flying",
+   "Arrogant"
+  ],
+  "gun_tag": "Burst Fire",
+  "role": "Dives down to stomp his foes",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "viscous",
+  "name": "Viscous",
+  "type": "mystic",
+  "complexity": 2,
+  "tags": [
+   "Evasive",
+   "Disruptor",
+   "Gooey"
+  ],
+  "gun_tag": "Projectile",
+  "role": "Rolls around deflecting bullets",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "pocket",
+  "name": "Pocket",
+  "type": "assassin",
+  "complexity": 2,
+  "tags": [
+   "Trickster",
+   "Burst Damage",
+   "Frogs"
+  ],
+  "gun_tag": "Spreadshot",
+  "role": "Infiltrates and disrupts the backline",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "mirage",
+  "name": "Mirage",
+  "type": "assassin",
+  "complexity": 2,
+  "tags": [
+   "Bodyguard",
+   "Traveller",
+   "Focused"
+  ],
+  "gun_tag": "Pistol",
+  "role": "Times his shots and catches fleeing targets",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "vyper",
+  "name": "Vyper",
+  "type": "assassin",
+  "complexity": 1,
+  "tags": [
+   "Gunner",
+   "Slippery",
+   "Rat-a-Tat"
+  ],
+  "gun_tag": "Rapid Fire",
+  "role": "Slither in and assassinate enemies",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "sinclair",
+  "name": "Sinclair",
+  "type": "mystic",
+  "complexity": 4,
+  "tags": [
+   "Trickster",
+   "Copycat",
+   "Versatile"
+  ],
+  "gun_tag": "Burst Fire",
+  "role": "Misdirect and hex enemies",
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "mina",
+  "name": "Mina",
+  "type": "marksman",
+  "complexity": 3,
+  "tags": [
+   "Harasser",
+   "Nimble",
+   "Vexing"
+  ],
+  "gun_tag": "Pistol",
+  "role": null,
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "drifter",
+  "name": "Drifter",
+  "type": "assassin",
+  "complexity": 3,
+  "tags": [
+   "Stalker",
+   "Bloodthirsty",
+   "Cruel"
+  ],
+  "gun_tag": "Spreadshot",
+  "role": null,
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "venator",
+  "name": "Venator",
+  "type": "marksman",
+  "complexity": 2,
+  "tags": [
+   "Devout",
+   "Arms Expert",
+   "Tactical"
+  ],
+  "gun_tag": "Crossbow",
+  "role": null,
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "victor",
+  "name": "Victor",
+  "type": "brawler",
+  "complexity": 2,
+  "tags": [
+   "You",
+   "Can't",
+   "Kill Me"
+  ],
+  "gun_tag": "Pistol",
+  "role": null,
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "paige",
+  "name": "Paige",
+  "type": "mystic",
+  "complexity": 1,
+  "tags": [
+   "Helpful",
+   "Protector",
+   "Booksmart"
+  ],
+  "gun_tag": "Projectile",
+  "role": null,
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "the-doorman",
+  "name": "The Doorman",
+  "type": "mystic",
+  "complexity": 1,
+  "tags": [
+   "Disorienting",
+   "Map Control",
+   "Mind Games"
+  ],
+  "gun_tag": "Pistol",
+  "role": null,
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "billy",
+  "name": "Billy",
+  "type": "brawler",
+  "complexity": 3,
+  "tags": [
+   "Punk",
+   "Chaotic",
+   "G.O.A.T."
+  ],
+  "gun_tag": "Close Range",
+  "role": null,
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "graves",
+  "name": "Graves",
+  "type": "marksman",
+  "complexity": 2,
+  "tags": [
+   "Morbid",
+   "Area Denial",
+   "Necromancer"
+  ],
+  "gun_tag": "Pistol",
+  "role": null,
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "apollo",
+  "name": "Apollo",
+  "type": "assassin",
+  "complexity": 2,
+  "tags": [
+   "Finesse",
+   "Mobility",
+   "A Cut Above"
+  ],
+  "gun_tag": "Spreadshot",
+  "role": null,
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "rem",
+  "name": "Rem",
+  "type": null,
+  "complexity": 3,
+  "tags": [
+   "Helpful",
+   "Tiny",
+   "zZzzZ"
+  ],
+  "gun_tag": null,
+  "role": null,
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "silver",
+  "name": "Silver",
+  "type": "marksman",
+  "complexity": 1,
+  "tags": [
+   "Feral",
+   "Hot Mess",
+   "Transformation"
+  ],
+  "gun_tag": "Long Range",
+  "role": null,
+  "has_card": true,
+  "has_sm": true
+ },
+ {
+  "slug": "celeste",
+  "name": "Celeste",
+  "type": "marksman",
+  "complexity": 2,
+  "tags": [
+   "Performer",
+   "Disruptive",
+   "Dazzling"
+  ],
+  "gun_tag": "Burst Fire",
+  "role": null,
+  "has_card": true,
+  "has_sm": true
+ }
+]

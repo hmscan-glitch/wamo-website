@@ -1,0 +1,218 @@
+[
+ {
+  "slug": "close-quarters",
+  "name": "Close Quarters",
+  "slot": "weapon",
+  "tier": 1,
+  "cost": 800,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "extended-magazine",
+  "name": "Extended Magazine",
+  "slot": "weapon",
+  "tier": 1,
+  "cost": 800,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "active-reload",
+  "name": "Active Reload",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "fleetfoot",
+  "name": "Fleetfoot",
+  "slot": "weapon",
+  "tier": 2,
+  "cost": 1600,
+  "active": true,
+  "ok": true
+ },
+ {
+  "slug": "alchemical-fire",
+  "name": "Alchemical Fire",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": true,
+  "ok": true
+ },
+ {
+  "slug": "ballistic-enchantment",
+  "name": "Ballistic Enchantment",
+  "slot": "weapon",
+  "tier": 3,
+  "cost": 3200,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "armor-piercing-rounds",
+  "name": "Armor Piercing Rounds",
+  "slot": "weapon",
+  "tier": 4,
+  "cost": 6400,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "capacitor",
+  "name": "Capacitor",
+  "slot": "weapon",
+  "tier": 4,
+  "cost": 6400,
+  "active": true,
+  "ok": true
+ },
+ {
+  "slug": "extra-health",
+  "name": "Extra Health",
+  "slot": "vitality",
+  "tier": 1,
+  "cost": 800,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "extra-regen",
+  "name": "Extra Regen",
+  "slot": "vitality",
+  "tier": 1,
+  "cost": 800,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "battle-vest",
+  "name": "Battle Vest",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "bullet-lifesteal",
+  "name": "Bullet Lifesteal",
+  "slot": "vitality",
+  "tier": 2,
+  "cost": 1600,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "bullet-resilience",
+  "name": "Bullet Resilience",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "counterspell",
+  "name": "Counterspell",
+  "slot": "vitality",
+  "tier": 3,
+  "cost": 3200,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "cheat-death",
+  "name": "Cheat Death",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "colossus",
+  "name": "Colossus",
+  "slot": "vitality",
+  "tier": 4,
+  "cost": 6400,
+  "active": true,
+  "ok": true
+ },
+ {
+  "slug": "extra-charge",
+  "name": "Extra Charge",
+  "slot": "spirit",
+  "tier": 1,
+  "cost": 800,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "extra-spirit",
+  "name": "Extra Spirit",
+  "slot": "spirit",
+  "tier": 1,
+  "cost": 800,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "arcane-surge",
+  "name": "Arcane Surge",
+  "slot": "spirit",
+  "tier": 2,
+  "cost": 1600,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "bullet-resist-shredder",
+  "name": "Bullet Resist Shredder",
+  "slot": "spirit",
+  "tier": 2,
+  "cost": 1600,
+  "active": false,
+  "ok": true
+ },
+ {
+  "slug": "decay",
+  "name": "Decay",
+  "slot": "spirit",
+  "tier": 3,
+  "cost": 3200,
+  "active": true,
+  "ok": true
+ },
+ {
+  "slug": "disarming-hex",
+  "name": "Disarming Hex",
+  "slot": "spirit",
+  "tier": 3,
+  "cost": 3200,
+  "active": true,
+  "ok": true
+ },
+ {
+  "slug": "arctic-blast",
+  "name": "Arctic Blast",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": true,
+  "ok": true
+ },
+ {
+  "slug": "boundless-spirit",
+  "name": "Boundless Spirit",
+  "slot": "spirit",
+  "tier": 4,
+  "cost": 6400,
+  "active": false,
+  "ok": true
+ }
+]

@@ -1,0 +1,1046 @@
+/* ==========================================================================
+   Lokal gehostete Schriften (Google Fonts, latin subset)
+   ========================================================================== */
+
+@font-face {
+  font-family: "Crimson Pro";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/CrimsonPro-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Limelight";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/Limelight-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/SourceSans3-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/SourceSans3-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/SourceSans3-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/SourceSans3-700-normal.woff2") format("woff2");
+}
+
+/* ==========================================================================
+   Deadlock Wiki — Fandom-artiges Fan-Wiki-Theme
+   Noir-Palette aus der Welt des Spiels: Nacht, Messing, Patina, altes Papier.
+   ========================================================================== */
+
+:root {
+  --night: #16110c;
+  --night-deep: #0d0a07;
+  --surface: #201a13;
+  --panel: #2a2118;
+  --panel-raised: #322717;
+  --line: #3e3222;
+  --line-soft: #332a1d;
+  --paper: #ebdfc7;
+  --muted: #a08e76;
+  --faint: #7c6d58;
+  --brass: #d9a03c;
+  --brass-bright: #f0be62;
+  --brass-dim: #8a6524;
+  --redlink: #d06a55;
+  --weapon: #e8963f;
+  --vitality: #84c761;
+  --spirit: #c084f5;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --font-display: "Limelight", "Georgia", serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+  --font-lore: "Crimson Pro", "Georgia", serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Fixiertes, stark gedimmtes Key-Art hinter der Content-Shell — der
+   klassische Wiki-Skin-Hintergrund. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(22, 17, 12, 0.72) 0%, rgba(22, 17, 12, 0.94) 55%, #16110c 100%),
+    url("assets/keyart.jpg") center top / cover no-repeat;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--brass); text-decoration: none; }
+a:hover { color: var(--brass-bright); text-decoration: underline; }
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--brass-bright);
+  outline-offset: 2px;
+}
+
+/* Nicht existierende Artikel — der klassische MediaWiki-Rotlink */
+a.redlink { color: var(--redlink); }
+a.redlink:hover { color: #e28974; }
+
+::selection { background: var(--brass); color: var(--night-deep); }
+
+/* --------------------------------------------------------------------------
+   Globale Netzwerk-Leiste
+   -------------------------------------------------------------------------- */
+
+.globalbar {
+  background: var(--night-deep);
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 13px;
+}
+
+.globalbar-inner {
+  max-width: 1236px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.gb-logo {
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--paper);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gb-logo .gb-mark {
+  width: 14px;
+  height: 14px;
+  background: var(--brass);
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+.gb-link { color: var(--muted); letter-spacing: 0.04em; }
+.gb-link:hover { color: var(--paper); text-decoration: none; }
+
+.gb-spacer { flex: 1; }
+
+.gb-cta {
+  border: 1px solid var(--line);
+  padding: 5px 14px;
+  border-radius: 3px;
+  color: var(--paper);
+  letter-spacing: 0.04em;
+}
+.gb-cta:hover { border-color: var(--brass); text-decoration: none; }
+
+.gb-cta--solid { background: var(--brass); border-color: var(--brass); color: var(--night-deep); font-weight: 600; }
+.gb-cta--solid:hover { background: var(--brass-bright); color: var(--night-deep); }
+
+/* --------------------------------------------------------------------------
+   Masthead mit Key-Art, Wortmarke und Suche
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  position: relative;
+  background: url("assets/keyart.jpg") center 30% / cover no-repeat;
+}
+
+.masthead::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 10%, rgba(13, 10, 7, 0.25), rgba(13, 10, 7, 0.78) 75%),
+    linear-gradient(180deg, rgba(13, 10, 7, 0.55), rgba(22, 17, 12, 0.97) 96%);
+}
+
+.masthead-inner {
+  position: relative;
+  max-width: 1236px;
+  margin: 0 auto;
+  padding: 58px 20px 30px;
+  text-align: center;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 6vw, 58px);
+  letter-spacing: 0.14em;
+  color: var(--paper);
+  line-height: 1.05;
+  display: inline-block;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.8);
+}
+.wordmark:hover { text-decoration: none; color: var(--paper); }
+.wordmark .wm-wiki { color: var(--brass); }
+
+.wordmark-rule {
+  width: 220px;
+  margin: 14px auto 10px;
+  height: 9px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.wordmark-rule::before,
+.wordmark-rule::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brass));
+}
+.wordmark-rule::after { background: linear-gradient(90deg, var(--brass), transparent); }
+.wordmark-rule .wm-diamond {
+  width: 7px;
+  height: 7px;
+  background: var(--brass);
+  transform: rotate(45deg);
+  flex: none;
+}
+
+.tagline {
+  margin: 0 auto;
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.searchform {
+  margin: 24px auto 0;
+  max-width: 540px;
+  display: flex;
+  border: 1px solid var(--line);
+  background: rgba(13, 10, 7, 0.82);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.searchform:focus-within { border-color: var(--brass); }
+
+.searchform input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  padding: 12px 16px;
+  color: var(--paper);
+  font: inherit;
+  font-size: 15px;
+}
+.searchform input::placeholder { color: var(--faint); }
+.searchform input:focus { outline: none; }
+
+.searchform button {
+  border: 0;
+  background: var(--brass);
+  color: var(--night-deep);
+  font: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  padding: 0 22px;
+  cursor: pointer;
+}
+.searchform button:hover { background: var(--brass-bright); }
+
+/* --------------------------------------------------------------------------
+   Lokale Wiki-Navigation (sticky)
+   -------------------------------------------------------------------------- */
+
+.localnav {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(13, 10, 7, 0.93);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.localnav-inner {
+  max-width: 1236px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+  overflow-x: auto;
+}
+
+.localnav a {
+  display: flex;
+  align-items: center;
+  padding: 13px 16px 11px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+.localnav a:hover { color: var(--paper); text-decoration: none; }
+.localnav a[aria-current="page"] {
+  color: var(--paper);
+  border-bottom-color: var(--brass);
+}
+.localnav a.redlink { color: var(--redlink); opacity: 0.85; }
+
+.localnav .nav-stats {
+  margin-left: auto;
+  align-self: center;
+  color: var(--faint);
+  font-size: 12.5px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  padding-left: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   Content-Shell
+   -------------------------------------------------------------------------- */
+
+.shell {
+  max-width: 1236px;
+  margin: 0 auto;
+  background: rgba(32, 26, 19, 0.97);
+  border-left: 1px solid var(--line-soft);
+  border-right: 1px solid var(--line-soft);
+  padding: 34px clamp(18px, 3.5vw, 42px) 60px;
+  min-height: 60vh;
+}
+
+.shell--rail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 36px;
+  align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   Typografie im Artikelraum
+   -------------------------------------------------------------------------- */
+
+.page-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(30px, 4.5vw, 42px);
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  margin: 0 0 4px;
+  text-wrap: balance;
+}
+
+.page-sub {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 14px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 7px;
+  margin: 40px 0 16px;
+  text-wrap: balance;
+}
+
+h2 .h-deco {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: var(--brass);
+  transform: rotate(45deg);
+  margin-right: 12px;
+  vertical-align: 2px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 28px 0 10px;
+}
+
+p { margin: 0 0 14px; max-width: 72ch; }
+
+.lead {
+  font-size: 17.5px;
+  max-width: 70ch;
+}
+
+.lore-quote {
+  font-family: var(--font-lore);
+  font-style: italic;
+  font-size: 19px;
+  color: var(--paper);
+  border-left: 3px solid var(--brass);
+  background: linear-gradient(90deg, rgba(217, 160, 60, 0.07), transparent 70%);
+  margin: 20px 0;
+  padding: 14px 20px;
+  max-width: 62ch;
+}
+.lore-quote cite {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+/* --------------------------------------------------------------------------
+   Wiki-Möblierung: Editierleiste, TOC, Meldungen, Kategorien
+   -------------------------------------------------------------------------- */
+
+.article-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}
+
+.aa-btn {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--paper);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 6px 14px;
+  border-radius: 3px;
+}
+.aa-btn:hover { border-color: var(--brass); text-decoration: none; color: var(--brass-bright); }
+.aa-btn--primary { background: var(--brass); border-color: var(--brass); color: var(--night-deep); }
+.aa-btn--primary:hover { background: var(--brass-bright); color: var(--night-deep); }
+
+.aa-meta {
+  margin-left: auto;
+  color: var(--faint);
+  font-size: 13px;
+}
+.aa-meta a { color: var(--muted); text-decoration: underline dotted; }
+
+.toc {
+  display: inline-block;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 14px 26px 14px 18px;
+  margin: 6px 0 10px;
+  font-size: 14.5px;
+}
+.toc-title {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.toc ol {
+  margin: 0;
+  padding-left: 4px;
+  list-style: none;
+  counter-reset: toc;
+}
+.toc li { counter-increment: toc; padding: 2.5px 0; }
+.toc li::before {
+  content: counter(toc);
+  color: var(--brass);
+  font-weight: 700;
+  display: inline-block;
+  width: 22px;
+  font-variant-numeric: tabular-nums;
+}
+
+.notice {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--brass);
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-size: 14.5px;
+  color: var(--muted);
+  margin: 18px 0;
+}
+.notice strong { color: var(--paper); }
+
+.cat-footer {
+  margin-top: 48px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  font-size: 13.5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.cat-footer .cat-label { color: var(--faint); letter-spacing: 0.06em; text-transform: uppercase; font-size: 11.5px; font-weight: 700; }
+.cat-pill {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 13px;
+}
+.cat-pill:hover { border-color: var(--brass); text-decoration: none; }
+
+/* --------------------------------------------------------------------------
+   Infobox (Artikelseiten)
+   -------------------------------------------------------------------------- */
+
+.infobox {
+  float: right;
+  width: 300px;
+  margin: 4px 0 20px 28px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--brass);
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 14px;
+  box-shadow: var(--shadow);
+}
+
+.infobox-title {
+  font-family: var(--font-display);
+  font-size: 21px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 12px 10px 10px;
+  background: linear-gradient(180deg, var(--panel-raised), var(--panel));
+  border-bottom: 1px solid var(--line);
+}
+
+.infobox-img { background: var(--night-deep); }
+
+.infobox-caption {
+  text-align: center;
+  color: var(--faint);
+  font-size: 12px;
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.infobox-section {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brass);
+  padding: 10px 14px 4px;
+}
+
+.infobox dl {
+  margin: 0;
+  padding: 2px 14px 10px;
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  row-gap: 0;
+}
+.infobox dt,
+.infobox dd {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.infobox dt { color: var(--muted); }
+.infobox dd { font-weight: 600; font-variant-numeric: tabular-nums; }
+.infobox dl > dt:last-of-type,
+.infobox dl > dd:last-of-type { border-bottom: 0; }
+
+.stat-weapon { color: var(--weapon); }
+.stat-vitality { color: var(--vitality); }
+.stat-spirit { color: var(--spirit); }
+
+/* --------------------------------------------------------------------------
+   Fähigkeiten
+   -------------------------------------------------------------------------- */
+
+.ability {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 16px 18px;
+  margin: 14px 0;
+}
+
+.ability-icon {
+  width: 72px;
+  height: 72px;
+  background: radial-gradient(circle at 50% 35%, #3d3121, var(--night-deep) 75%);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+}
+.ability-icon img { width: 100%; height: 100%; object-fit: contain; }
+
+.ability-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.ability-name { font-size: 17px; font-weight: 700; margin: 0; }
+
+.key-chip {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--brass-dim);
+  color: var(--brass);
+  border-radius: 3px;
+  padding: 1px 8px;
+  text-transform: uppercase;
+}
+.key-chip--type { border-color: var(--line); color: var(--muted); }
+
+.ability p { margin: 0; font-size: 14.5px; color: var(--paper); }
+.ability .ability-notes { color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+/* --------------------------------------------------------------------------
+   Datentabellen
+   -------------------------------------------------------------------------- */
+
+.wikitable-wrap { overflow-x: auto; margin: 16px 0; }
+
+.wikitable {
+  border-collapse: collapse;
+  min-width: 460px;
+  font-size: 14.5px;
+}
+.wikitable th,
+.wikitable td {
+  border: 1px solid var(--line);
+  padding: 8px 14px;
+  text-align: left;
+}
+.wikitable th {
+  background: var(--panel-raised);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.wikitable td { background: var(--panel); font-variant-numeric: tabular-nums; }
+
+/* --------------------------------------------------------------------------
+   Helden-Raster
+   -------------------------------------------------------------------------- */
+
+.hero-grid {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  gap: 14px;
+}
+
+.hero-card {
+  display: block;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.hero-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--brass);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+}
+
+.hero-card figure { margin: 0; }
+
+.hero-card .hc-img {
+  aspect-ratio: 3 / 4;
+  background: var(--night-deep);
+  overflow: hidden;
+}
+.hero-card .hc-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.25s ease;
+}
+.hero-card:hover .hc-img img { transform: scale(1.045); }
+
+.hero-card figcaption {
+  padding: 8px 10px 9px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.hc-name {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--paper);
+}
+
+.hc-tag {
+  display: block;
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 1px;
+}
+
+.hc-stars { color: var(--brass); letter-spacing: 2px; font-size: 11px; }
+
+/* Filter-Chips (Heldenseite) */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 4px;
+}
+.filter-chip {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--muted);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 6px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.filter-chip:hover { color: var(--paper); border-color: var(--brass-dim); }
+.filter-chip[aria-pressed="true"] {
+  background: var(--brass);
+  border-color: var(--brass);
+  color: var(--night-deep);
+}
+
+/* --------------------------------------------------------------------------
+   Items
+   -------------------------------------------------------------------------- */
+
+.slot-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 42px 0 4px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+.slot-head h2 { border: 0; margin: 0; padding: 0; }
+.slot-swatch { width: 12px; height: 12px; transform: rotate(45deg); flex: none; }
+.slot-head .slot-count { margin-left: auto; color: var(--faint); font-size: 13px; }
+
+.slot-head--weapon .slot-swatch { background: var(--weapon); }
+.slot-head--vitality .slot-swatch { background: var(--vitality); }
+.slot-head--spirit .slot-swatch { background: var(--spirit); }
+
+.item-grid {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+  gap: 12px;
+}
+
+.item-tile {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 14px 12px 12px;
+  text-align: center;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.item-tile:hover { transform: translateY(-3px); }
+
+.item-grid--weapon .item-tile:hover { border-color: var(--weapon); }
+.item-grid--vitality .item-tile:hover { border-color: var(--vitality); }
+.item-grid--spirit .item-tile:hover { border-color: var(--spirit); }
+
+.item-tile img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin: 0 auto 8px;
+}
+
+.item-name { font-weight: 700; font-size: 13.5px; line-height: 1.3; display: block; }
+
+.item-cost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  color: var(--brass);
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.item-cost::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--brass);
+  transform: rotate(45deg);
+}
+
+.item-tier { display: block; color: var(--faint); font-size: 11px; letter-spacing: 0.14em; margin-top: 3px; }
+
+/* --------------------------------------------------------------------------
+   Hauptseiten-Bausteine
+   -------------------------------------------------------------------------- */
+
+.welcome {
+  background:
+    linear-gradient(120deg, rgba(217, 160, 60, 0.1), transparent 55%),
+    var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 26px 28px 24px;
+}
+.welcome h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(24px, 3.4vw, 34px);
+  letter-spacing: 0.07em;
+  margin: 0 0 10px;
+  text-wrap: balance;
+}
+.welcome p { color: var(--muted); font-size: 15.5px; }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+
+.btn {
+  display: inline-block;
+  padding: 9px 20px;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--brass);
+}
+.btn--solid { background: var(--brass); color: var(--night-deep); }
+.btn--solid:hover { background: var(--brass-bright); text-decoration: none; color: var(--night-deep); }
+.btn--ghost { color: var(--brass); }
+.btn--ghost:hover { background: rgba(217, 160, 60, 0.12); text-decoration: none; }
+
+.featured {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.featured-img { background: var(--night-deep); }
+.featured-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.featured-body { padding: 20px 24px 20px 0; }
+.featured-kicker {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+.featured-body h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: 0.07em;
+  margin: 6px 0 8px;
+}
+.featured-body p { color: var(--muted); font-size: 14.5px; }
+
+.basics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+.basics-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--brass);
+  border-radius: 4px;
+  padding: 18px 18px 16px;
+}
+.basics-card--weapon { border-top-color: var(--weapon); }
+.basics-card--vitality { border-top-color: var(--vitality); }
+.basics-card--spirit { border-top-color: var(--spirit); }
+.basics-card h3 { margin: 0 0 8px; font-size: 16px; }
+.basics-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+.more-link { display: inline-block; margin-top: 16px; font-weight: 700; }
+
+/* --------------------------------------------------------------------------
+   Rechte Rail
+   -------------------------------------------------------------------------- */
+
+.rail { display: grid; gap: 22px; }
+
+.rail-box {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 16px 18px 14px;
+  font-size: 14px;
+}
+.rail-box h4 {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass);
+  border-bottom: 1px solid var(--line-soft);
+  padding-bottom: 8px;
+}
+
+.trend-list { list-style: none; margin: 0; padding: 0; }
+.trend-list li { display: flex; gap: 12px; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--line-soft); }
+.trend-list li:last-child { border-bottom: 0; }
+.trend-thumb {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--night-deep);
+  object-fit: cover;
+  object-position: top;
+  flex: none;
+}
+.trend-title { font-weight: 700; display: block; line-height: 1.3; }
+.trend-meta { color: var(--faint); font-size: 12px; display: block; }
+
+.patch-list { list-style: none; margin: 0; padding: 0; }
+.patch-list li { padding: 7px 0; border-bottom: 1px solid var(--line-soft); }
+.patch-list li:last-child { border-bottom: 0; }
+.patch-date { color: var(--faint); font-size: 12px; display: block; font-variant-numeric: tabular-nums; }
+
+.activity-list { list-style: none; margin: 0; padding: 0; color: var(--muted); }
+.activity-list li { padding: 6px 0; border-bottom: 1px solid var(--line-soft); font-size: 13.5px; }
+.activity-list li:last-child { border-bottom: 0; }
+.activity-user { color: var(--paper); font-weight: 600; }
+
+/* --------------------------------------------------------------------------
+   Galerie
+   -------------------------------------------------------------------------- */
+
+.gallery {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+.gallery li {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.gallery .g-img { aspect-ratio: 4 / 5; background: var(--night-deep); }
+.gallery .g-img--wide { aspect-ratio: 16 / 9; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.gallery figure { margin: 0; }
+.gallery figcaption { padding: 7px 10px; font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line-soft); }
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.wikifoot {
+  border-top: 1px solid var(--line-soft);
+  background: var(--night-deep);
+}
+.wikifoot-inner {
+  max-width: 1236px;
+  margin: 0 auto;
+  padding: 26px 20px 34px;
+  color: var(--faint);
+  font-size: 13px;
+}
+.wikifoot-inner p { max-width: none; margin: 0 0 6px; }
+.wikifoot a { color: var(--muted); }
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1020px) {
+  .shell--rail { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .infobox { float: none; width: 100%; margin: 0 0 22px; }
+  .featured { grid-template-columns: 1fr; }
+  .featured-img { aspect-ratio: 16 / 10; }
+  .featured-body { padding: 18px 20px; }
+  .basics-grid { grid-template-columns: 1fr; }
+  .aa-meta { margin-left: 0; width: 100%; }
+  .globalbar-inner .gb-link { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

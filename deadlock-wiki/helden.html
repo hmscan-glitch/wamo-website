@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helden – Deadlock Wiki</title>
+<meta name="description" content="Alle 38 spielbaren Helden in Deadlock mit Rolle, Spielstil und Komplexität.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="globalbar" aria-label="Netzwerk">
+  <div class="globalbar-inner">
+    <a class="gb-logo" href="index.html"><span class="gb-mark" aria-hidden="true"></span>FANWIKI</a>
+    <a class="gb-link" href="#">Spiele</a>
+    <a class="gb-link" href="#">Filme</a>
+    <a class="gb-link" href="#">Serien</a>
+    <span class="gb-spacer"></span>
+    <a class="gb-cta" href="#">Anmelden</a>
+    <a class="gb-cta gb-cta--solid" href="#">Registrieren</a>
+  </div>
+</nav>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="index.html">DEADLOCK<span class="wm-wiki">&nbsp;WIKI</span></a>
+    <div class="wordmark-rule" aria-hidden="true"><span class="wm-diamond"></span></div>
+    <p class="tagline">Die von Fans geschriebene Enzyklopädie zur okkulten Unterwelt von New York.</p>
+    <form class="searchform" action="helden.html" role="search">
+      <input type="search" name="q" id="hero-search" placeholder="Helden durchsuchen …" aria-label="Helden durchsuchen">
+      <button type="submit">Suchen</button>
+    </form>
+  </div>
+  <nav class="localnav" aria-label="Wiki-Navigation">
+    <div class="localnav-inner">
+      <a href="index.html">Hauptseite</a>
+      <a href="helden.html" aria-current="page">Helden</a>
+      <a href="items.html">Items</a>
+      <a href="#" class="redlink" title="Diese Seite existiert noch nicht – hilf mit, sie zu schreiben!">Gameplay</a>
+      <a href="#" class="redlink" title="Diese Seite existiert noch nicht – hilf mit, sie zu schreiben!">Karte</a>
+      <a href="#" class="redlink" title="Diese Seite existiert noch nicht – hilf mit, sie zu schreiben!">Community</a>
+      <span class="nav-stats">1.284 Artikel &middot; 4.107 Dateien</span>
+    </div>
+  </nav>
+</header>
+
+<div class="shell">
+  <main>
+    <div class="article-actions">
+      <a class="aa-btn aa-btn--primary" href="#">Bearbeiten</a>
+      <a class="aa-btn" href="#">Versionsgeschichte</a>
+      <a class="aa-btn" href="#">Diskussion (14)</a>
+      <span class="aa-meta">Zuletzt bearbeitet von <a href="#">CursedApple</a> gestern um 21:47</span>
+    </div>
+
+    <p class="page-sub">Kategorie</p>
+    <h1 class="page-title">Helden</h1>
+    <p class="lead">In Deadlock treten zwei Teams aus je sechs Helden gegeneinander an. Jeder Held bringt eine eigene Waffe, vier Signaturfähigkeiten und eine Geschichte aus der okkulten Unterwelt New&nbsp;Yorks mit. Derzeit sind <strong>38 Helden</strong> spielbar. Die Sterne geben die Einstiegskomplexität an — von ★ (einsteigerfreundlich) bis ★★★ (anspruchsvoll).</p>
+
+    <div class="filter-row" role="group" aria-label="Nach Komplexität filtern">
+      <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">Alle 38</button>
+      <button class="filter-chip" type="button" data-filter="1" aria-pressed="false">★ Einsteiger</button>
+      <button class="filter-chip" type="button" data-filter="2" aria-pressed="false">★★ Fortgeschritten</button>
+      <button class="filter-chip" type="button" data-filter="3" aria-pressed="false">★★★ Experte</button>
+    </div>
+
+    <ul class="hero-grid" id="hero-grid">
+      <li data-complexity="1" data-name="abrams">
+        <a class="hero-card" href="abrams.html">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/abrams.webp" alt="Heldenkarte von Abrams" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Abrams</span>
+              <span class="hc-tag">Tank <span class="hc-stars">★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="apollo">
+        <a class="hero-card" href="#" title="Artikel zu Apollo ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/apollo.webp" alt="Heldenkarte von Apollo" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Apollo</span>
+              <span class="hc-tag">Finesse <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="bebop">
+        <a class="hero-card" href="#" title="Artikel zu Bebop ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/bebop.webp" alt="Heldenkarte von Bebop" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Bebop</span>
+              <span class="hc-tag">Hook <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="3" data-name="billy">
+        <a class="hero-card" href="#" title="Artikel zu Billy ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/billy.webp" alt="Heldenkarte von Billy" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Billy</span>
+              <span class="hc-tag">Punk <span class="hc-stars">★★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="calico">
+        <a class="hero-card" href="#" title="Artikel zu Calico ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/calico.webp" alt="Heldenkarte von Calico" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Calico</span>
+              <span class="hc-tag">Tricksy <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="celeste">
+        <a class="hero-card" href="#" title="Artikel zu Celeste ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/celeste.webp" alt="Heldenkarte von Celeste" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Celeste</span>
+              <span class="hc-tag">Performer <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="3" data-name="drifter">
+        <a class="hero-card" href="#" title="Artikel zu Drifter ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/drifter.webp" alt="Heldenkarte von Drifter" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Drifter</span>
+              <span class="hc-tag">Stalker <span class="hc-stars">★★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="dynamo">
+        <a class="hero-card" href="#" title="Artikel zu Dynamo ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/dynamo.webp" alt="Heldenkarte von Dynamo" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Dynamo</span>
+              <span class="hc-tag">Teamplay <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="graves">
+        <a class="hero-card" href="#" title="Artikel zu Graves ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/graves.webp" alt="Heldenkarte von Graves" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Graves</span>
+              <span class="hc-tag">Morbid <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="grey talon">
+        <a class="hero-card" href="#" title="Artikel zu Grey Talon ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/grey-talon.webp" alt="Heldenkarte von Grey Talon" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Grey Talon</span>
+              <span class="hc-tag">Precision <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="1" data-name="haze">
+        <a class="hero-card" href="#" title="Artikel zu Haze ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/haze.webp" alt="Heldenkarte von Haze" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Haze</span>
+              <span class="hc-tag">Assassin <span class="hc-stars">★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="3" data-name="holliday">
+        <a class="hero-card" href="#" title="Artikel zu Holliday ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/holliday.webp" alt="Heldenkarte von Holliday" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Holliday</span>
+              <span class="hc-tag">Crackshot <span class="hc-stars">★★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="1" data-name="infernus">
+        <a class="hero-card" href="#" title="Artikel zu Infernus ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/infernus.webp" alt="Heldenkarte von Infernus" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Infernus</span>
+              <span class="hc-tag">Arsonist <span class="hc-stars">★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="3" data-name="ivy">
+        <a class="hero-card" href="#" title="Artikel zu Ivy ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/ivy.webp" alt="Heldenkarte von Ivy" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Ivy</span>
+              <span class="hc-tag">Team-Up <span class="hc-stars">★★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="kelvin">
+        <a class="hero-card" href="#" title="Artikel zu Kelvin ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/kelvin.webp" alt="Heldenkarte von Kelvin" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Kelvin</span>
+              <span class="hc-tag">Protector <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="lady geist">
+        <a class="hero-card" href="#" title="Artikel zu Lady Geist ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/lady-geist.webp" alt="Heldenkarte von Lady Geist" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Lady Geist</span>
+              <span class="hc-tag">Lifesteal <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="3" data-name="lash">
+        <a class="hero-card" href="#" title="Artikel zu Lash ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/lash.webp" alt="Heldenkarte von Lash" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Lash</span>
+              <span class="hc-tag">Initiator <span class="hc-stars">★★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="1" data-name="mcginnis">
+        <a class="hero-card" href="#" title="Artikel zu McGinnis ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/mcginnis.webp" alt="Heldenkarte von McGinnis" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">McGinnis</span>
+              <span class="hc-tag">Inventor <span class="hc-stars">★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="3" data-name="mina">
+        <a class="hero-card" href="#" title="Artikel zu Mina ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/mina.webp" alt="Heldenkarte von Mina" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Mina</span>
+              <span class="hc-tag">Harasser <span class="hc-stars">★★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="mirage">
+        <a class="hero-card" href="#" title="Artikel zu Mirage ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/mirage.webp" alt="Heldenkarte von Mirage" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Mirage</span>
+              <span class="hc-tag">Bodyguard <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="3" data-name="mo &amp; krill">
+        <a class="hero-card" href="#" title="Artikel zu Mo &amp; Krill ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/mo-and-krill.webp" alt="Heldenkarte von Mo &amp; Krill" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Mo &amp; Krill</span>
+              <span class="hc-tag">Tag-Team <span class="hc-stars">★★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="1" data-name="paige">
+        <a class="hero-card" href="#" title="Artikel zu Paige ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/paige.webp" alt="Heldenkarte von Paige" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Paige</span>
+              <span class="hc-tag">Helpful <span class="hc-stars">★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="3" data-name="paradox">
+        <a class="hero-card" href="#" title="Artikel zu Paradox ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/paradox.webp" alt="Heldenkarte von Paradox" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Paradox</span>
+              <span class="hc-tag">Calculated <span class="hc-stars">★★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="pocket">
+        <a class="hero-card" href="#" title="Artikel zu Pocket ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/pocket.webp" alt="Heldenkarte von Pocket" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Pocket</span>
+              <span class="hc-tag">Trickster <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="3" data-name="rem">
+        <a class="hero-card" href="#" title="Artikel zu Rem ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/rem.webp" alt="Heldenkarte von Rem" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Rem</span>
+              <span class="hc-tag">Helpful <span class="hc-stars">★★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="1" data-name="seven">
+        <a class="hero-card" href="#" title="Artikel zu Seven ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/seven.webp" alt="Heldenkarte von Seven" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Seven</span>
+              <span class="hc-tag">High Voltage <span class="hc-stars">★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="3" data-name="shiv">
+        <a class="hero-card" href="#" title="Artikel zu Shiv ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/shiv.webp" alt="Heldenkarte von Shiv" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Shiv</span>
+              <span class="hc-tag">Rage <span class="hc-stars">★★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="1" data-name="silver">
+        <a class="hero-card" href="#" title="Artikel zu Silver ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/silver.webp" alt="Heldenkarte von Silver" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Silver</span>
+              <span class="hc-tag">Feral <span class="hc-stars">★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="3" data-name="sinclair">
+        <a class="hero-card" href="#" title="Artikel zu Sinclair ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/sinclair.webp" alt="Heldenkarte von Sinclair" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Sinclair</span>
+              <span class="hc-tag">Trickster <span class="hc-stars">★★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="1" data-name="the doorman">
+        <a class="hero-card" href="#" title="Artikel zu The Doorman ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/the-doorman.webp" alt="Heldenkarte von The Doorman" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">The Doorman</span>
+              <span class="hc-tag">Disorienting <span class="hc-stars">★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="venator">
+        <a class="hero-card" href="#" title="Artikel zu Venator ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/venator.webp" alt="Heldenkarte von Venator" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Venator</span>
+              <span class="hc-tag">Devout <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="victor">
+        <a class="hero-card" href="#" title="Artikel zu Victor ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/victor.webp" alt="Heldenkarte von Victor" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Victor</span>
+              <span class="hc-tag">You <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="1" data-name="vindicta">
+        <a class="hero-card" href="#" title="Artikel zu Vindicta ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/vindicta.webp" alt="Heldenkarte von Vindicta" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Vindicta</span>
+              <span class="hc-tag">Sniper <span class="hc-stars">★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="viscous">
+        <a class="hero-card" href="#" title="Artikel zu Viscous ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/viscous.webp" alt="Heldenkarte von Viscous" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Viscous</span>
+              <span class="hc-tag">Evasive <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="1" data-name="vyper">
+        <a class="hero-card" href="#" title="Artikel zu Vyper ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/vyper.webp" alt="Heldenkarte von Vyper" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Vyper</span>
+              <span class="hc-tag">Gunner <span class="hc-stars">★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="2" data-name="warden">
+        <a class="hero-card" href="#" title="Artikel zu Warden ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/warden.webp" alt="Heldenkarte von Warden" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Warden</span>
+              <span class="hc-tag">Initiator <span class="hc-stars">★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="1" data-name="wraith">
+        <a class="hero-card" href="#" title="Artikel zu Wraith ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/wraith.webp" alt="Heldenkarte von Wraith" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Wraith</span>
+              <span class="hc-tag">Duelist <span class="hc-stars">★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li data-complexity="3" data-name="yamato">
+        <a class="hero-card" href="#" title="Artikel zu Yamato ist in Arbeit">
+          <figure>
+            <div class="hc-img"><img src="assets/heroes/card/yamato.webp" alt="Heldenkarte von Yamato" loading="lazy"></div>
+            <figcaption>
+              <span class="hc-name">Yamato</span>
+              <span class="hc-tag">Relentless <span class="hc-stars">★★★</span></span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+    </ul>
+
+    <div class="notice">
+      <span aria-hidden="true" style="color:var(--brass);font-weight:700;">✦</span>
+      <span><strong>Hinweis:</strong> Deadlock befindet sich in aktiver Entwicklung. Werte, Fähigkeiten und sogar ganze Helden können sich mit jedem Patch ändern. Hilf mit, die Artikel aktuell zu halten!</span>
+    </div>
+
+    <div class="cat-footer">
+      <span class="cat-label">Kategorien:</span>
+      <a class="cat-pill" href="helden.html">Helden</a>
+      <a class="cat-pill redlink" href="#" title="Diese Seite existiert noch nicht">Spielmechanik</a>
+      <a class="cat-pill redlink" href="#" title="Diese Seite existiert noch nicht">Charaktere</a>
+    </div>
+  </main>
+</div>
+
+<footer class="wikifoot">
+  <div class="wikifoot-inner">
+    <p><strong>Deadlock Wiki</strong> ist ein inoffizielles Fan-Projekt und steht in keiner Verbindung zur Valve Corporation.</p>
+    <p>Deadlock sowie alle zugehörigen Grafiken und Namen sind Eigentum der Valve Corporation. Inhalte der Community stehen unter CC&nbsp;BY-SA, sofern nicht anders angegeben.</p>
+    <p><a href="index.html">Hauptseite</a> · <a href="helden.html">Helden</a> · <a href="items.html">Items</a> · <a href="#">Impressum</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var chips = document.querySelectorAll(".filter-chip");
+  var cards = document.querySelectorAll("#hero-grid > li");
+  var search = document.getElementById("hero-search");
+  var active = "all";
+
+  function apply() {
+    var q = (search.value || "").trim().toLowerCase();
+    cards.forEach(function (li) {
+      var okFilter = active === "all" || li.dataset.complexity === active;
+      var okSearch = !q || li.dataset.name.indexOf(q) !== -1;
+      li.style.display = okFilter && okSearch ? "" : "none";
+    });
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      active = chip.dataset.filter;
+      chips.forEach(function (c) { c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
+      apply();
+    });
+  });
+
+  search.addEventListener("input", apply);
+  search.form.addEventListener("submit", function (e) { e.preventDefault(); apply(); });
+
+  var params = new URLSearchParams(location.search);
+  if (params.get("q")) { search.value = params.get("q"); apply(); }
+})();
+</script>
+
+</body>
+</html>
