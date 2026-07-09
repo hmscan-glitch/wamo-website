@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profil – Deadlock Wiki</title>
-<meta name="description" content="Dein Wiki-Konto: Lieblingshelden speichern und deinen Deadlock-Account verknüpfen, um echte Match-Statistiken zu sehen.">
+<title>Anmelden – Deadlock Wiki</title>
+<meta name="description" content="Melde dich beim Deadlock Wiki an: Konto mit E-Mail und Passwort, Lieblingshelden speichern und deinen Deadlock-Account mit echten Match-Statistiken verknüpfen.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -36,44 +36,87 @@
 <div class="shell">
   <main>
     <p class="page-sub">Konto</p>
-    <h1 class="page-title">Dein Profil</h1>
+    <h1 class="page-title" id="page-title">Anmelden</h1>
 
-    <!-- Ansicht 1: Registrieren -->
-    <section id="view-register" hidden>
-      <p class="lead">Leg dir ein Wiki-Konto an, um <strong>Lieblingshelden zu speichern</strong> und dein Profil mit deinem <strong>Deadlock-Account zu verknüpfen</strong> — inklusive echter Match-Statistiken.</p>
+    <!-- Ansicht 1: Anmelden / Registrieren -->
+    <section id="view-auth" hidden>
+      <p class="lead">Mit einem Wiki-Konto speicherst du <strong>Lieblingshelden</strong> und verknüpfst dein Profil mit deinem <strong>Deadlock-Account</strong> — inklusive echter Match-Statistiken.</p>
+
       <div class="auth-card">
-        <h2>Konto anlegen</h2>
-        <label for="reg-name">Dein Anzeigename</label>
-        <input class="auth-input" id="reg-name" type="text" maxlength="24" placeholder="z. B. LaneLurker" autocomplete="off">
-        <label>Wähle einen Avatar</label>
-        <div class="avatar-picker" id="avatar-picker" role="group" aria-label="Avatar wählen"></div>
-        <div class="btn-row">
-          <button class="btn btn--solid" id="btn-register" type="button">Konto anlegen</button>
+        <div class="filter-row" role="tablist" style="margin:0 0 8px;">
+          <button class="filter-chip" type="button" id="tab-login" role="tab" aria-pressed="true">Anmelden</button>
+          <button class="filter-chip" type="button" id="tab-register" role="tab" aria-pressed="false">Registrieren</button>
         </div>
-        <p class="auth-note">Dieses Wiki ist ein Fan-Projekt ohne Server: Dein Konto wird nur <strong>in diesem Browser</strong> gespeichert (localStorage) — kein Passwort, keine Datenübertragung. Löschst du deine Browserdaten, ist auch das Konto weg.</p>
-      </div>
-    </section>
 
-    <!-- Ansicht 2: Willkommen zurück -->
-    <section id="view-login" hidden>
-      <div class="auth-card">
-        <h2>Willkommen zurück!</h2>
-        <p style="color:var(--muted);">In diesem Browser ist bereits ein Konto gespeichert:</p>
-        <div class="profile-head" style="margin:14px 0;">
-          <img class="profile-avatar" id="login-avatar" src="assets/heroes/sm/abrams.webp" alt="">
-          <div>
-            <div class="profile-name" id="login-name"></div>
-            <div class="profile-meta" id="login-meta"></div>
+        <!-- Login -->
+        <form id="form-login">
+          <label for="login-email">E-Mail-Adresse</label>
+          <input class="auth-input" id="login-email" type="email" placeholder="du@beispiel.de" autocomplete="email">
+          <label for="login-pw">Passwort</label>
+          <input class="auth-input" id="login-pw" type="password" placeholder="••••••••" autocomplete="current-password">
+          <p class="link-status" id="login-status" role="alert"></p>
+          <div class="btn-row">
+            <button class="btn btn--solid" type="submit">Anmelden</button>
+            <a class="btn btn--ghost" href="#" id="link-forgot">Passwort vergessen?</a>
           </div>
-        </div>
+        </form>
+
+        <!-- Registrierung -->
+        <form id="form-register" hidden>
+          <label for="reg-name">Anzeigename</label>
+          <input class="auth-input" id="reg-name" type="text" maxlength="24" placeholder="z. B. LaneLurker" autocomplete="nickname">
+          <label for="reg-email">E-Mail-Adresse</label>
+          <input class="auth-input" id="reg-email" type="email" placeholder="du@beispiel.de" autocomplete="email">
+          <label for="reg-pw">Passwort <span style="text-transform:none;letter-spacing:0;color:var(--faint);">(mind. 8 Zeichen)</span></label>
+          <input class="auth-input" id="reg-pw" type="password" placeholder="••••••••" autocomplete="new-password">
+          <label for="reg-pw2">Passwort wiederholen</label>
+          <input class="auth-input" id="reg-pw2" type="password" placeholder="••••••••" autocomplete="new-password">
+          <label>Wähle einen Avatar</label>
+          <div class="avatar-picker" id="avatar-picker" role="group" aria-label="Avatar wählen"></div>
+          <p class="link-status" id="reg-status" role="alert"></p>
+          <div class="btn-row">
+            <button class="btn btn--solid" type="submit">Konto erstellen</button>
+          </div>
+        </form>
+
+        <p class="auth-note">Dieses Wiki ist ein Fan-Projekt ohne eigenen Server: Dein Konto (inklusive sicher gehashtem Passwort) wird <strong>nur in diesem Browser</strong> gespeichert und nirgendwohin übertragen. Deshalb erhältst du statt einer E-Mail einen <strong>Wiederherstellungs-Code</strong> für „Passwort vergessen“.</p>
+      </div>
+    </section>
+
+    <!-- Ansicht 2: Wiederherstellungs-Code nach Registrierung -->
+    <section id="view-recovery" hidden>
+      <div class="auth-card">
+        <h2>Konto erstellt — sichere deinen Code!</h2>
+        <p style="color:var(--muted);">Da dieses Fan-Wiki keine E-Mails verschicken kann, ist dieser <strong>Wiederherstellungs-Code</strong> dein einziger Weg, ein vergessenes Passwort zurückzusetzen. Schreib ihn dir auf oder speichere ihn im Passwort-Manager — er wird nur dieses eine Mal angezeigt:</p>
+        <p style="font-family:var(--font-display);font-size:30px;letter-spacing:.12em;color:var(--brass-bright);text-align:center;margin:22px 0;" id="recovery-code">XXXX-XXXX-XXXX</p>
         <div class="btn-row">
-          <button class="btn btn--solid" id="btn-login" type="button">Anmelden</button>
-          <button class="btn btn--ghost" id="btn-delete-1" type="button">Konto löschen</button>
+          <button class="btn btn--solid" id="btn-code-done" type="button">Ich habe den Code gesichert — weiter zum Profil</button>
         </div>
       </div>
     </section>
 
-    <!-- Ansicht 3: Profil-Dashboard -->
+    <!-- Ansicht 3: Passwort vergessen -->
+    <section id="view-reset" hidden>
+      <div class="auth-card">
+        <h2>Passwort zurücksetzen</h2>
+        <p style="color:var(--muted);">Gib deine E-Mail und den <strong>Wiederherstellungs-Code</strong> ein, den du bei der Registrierung erhalten hast. Danach kannst du ein neues Passwort vergeben.</p>
+        <form id="form-reset">
+          <label for="reset-email">E-Mail-Adresse</label>
+          <input class="auth-input" id="reset-email" type="email" placeholder="du@beispiel.de" autocomplete="email">
+          <label for="reset-code">Wiederherstellungs-Code</label>
+          <input class="auth-input" id="reset-code" type="text" placeholder="XXXX-XXXX-XXXX" autocomplete="off" style="text-transform:uppercase;">
+          <label for="reset-pw">Neues Passwort <span style="text-transform:none;letter-spacing:0;color:var(--faint);">(mind. 8 Zeichen)</span></label>
+          <input class="auth-input" id="reset-pw" type="password" placeholder="••••••••" autocomplete="new-password">
+          <p class="link-status" id="reset-status" role="alert"></p>
+          <div class="btn-row">
+            <button class="btn btn--solid" type="submit">Passwort setzen &amp; anmelden</button>
+            <button class="btn btn--ghost" id="btn-reset-back" type="button">Zurück zur Anmeldung</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Ansicht 4: Profil-Dashboard -->
     <section id="view-profile" hidden>
       <div class="profile-head">
         <img class="profile-avatar" id="prof-avatar" src="assets/heroes/sm/abrams.webp" alt="Dein Avatar">
@@ -83,7 +126,6 @@
         </div>
         <div class="btn-row">
           <button class="btn btn--ghost" id="btn-logout" type="button">Abmelden</button>
-          <button class="btn btn--ghost" id="btn-delete-2" type="button">Konto löschen</button>
         </div>
       </div>
 
@@ -131,7 +173,33 @@
         </div>
       </div>
 
-      <p class="auth-note">Datenschutz: Die Verknüpfung fragt ausschließlich <strong>öffentliche Match-Daten</strong> über die Community-API ab und speichert deine ID nur in diesem Browser. Keine Anmeldung bei Steam, kein Zugriff auf dein Steam-Konto.</p>
+      <h2><span class="h-deco" aria-hidden="true"></span>Konto &amp; Sicherheit</h2>
+      <details class="build-card" style="max-width:560px;">
+        <summary><span class="build-name">Passwort ändern</span></summary>
+        <div class="build-body">
+          <form id="form-pwchange">
+            <label for="pwc-old">Aktuelles Passwort</label>
+            <input class="auth-input" id="pwc-old" type="password" autocomplete="current-password">
+            <label for="pwc-new">Neues Passwort <span style="text-transform:none;letter-spacing:0;color:var(--faint);">(mind. 8 Zeichen)</span></label>
+            <input class="auth-input" id="pwc-new" type="password" autocomplete="new-password">
+            <p class="link-status" id="pwc-status" role="alert"></p>
+            <div class="btn-row" style="margin-bottom:8px;">
+              <button class="btn btn--solid" type="submit">Passwort ändern</button>
+            </div>
+          </form>
+        </div>
+      </details>
+      <details class="build-card" style="max-width:560px;">
+        <summary><span class="build-name" style="color:var(--redlink);">Konto löschen</span></summary>
+        <div class="build-body">
+          <p style="color:var(--muted);font-size:14px;">Löscht dein Konto samt Favoriten und Verknüpfung unwiderruflich aus diesem Browser.</p>
+          <div class="btn-row" style="margin-bottom:8px;">
+            <button class="btn btn--ghost" id="btn-delete" type="button" style="border-color:var(--redlink);color:var(--redlink);">Konto endgültig löschen</button>
+          </div>
+        </div>
+      </details>
+
+      <p class="auth-note">Datenschutz: Konto und Passwort-Hash bleiben in diesem Browser; die Deadlock-Verknüpfung fragt ausschließlich <strong>öffentliche Match-Daten</strong> über die Community-API ab. Keine Anmeldung bei Steam, kein Zugriff auf dein Steam-Konto.</p>
     </section>
 
   </main>
@@ -155,21 +223,20 @@
   var AVATARS = ["abrams","seven","haze","infernus","lady-geist","bebop","vindicta","wraith","lash","paradox","kelvin","yamato","ivy","viscous","pocket","grey-talon"];
   var W = window.DLWiki;
 
-  var views = {
-    register: document.getElementById("view-register"),
-    login: document.getElementById("view-login"),
-    profile: document.getElementById("view-profile")
-  };
-
+  var views = ["auth", "recovery", "reset", "profile"];
   function showView(name) {
-    Object.keys(views).forEach(function (k) { views[k].hidden = k !== name; });
+    views.forEach(function (v) { document.getElementById("view-" + v).hidden = v !== name; });
+    document.getElementById("page-title").textContent =
+      name === "profile" ? "Dein Profil" : name === "reset" ? "Passwort zurücksetzen" : "Anmelden";
   }
 
   function fmtNum(n) { return n.toLocaleString("de-DE"); }
-
   function memberSince(acc) {
     var d = new Date(acc.created || Date.now());
-    return "Mitglied seit " + d.toLocaleDateString("de-DE", { day: "numeric", month: "long", year: "numeric" });
+    return acc.email + " · Mitglied seit " + d.toLocaleDateString("de-DE", { day: "numeric", month: "long", year: "numeric" });
+  }
+  function setStatus(id, msg, ok) {
+    document.getElementById(id).innerHTML = msg ? '<span class="' + (ok ? "ok" : "err") + '">' + msg + "</span>" : "";
   }
 
   // ---------- Avatar-Picker ----------
@@ -180,8 +247,8 @@
     b.type = "button";
     b.className = "avatar-pick";
     b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
-    b.title = (HEROES_BY_SLUG[slug] || slug);
-    b.innerHTML = '<img src="assets/heroes/sm/' + slug + '.webp" alt="' + slug + '">';
+    b.title = HEROES_BY_SLUG[slug] || slug;
+    b.innerHTML = '<img src="assets/heroes/sm/' + slug + '.webp" alt="' + (HEROES_BY_SLUG[slug] || slug) + '">';
     b.addEventListener("click", function () {
       chosenAvatar = slug;
       picker.querySelectorAll(".avatar-pick").forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
@@ -190,35 +257,95 @@
     picker.appendChild(b);
   });
 
+  // ---------- Tabs ----------
+  var tabLogin = document.getElementById("tab-login");
+  var tabRegister = document.getElementById("tab-register");
+  function showTab(which) {
+    tabLogin.setAttribute("aria-pressed", which === "login" ? "true" : "false");
+    tabRegister.setAttribute("aria-pressed", which === "register" ? "true" : "false");
+    document.getElementById("form-login").hidden = which !== "login";
+    document.getElementById("form-register").hidden = which !== "register";
+  }
+  tabLogin.addEventListener("click", function () { showTab("login"); });
+  tabRegister.addEventListener("click", function () { showTab("register"); });
+
   // ---------- Routing ----------
   function route() {
-    var acc = W.getAccount();
-    if (!acc) { showView("register"); return; }
-    if (!W.isLoggedIn()) {
-      document.getElementById("login-name").textContent = acc.name;
-      document.getElementById("login-avatar").src = "assets/heroes/sm/" + (acc.avatar || "abrams") + ".webp";
-      document.getElementById("login-meta").textContent = memberSince(acc);
-      showView("login");
-      return;
+    W.refreshNav();
+    if (W.isLoggedIn()) { renderProfile(W.getAccount()); showView("profile"); }
+    else {
+      // Gibt es hier schon Konten? Dann Login-Tab, sonst Registrieren.
+      showTab(W.knownEmails().length ? "login" : "register");
+      showView("auth");
     }
-    renderProfile(acc);
-    showView("profile");
   }
 
-  // ---------- Registrieren / Anmelden / Löschen ----------
-  document.getElementById("btn-register").addEventListener("click", function () {
-    var name = document.getElementById("reg-name").value.trim();
-    if (name.length < 2) { document.getElementById("reg-name").focus(); return; }
-    W.saveAccount({ name: name, avatar: chosenAvatar, created: Date.now(), favorites: [], steamId: null });
-    W.login();
-    route();
+  // ---------- Login ----------
+  document.getElementById("form-login").addEventListener("submit", function (e) {
+    e.preventDefault();
+    setStatus("login-status", "");
+    W.login(document.getElementById("login-email").value, document.getElementById("login-pw").value)
+      .then(function (r) {
+        if (r.error) { setStatus("login-status", r.error); return; }
+        route();
+      });
   });
-  document.getElementById("btn-login").addEventListener("click", function () { W.login(); route(); });
-  function delAccount() {
-    if (confirm("Konto wirklich löschen? Favoriten und Verknüpfung gehen verloren.")) { W.deleteAccount(); route(); }
-  }
-  document.getElementById("btn-delete-1").addEventListener("click", delAccount);
-  document.getElementById("btn-delete-2").addEventListener("click", delAccount);
+
+  // ---------- Registrierung ----------
+  document.getElementById("form-register").addEventListener("submit", function (e) {
+    e.preventDefault();
+    setStatus("reg-status", "");
+    var pw = document.getElementById("reg-pw").value;
+    if (pw !== document.getElementById("reg-pw2").value) {
+      setStatus("reg-status", "Die Passwörter stimmen nicht überein."); return;
+    }
+    W.register({
+      name: document.getElementById("reg-name").value,
+      email: document.getElementById("reg-email").value,
+      password: pw,
+      avatar: chosenAvatar
+    }).then(function (r) {
+      if (r.error) { setStatus("reg-status", r.error); return; }
+      document.getElementById("recovery-code").textContent = r.recoveryCode;
+      showView("recovery");
+    });
+  });
+  document.getElementById("btn-code-done").addEventListener("click", route);
+
+  // ---------- Passwort vergessen ----------
+  document.getElementById("link-forgot").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.getElementById("reset-email").value = document.getElementById("login-email").value;
+    showView("reset");
+  });
+  document.getElementById("btn-reset-back").addEventListener("click", function () { showView("auth"); showTab("login"); });
+  document.getElementById("form-reset").addEventListener("submit", function (e) {
+    e.preventDefault();
+    setStatus("reset-status", "");
+    W.resetPassword(
+      document.getElementById("reset-email").value,
+      document.getElementById("reset-code").value,
+      document.getElementById("reset-pw").value
+    ).then(function (r) {
+      if (r.error) { setStatus("reset-status", r.error); return; }
+      route();
+    });
+  });
+
+  // ---------- Passwort ändern / Konto löschen / Abmelden ----------
+  document.getElementById("form-pwchange").addEventListener("submit", function (e) {
+    e.preventDefault();
+    W.changePassword(document.getElementById("pwc-old").value, document.getElementById("pwc-new").value)
+      .then(function (r) {
+        if (r.error) { setStatus("pwc-status", r.error); return; }
+        setStatus("pwc-status", "Passwort geändert ✓", true);
+        document.getElementById("pwc-old").value = "";
+        document.getElementById("pwc-new").value = "";
+      });
+  });
+  document.getElementById("btn-delete").addEventListener("click", function () {
+    if (confirm("Konto wirklich unwiderruflich löschen?")) { W.deleteAccount(); route(); }
+  });
   document.getElementById("btn-logout").addEventListener("click", function () { W.logout(); route(); });
 
   // ---------- Profil ----------
@@ -227,7 +354,6 @@
     document.getElementById("prof-avatar").src = "assets/heroes/sm/" + (acc.avatar || "abrams") + ".webp";
     document.getElementById("prof-meta").textContent = memberSince(acc);
 
-    // Favoriten
     var grid = document.getElementById("fav-grid");
     grid.innerHTML = "";
     var favs = acc.favorites || [];
@@ -241,7 +367,6 @@
       grid.appendChild(li);
     });
 
-    // Verknüpfung
     if (acc.steamId) {
       document.getElementById("link-form").hidden = true;
       document.getElementById("stats-area").hidden = false;
@@ -324,7 +449,6 @@
           tile(((kills + assists) / Math.max(1, deaths)).toFixed(2), "KDA-Verhältnis") +
           tile((kills / n).toFixed(1) + " / " + (deaths / n).toFixed(1) + " / " + (assists / n).toFixed(1), "Ø K / D / A");
 
-        // Top-Helden
         var tops = Object.keys(perHero).map(function (hid) {
           return { hid: hid, g: perHero[hid].games, w: perHero[hid].wins };
         }).sort(function (a, b) { return b.g - a.g; }).slice(0, 5);
@@ -337,7 +461,6 @@
             "</td><td>" + fmtNum(t.w) + "</td><td class=\"" + (twr >= 50 ? "st-win" : "st-loss") + "\">" + twr + " %</td></tr>";
         }).join("");
 
-        // Letzte 10
         var last = matches.slice().sort(function (a, b) { return b.start_time - a.start_time; }).slice(0, 10);
         document.getElementById("last-matches").innerHTML = last.map(function (m) {
           var hi = heroInfo(m.hero_id);
@@ -353,7 +476,7 @@
         }).join("");
       })
       .catch(function () {
-        tiles.innerHTML = '<div class="stat-tile"><span class="st-num err" style="color:var(--redlink);">!</span><span class="st-label">API nicht erreichbar — später erneut versuchen</span></div>';
+        tiles.innerHTML = '<div class="stat-tile"><span class="st-num" style="color:var(--redlink);">!</span><span class="st-label">API nicht erreichbar — später erneut versuchen</span></div>';
       });
   }
 
