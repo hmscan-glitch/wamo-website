@@ -1254,3 +1254,171 @@ p { margin: 0 0 14px; max-width: 72ch; }
 @media (prefers-reduced-motion: reduce) {
   .map-tip { transition: none; }
 }
+
+/* --------------------------------------------------------------------------
+   Wiki-Konto & Profil
+   -------------------------------------------------------------------------- */
+
+.nav-account {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+  border: 1px solid var(--brass-dim) !important;
+  border-radius: 999px;
+  padding: 5px 14px !important;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  color: var(--brass) !important;
+  border-bottom-width: 1px !important;
+}
+.nav-account:hover { border-color: var(--brass) !important; color: var(--brass-bright) !important; }
+.nav-account img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--brass-dim);
+  object-fit: cover;
+}
+
+.auth-card {
+  max-width: 560px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--brass);
+  border-radius: 5px;
+  padding: 26px 28px 24px;
+  margin: 24px 0;
+}
+.auth-card h2 { border: 0; margin: 0 0 6px; padding: 0; }
+.auth-card label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 18px 0 6px;
+}
+.auth-input {
+  display: block;
+  width: 100%;
+  background: var(--night-deep);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--paper);
+  font: inherit;
+  font-size: 15px;
+  padding: 11px 14px;
+}
+.auth-input:focus { outline: none; border-color: var(--brass); }
+.auth-hint { font-size: 12.5px; color: var(--faint); margin-top: 6px; }
+
+.avatar-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+  gap: 8px;
+  margin-top: 4px;
+}
+.avatar-pick {
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  padding: 0;
+  background: var(--night-deep);
+  cursor: pointer;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.avatar-pick img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.avatar-pick:hover { border-color: var(--brass-dim); }
+.avatar-pick[aria-pressed="true"] { border-color: var(--brass); box-shadow: 0 0 0 2px rgba(217,160,60,.35); }
+
+.profile-head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+.profile-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 3px solid var(--brass);
+  object-fit: cover;
+  background: var(--night-deep);
+}
+.profile-name {
+  font-family: var(--font-display);
+  font-size: 30px;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+}
+.profile-meta { color: var(--muted); font-size: 13.5px; }
+.profile-head .btn-row { margin: 0 0 0 auto; }
+
+.stat-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.stat-tile {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 14px 16px;
+}
+.stat-tile .st-num {
+  font-size: 26px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  display: block;
+  line-height: 1.1;
+}
+.stat-tile .st-label {
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-top: 3px;
+}
+.st-win { color: var(--vitality); }
+.st-loss { color: var(--redlink); }
+
+.result-chip {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border-radius: 3px;
+  padding: 1px 8px;
+}
+.result-chip--win { background: rgba(132, 199, 97, 0.15); color: var(--vitality); border: 1px solid rgba(132,199,97,.4); }
+.result-chip--loss { background: rgba(208, 106, 85, 0.13); color: var(--redlink); border: 1px solid rgba(208,106,85,.4); }
+
+.mh-hero { display: flex; align-items: center; gap: 10px; }
+.mh-hero img { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); object-fit: cover; }
+
+.fav-btn[data-faved="true"] { border-color: var(--brass); color: var(--brass-bright); }
+
+.auth-note {
+  font-size: 13px;
+  color: var(--faint);
+  border-left: 3px solid var(--line);
+  padding-left: 12px;
+  margin-top: 18px;
+}
+
+.link-status { font-size: 14px; margin-top: 12px; }
+.link-status .ok { color: var(--vitality); font-weight: 700; }
+.link-status .err { color: var(--redlink); font-weight: 700; }
+
+@media (max-width: 720px) {
+  .profile-head .btn-row { margin-left: 0; }
+}

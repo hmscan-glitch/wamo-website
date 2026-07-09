@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil – Deadlock Wiki</title>
+<meta name="description" content="Dein Wiki-Konto: Lieblingshelden speichern und deinen Deadlock-Account verknüpfen, um echte Match-Statistiken zu sehen.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="index.html">DEADLOCK<span class="wm-wiki">&nbsp;WIKI</span></a>
+    <div class="wordmark-rule" aria-hidden="true"><span class="wm-diamond"></span></div>
+    <p class="tagline">Die von Fans geschriebene Enzyklopädie zur okkulten Unterwelt von New York.</p>
+    <form class="searchform" action="helden.html" role="search">
+      <input type="search" name="q" placeholder="Deadlock Wiki durchsuchen …" aria-label="Wiki durchsuchen">
+      <button type="submit">Suchen</button>
+    </form>
+  </div>
+  <nav class="localnav" aria-label="Wiki-Navigation">
+    <div class="localnav-inner">
+      <a href="index.html">Hauptseite</a>
+      <a href="helden.html">Helden</a>
+      <a href="items.html">Items</a>
+      <a href="gameplay.html">Gameplay</a>
+      <a href="karte.html">Karte</a>
+      <a href="#" class="redlink" title="Diese Seite existiert noch nicht – hilf mit, sie zu schreiben!">Community</a>
+      <a class="nav-account" href="profil.html" data-nav-account aria-current="page">Anmelden</a>
+      <span class="nav-stats">1.284 Artikel &middot; 4.107 Dateien</span>
+    </div>
+  </nav>
+</header>
+
+<div class="shell">
+  <main>
+    <p class="page-sub">Konto</p>
+    <h1 class="page-title">Dein Profil</h1>
+
+    <!-- Ansicht 1: Registrieren -->
+    <section id="view-register" hidden>
+      <p class="lead">Leg dir ein Wiki-Konto an, um <strong>Lieblingshelden zu speichern</strong> und dein Profil mit deinem <strong>Deadlock-Account zu verknüpfen</strong> — inklusive echter Match-Statistiken.</p>
+      <div class="auth-card">
+        <h2>Konto anlegen</h2>
+        <label for="reg-name">Dein Anzeigename</label>
+        <input class="auth-input" id="reg-name" type="text" maxlength="24" placeholder="z. B. LaneLurker" autocomplete="off">
+        <label>Wähle einen Avatar</label>
+        <div class="avatar-picker" id="avatar-picker" role="group" aria-label="Avatar wählen"></div>
+        <div class="btn-row">
+          <button class="btn btn--solid" id="btn-register" type="button">Konto anlegen</button>
+        </div>
+        <p class="auth-note">Dieses Wiki ist ein Fan-Projekt ohne Server: Dein Konto wird nur <strong>in diesem Browser</strong> gespeichert (localStorage) — kein Passwort, keine Datenübertragung. Löschst du deine Browserdaten, ist auch das Konto weg.</p>
+      </div>
+    </section>
+
+    <!-- Ansicht 2: Willkommen zurück -->
+    <section id="view-login" hidden>
+      <div class="auth-card">
+        <h2>Willkommen zurück!</h2>
+        <p style="color:var(--muted);">In diesem Browser ist bereits ein Konto gespeichert:</p>
+        <div class="profile-head" style="margin:14px 0;">
+          <img class="profile-avatar" id="login-avatar" src="assets/heroes/sm/abrams.webp" alt="">
+          <div>
+            <div class="profile-name" id="login-name"></div>
+            <div class="profile-meta" id="login-meta"></div>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn--solid" id="btn-login" type="button">Anmelden</button>
+          <button class="btn btn--ghost" id="btn-delete-1" type="button">Konto löschen</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ansicht 3: Profil-Dashboard -->
+    <section id="view-profile" hidden>
+      <div class="profile-head">
+        <img class="profile-avatar" id="prof-avatar" src="assets/heroes/sm/abrams.webp" alt="Dein Avatar">
+        <div>
+          <div class="profile-name" id="prof-name"></div>
+          <div class="profile-meta" id="prof-meta"></div>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn--ghost" id="btn-logout" type="button">Abmelden</button>
+          <button class="btn btn--ghost" id="btn-delete-2" type="button">Konto löschen</button>
+        </div>
+      </div>
+
+      <h2><span class="h-deco" aria-hidden="true"></span>Deine Lieblingshelden</h2>
+      <p id="fav-empty">Noch keine Favoriten — öffne einen <a href="helden.html">Helden-Artikel</a> und klicke oben auf <strong>„☆ Favorit“</strong>.</p>
+      <ul class="hero-grid" id="fav-grid" style="grid-template-columns:repeat(auto-fill,minmax(130px,1fr));"></ul>
+
+      <h2><span class="h-deco" aria-hidden="true"></span>Deadlock-Account verknüpfen</h2>
+
+      <div id="link-form">
+        <p>Verknüpfe dein Wiki-Konto mit deinem <strong>Deadlock-Account</strong>, um deine echten Statistiken zu sehen: Siegquote, letzte Matches und deine meistgespielten Helden. Die Daten kommen live von der Community-API <code>deadlock-api.com</code>.</p>
+        <div class="auth-card" style="margin-top:14px;">
+          <label for="steam-id">Steam-ID64, Deadlock-Freundes-ID oder Account-ID</label>
+          <input class="auth-input" id="steam-id" type="text" inputmode="numeric" placeholder="z. B. 76561198… oder 123456789" autocomplete="off">
+          <p class="auth-hint">Die Steam-ID64 findest du in deinem Steam-Profil-Link (steamcommunity.com/profiles/<strong>7656119…</strong>). Die Freundes-ID zeigt Deadlock im Freunde-Menü an.</p>
+          <div class="btn-row">
+            <button class="btn btn--solid" id="btn-link" type="button">Verknüpfen &amp; Statistiken laden</button>
+          </div>
+          <p class="link-status" id="link-status"></p>
+        </div>
+      </div>
+
+      <div id="stats-area" hidden>
+        <p class="link-status">Verknüpft mit Account-ID <strong id="linked-id"></strong> <span class="ok">✓</span>
+          &nbsp;<button class="aa-btn" id="btn-unlink" type="button">Verknüpfung lösen</button>
+          &nbsp;<button class="aa-btn" id="btn-refresh" type="button">Aktualisieren</button>
+        </p>
+
+        <div class="stat-tiles" id="stat-tiles"></div>
+
+        <h3>Deine meistgespielten Helden</h3>
+        <div class="wikitable-wrap">
+          <table class="wikitable">
+            <thead><tr><th scope="col">Held</th><th scope="col">Matches</th><th scope="col">Siege</th><th scope="col">Siegquote</th></tr></thead>
+            <tbody id="top-heroes"></tbody>
+          </table>
+        </div>
+
+        <h3>Deine letzten 10 Matches</h3>
+        <div class="wikitable-wrap">
+          <table class="wikitable">
+            <thead><tr><th scope="col">Held</th><th scope="col">Ergebnis</th><th scope="col">K / D / A</th><th scope="col">Seelen</th><th scope="col">Dauer</th><th scope="col">Datum</th></tr></thead>
+            <tbody id="last-matches"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="auth-note">Datenschutz: Die Verknüpfung fragt ausschließlich <strong>öffentliche Match-Daten</strong> über die Community-API ab und speichert deine ID nur in diesem Browser. Keine Anmeldung bei Steam, kein Zugriff auf dein Steam-Konto.</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="wikifoot">
+  <div class="wikifoot-inner">
+    <p><strong>Deadlock Wiki</strong> ist ein inoffizielles Fan-Projekt und steht in keiner Verbindung zur Valve Corporation.</p>
+    <p>Deadlock sowie alle zugehörigen Grafiken und Namen sind Eigentum der Valve Corporation. Inhalte der Community stehen unter CC&nbsp;BY-SA, sofern nicht anders angegeben.</p>
+    <p><a href="index.html">Hauptseite</a> · <a href="helden.html">Helden</a> · <a href="items.html">Items</a> · <a href="gameplay.html">Gameplay</a> · <a href="karte.html">Karte</a> · <a href="#">Impressum</a></p>
+  </div>
+</footer>
+
+<script src="assets/wiki-account.js"></script>
+<script>
+(function () {
+  "use strict";
+  var HEROES = {"1": {"n": "Infernus", "s": "infernus"}, "2": {"n": "Seven", "s": "seven"}, "3": {"n": "Vindicta", "s": "vindicta"}, "4": {"n": "Lady Geist", "s": "lady-geist"}, "6": {"n": "Abrams", "s": "abrams"}, "7": {"n": "Wraith", "s": "wraith"}, "8": {"n": "McGinnis", "s": "mcginnis"}, "10": {"n": "Paradox", "s": "paradox"}, "11": {"n": "Dynamo", "s": "dynamo"}, "12": {"n": "Kelvin", "s": "kelvin"}, "13": {"n": "Haze", "s": "haze"}, "14": {"n": "Holliday", "s": "holliday"}, "15": {"n": "Bebop", "s": "bebop"}, "16": {"n": "Calico", "s": "calico"}, "17": {"n": "Grey Talon", "s": "grey-talon"}, "18": {"n": "Mo & Krill", "s": "mo-and-krill"}, "19": {"n": "Shiv", "s": "shiv"}, "20": {"n": "Ivy", "s": "ivy"}, "25": {"n": "Warden", "s": "warden"}, "27": {"n": "Yamato", "s": "yamato"}, "31": {"n": "Lash", "s": "lash"}, "35": {"n": "Viscous", "s": "viscous"}, "50": {"n": "Pocket", "s": "pocket"}, "52": {"n": "Mirage", "s": "mirage"}, "58": {"n": "Vyper", "s": "vyper"}, "60": {"n": "Sinclair", "s": "sinclair"}, "63": {"n": "Mina", "s": "mina"}, "64": {"n": "Drifter", "s": "drifter"}, "65": {"n": "Venator", "s": "venator"}, "66": {"n": "Victor", "s": "victor"}, "67": {"n": "Paige", "s": "paige"}, "69": {"n": "The Doorman", "s": "the-doorman"}, "72": {"n": "Billy", "s": "billy"}, "76": {"n": "Graves", "s": "graves"}, "77": {"n": "Apollo", "s": "apollo"}, "79": {"n": "Rem", "s": "rem"}, "80": {"n": "Silver", "s": "silver"}, "81": {"n": "Celeste", "s": "celeste"}};
+  var HEROES_BY_SLUG = {"infernus": "Infernus", "seven": "Seven", "vindicta": "Vindicta", "lady-geist": "Lady Geist", "abrams": "Abrams", "wraith": "Wraith", "mcginnis": "McGinnis", "paradox": "Paradox", "dynamo": "Dynamo", "kelvin": "Kelvin", "haze": "Haze", "holliday": "Holliday", "bebop": "Bebop", "calico": "Calico", "grey-talon": "Grey Talon", "mo-and-krill": "Mo & Krill", "shiv": "Shiv", "ivy": "Ivy", "warden": "Warden", "yamato": "Yamato", "lash": "Lash", "viscous": "Viscous", "pocket": "Pocket", "mirage": "Mirage", "vyper": "Vyper", "sinclair": "Sinclair", "mina": "Mina", "drifter": "Drifter", "venator": "Venator", "victor": "Victor", "paige": "Paige", "the-doorman": "The Doorman", "billy": "Billy", "graves": "Graves", "apollo": "Apollo", "rem": "Rem", "silver": "Silver", "celeste": "Celeste"};
+
+  var AVATARS = ["abrams","seven","haze","infernus","lady-geist","bebop","vindicta","wraith","lash","paradox","kelvin","yamato","ivy","viscous","pocket","grey-talon"];
+  var W = window.DLWiki;
+
+  var views = {
+    register: document.getElementById("view-register"),
+    login: document.getElementById("view-login"),
+    profile: document.getElementById("view-profile")
+  };
+
+  function showView(name) {
+    Object.keys(views).forEach(function (k) { views[k].hidden = k !== name; });
+  }
+
+  function fmtNum(n) { return n.toLocaleString("de-DE"); }
+
+  function memberSince(acc) {
+    var d = new Date(acc.created || Date.now());
+    return "Mitglied seit " + d.toLocaleDateString("de-DE", { day: "numeric", month: "long", year: "numeric" });
+  }
+
+  // ---------- Avatar-Picker ----------
+  var picker = document.getElementById("avatar-picker");
+  var chosenAvatar = AVATARS[0];
+  AVATARS.forEach(function (slug, i) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "avatar-pick";
+    b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+    b.title = (HEROES_BY_SLUG[slug] || slug);
+    b.innerHTML = '<img src="assets/heroes/sm/' + slug + '.webp" alt="' + slug + '">';
+    b.addEventListener("click", function () {
+      chosenAvatar = slug;
+      picker.querySelectorAll(".avatar-pick").forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
+      b.setAttribute("aria-pressed", "true");
+    });
+    picker.appendChild(b);
+  });
+
+  // ---------- Routing ----------
+  function route() {
+    var acc = W.getAccount();
+    if (!acc) { showView("register"); return; }
+    if (!W.isLoggedIn()) {
+      document.getElementById("login-name").textContent = acc.name;
+      document.getElementById("login-avatar").src = "assets/heroes/sm/" + (acc.avatar || "abrams") + ".webp";
+      document.getElementById("login-meta").textContent = memberSince(acc);
+      showView("login");
+      return;
+    }
+    renderProfile(acc);
+    showView("profile");
+  }
+
+  // ---------- Registrieren / Anmelden / Löschen ----------
+  document.getElementById("btn-register").addEventListener("click", function () {
+    var name = document.getElementById("reg-name").value.trim();
+    if (name.length < 2) { document.getElementById("reg-name").focus(); return; }
+    W.saveAccount({ name: name, avatar: chosenAvatar, created: Date.now(), favorites: [], steamId: null });
+    W.login();
+    route();
+  });
+  document.getElementById("btn-login").addEventListener("click", function () { W.login(); route(); });
+  function delAccount() {
+    if (confirm("Konto wirklich löschen? Favoriten und Verknüpfung gehen verloren.")) { W.deleteAccount(); route(); }
+  }
+  document.getElementById("btn-delete-1").addEventListener("click", delAccount);
+  document.getElementById("btn-delete-2").addEventListener("click", delAccount);
+  document.getElementById("btn-logout").addEventListener("click", function () { W.logout(); route(); });
+
+  // ---------- Profil ----------
+  function renderProfile(acc) {
+    document.getElementById("prof-name").textContent = acc.name;
+    document.getElementById("prof-avatar").src = "assets/heroes/sm/" + (acc.avatar || "abrams") + ".webp";
+    document.getElementById("prof-meta").textContent = memberSince(acc);
+
+    // Favoriten
+    var grid = document.getElementById("fav-grid");
+    grid.innerHTML = "";
+    var favs = acc.favorites || [];
+    document.getElementById("fav-empty").hidden = favs.length > 0;
+    favs.forEach(function (slug) {
+      var name = HEROES_BY_SLUG[slug] || slug;
+      var li = document.createElement("li");
+      li.innerHTML = '<a class="hero-card" href="' + slug + '.html"><figure>' +
+        '<div class="hc-img"><img src="assets/heroes/card/' + slug + '.webp" alt="' + name + '" loading="lazy"></div>' +
+        '<figcaption><span class="hc-name">' + name + '</span></figcaption></figure></a>';
+      grid.appendChild(li);
+    });
+
+    // Verknüpfung
+    if (acc.steamId) {
+      document.getElementById("link-form").hidden = true;
+      document.getElementById("stats-area").hidden = false;
+      document.getElementById("linked-id").textContent = acc.steamId;
+      loadStats(acc.steamId);
+    } else {
+      document.getElementById("link-form").hidden = false;
+      document.getElementById("stats-area").hidden = true;
+    }
+  }
+
+  // ---------- Deadlock-Verknüpfung ----------
+  function parseAccountId(raw) {
+    var digits = (raw || "").replace(/\D/g, "");
+    if (!digits) return null;
+    if (digits.length >= 17 && digits.indexOf("7656") === 0) {
+      try { return (BigInt(digits) - 76561197960265728n).toString(); } catch (e) { return null; }
+    }
+    return digits;
+  }
+
+  document.getElementById("btn-link").addEventListener("click", function () {
+    var status = document.getElementById("link-status");
+    var id = parseAccountId(document.getElementById("steam-id").value);
+    if (!id) { status.innerHTML = '<span class="err">Bitte gib eine gültige ID ein.</span>'; return; }
+    status.textContent = "Prüfe Account …";
+    fetch("https://api.deadlock-api.com/v1/players/" + id + "/match-history")
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (data) {
+        if (!Array.isArray(data) || data.length === 0) {
+          status.innerHTML = '<span class="err">Keine Matches gefunden.</span> Prüfe die ID — oder das Match-Verlauf-Teilen ist in Deadlock deaktiviert.';
+          return;
+        }
+        var acc = W.getAccount();
+        acc.steamId = id;
+        W.saveAccount(acc);
+        renderProfile(acc);
+      })
+      .catch(function () {
+        status.innerHTML = '<span class="err">Account nicht gefunden oder API nicht erreichbar.</span> Prüfe die ID und versuche es erneut.';
+      });
+  });
+
+  document.getElementById("btn-unlink").addEventListener("click", function () {
+    var acc = W.getAccount();
+    acc.steamId = null;
+    W.saveAccount(acc);
+    renderProfile(acc);
+  });
+  document.getElementById("btn-refresh").addEventListener("click", function () {
+    loadStats(W.getAccount().steamId);
+  });
+
+  function heroInfo(id) {
+    return HEROES[id] || { n: "Held #" + id, s: null };
+  }
+
+  function loadStats(id) {
+    var tiles = document.getElementById("stat-tiles");
+    tiles.innerHTML = '<div class="stat-tile"><span class="st-num">…</span><span class="st-label">Lade Statistiken</span></div>';
+    fetch("https://api.deadlock-api.com/v1/players/" + id + "/match-history")
+      .then(function (r) { return r.json(); })
+      .then(function (matches) {
+        if (!Array.isArray(matches) || matches.length === 0) return;
+        var wins = 0, kills = 0, deaths = 0, assists = 0;
+        var perHero = {};
+        matches.forEach(function (m) {
+          var win = m.match_result === m.player_team;
+          if (win) wins++;
+          kills += m.player_kills; deaths += m.player_deaths; assists += m.player_assists;
+          var h = perHero[m.hero_id] = perHero[m.hero_id] || { games: 0, wins: 0 };
+          h.games++; if (win) h.wins++;
+        });
+        var n = matches.length;
+        var wr = Math.round(wins / n * 100);
+        tiles.innerHTML =
+          tile(fmtNum(n), "Matches gesamt") +
+          tile(wr + " %", "Siegquote", wr >= 50 ? "st-win" : "st-loss") +
+          tile(fmtNum(wins), "Siege", "st-win") +
+          tile(((kills + assists) / Math.max(1, deaths)).toFixed(2), "KDA-Verhältnis") +
+          tile((kills / n).toFixed(1) + " / " + (deaths / n).toFixed(1) + " / " + (assists / n).toFixed(1), "Ø K / D / A");
+
+        // Top-Helden
+        var tops = Object.keys(perHero).map(function (hid) {
+          return { hid: hid, g: perHero[hid].games, w: perHero[hid].wins };
+        }).sort(function (a, b) { return b.g - a.g; }).slice(0, 5);
+        document.getElementById("top-heroes").innerHTML = tops.map(function (t) {
+          var hi = heroInfo(t.hid);
+          var icon = hi.s ? '<img src="assets/heroes/sm/' + hi.s + '.webp" alt="">' : "";
+          var link = hi.s ? '<a href="' + hi.s + '.html">' + hi.n + "</a>" : hi.n;
+          var twr = Math.round(t.w / t.g * 100);
+          return "<tr><td><span class=\"mh-hero\">" + icon + link + "</span></td><td>" + fmtNum(t.g) +
+            "</td><td>" + fmtNum(t.w) + "</td><td class=\"" + (twr >= 50 ? "st-win" : "st-loss") + "\">" + twr + " %</td></tr>";
+        }).join("");
+
+        // Letzte 10
+        var last = matches.slice().sort(function (a, b) { return b.start_time - a.start_time; }).slice(0, 10);
+        document.getElementById("last-matches").innerHTML = last.map(function (m) {
+          var hi = heroInfo(m.hero_id);
+          var win = m.match_result === m.player_team;
+          var icon = hi.s ? '<img src="assets/heroes/sm/' + hi.s + '.webp" alt="">' : "";
+          var link = hi.s ? '<a href="' + hi.s + '.html">' + hi.n + "</a>" : hi.n;
+          var dur = Math.round(m.match_duration_s / 60) + " min";
+          var date = new Date(m.start_time * 1000).toLocaleDateString("de-DE");
+          return "<tr><td><span class=\"mh-hero\">" + icon + link + "</span></td>" +
+            "<td><span class=\"result-chip result-chip--" + (win ? "win" : "loss") + "\">" + (win ? "Sieg" : "Niederlage") + "</span></td>" +
+            "<td>" + m.player_kills + " / " + m.player_deaths + " / " + m.player_assists + "</td>" +
+            "<td>" + fmtNum(m.net_worth) + "</td><td>" + dur + "</td><td>" + date + "</td></tr>";
+        }).join("");
+      })
+      .catch(function () {
+        tiles.innerHTML = '<div class="stat-tile"><span class="st-num err" style="color:var(--redlink);">!</span><span class="st-label">API nicht erreichbar — später erneut versuchen</span></div>';
+      });
+  }
+
+  function tile(num, label, cls) {
+    return '<div class="stat-tile"><span class="st-num ' + (cls || "") + '">' + num + '</span><span class="st-label">' + label + "</span></div>";
+  }
+
+  route();
+})();
+</script>
+
+</body>
+</html>
