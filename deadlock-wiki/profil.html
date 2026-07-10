@@ -9,6 +9,8 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
 <header class="masthead">
   <div class="masthead-inner">
     <a class="wordmark" href="index.html">DEADLOCK<span class="wm-wiki">&nbsp;WIKI</span></a>
@@ -19,24 +21,25 @@
       <button type="submit">Suchen</button>
     </form>
   </div>
-  <nav class="localnav" aria-label="Wiki-Navigation">
+</header>
+<nav class="localnav" aria-label="Wiki-Navigation">
     <div class="localnav-inner">
       <a href="index.html">Hauptseite</a>
       <a href="helden.html">Helden</a>
       <a href="items.html">Items</a>
       <a href="gameplay.html">Gameplay</a>
       <a href="karte.html">Karte</a>
-      <a href="#" class="redlink" title="Diese Seite existiert noch nicht – hilf mit, sie zu schreiben!">Community</a>
+      <a href="https://github.com/hmscan-glitch/wamo-website/issues" title="Auf GitHub mithelfen oder einen Fehler melden">Community</a>
       <a class="nav-account" href="profil.html" data-nav-account aria-current="page">Anmelden</a>
-      <span class="nav-stats">1.284 Artikel &middot; 4.107 Dateien</span>
+      <span class="nav-stats">38 Helden &middot; Fanprojekt</span>
     </div>
   </nav>
-</header>
 
 <div class="shell">
-  <main>
+  <main id="main-content">
     <p class="page-sub">Konto</p>
-    <h1 class="page-title" id="page-title">Anmelden</h1>
+    <h1 class="page-title" id="page-title" tabindex="-1">Anmelden</h1>
+    <noscript><p class="auth-note">Für das lokale Wiki-Konto muss JavaScript aktiviert sein.</p></noscript>
 
     <!-- Ansicht 1: Anmelden / Registrieren -->
     <section id="view-auth" hidden>
@@ -44,17 +47,17 @@
 
       <div class="auth-card">
         <div class="filter-row" role="tablist" style="margin:0 0 8px;">
-          <button class="filter-chip" type="button" id="tab-login" role="tab" aria-pressed="true">Anmelden</button>
-          <button class="filter-chip" type="button" id="tab-register" role="tab" aria-pressed="false">Registrieren</button>
+          <button class="filter-chip" type="button" id="tab-login" role="tab" aria-selected="true" aria-controls="form-login" tabindex="0">Anmelden</button>
+          <button class="filter-chip" type="button" id="tab-register" role="tab" aria-selected="false" aria-controls="form-register" tabindex="-1">Registrieren</button>
         </div>
 
         <!-- Login -->
-        <form id="form-login">
+        <form id="form-login" role="tabpanel" aria-labelledby="tab-login">
           <label for="login-email">E-Mail-Adresse</label>
-          <input class="auth-input" id="login-email" type="email" placeholder="du@beispiel.de" autocomplete="email">
+          <input class="auth-input" id="login-email" type="email" placeholder="du@beispiel.de" autocomplete="email" required>
           <label for="login-pw">Passwort</label>
-          <input class="auth-input" id="login-pw" type="password" placeholder="••••••••" autocomplete="current-password">
-          <p class="link-status" id="login-status" role="alert"></p>
+          <input class="auth-input" id="login-pw" type="password" placeholder="••••••••" autocomplete="current-password" required>
+          <p class="link-status" id="login-status" role="status" aria-live="polite"></p>
           <div class="btn-row">
             <button class="btn btn--solid" type="submit">Anmelden</button>
             <a class="btn btn--ghost" href="#" id="link-forgot">Passwort vergessen?</a>
@@ -62,33 +65,33 @@
         </form>
 
         <!-- Registrierung -->
-        <form id="form-register" hidden>
+        <form id="form-register" role="tabpanel" aria-labelledby="tab-register" hidden>
           <label for="reg-name">Anzeigename</label>
-          <input class="auth-input" id="reg-name" type="text" maxlength="24" placeholder="z. B. LaneLurker" autocomplete="nickname">
+          <input class="auth-input" id="reg-name" type="text" minlength="2" maxlength="24" placeholder="z. B. LaneLurker" autocomplete="nickname" required>
           <label for="reg-email">E-Mail-Adresse</label>
-          <input class="auth-input" id="reg-email" type="email" placeholder="du@beispiel.de" autocomplete="email">
+          <input class="auth-input" id="reg-email" type="email" placeholder="du@beispiel.de" autocomplete="email" required>
           <label for="reg-pw">Passwort <span style="text-transform:none;letter-spacing:0;color:var(--faint);">(mind. 8 Zeichen)</span></label>
-          <input class="auth-input" id="reg-pw" type="password" placeholder="••••••••" autocomplete="new-password">
+          <input class="auth-input" id="reg-pw" type="password" minlength="8" placeholder="••••••••" autocomplete="new-password" required>
           <label for="reg-pw2">Passwort wiederholen</label>
-          <input class="auth-input" id="reg-pw2" type="password" placeholder="••••••••" autocomplete="new-password">
+          <input class="auth-input" id="reg-pw2" type="password" minlength="8" placeholder="••••••••" autocomplete="new-password" required>
           <label>Wähle einen Avatar</label>
           <div class="avatar-picker" id="avatar-picker" role="group" aria-label="Avatar wählen"></div>
-          <p class="link-status" id="reg-status" role="alert"></p>
+          <p class="link-status" id="reg-status" role="status" aria-live="polite"></p>
           <div class="btn-row">
             <button class="btn btn--solid" type="submit">Konto erstellen</button>
           </div>
         </form>
 
-        <p class="auth-note">Dieses Wiki ist ein Fan-Projekt ohne eigenen Server: Dein Konto (inklusive sicher gehashtem Passwort) wird <strong>nur in diesem Browser</strong> gespeichert und nirgendwohin übertragen. Deshalb erhältst du statt einer E-Mail einen <strong>Wiederherstellungs-Code</strong> für „Passwort vergessen“.</p>
+        <p class="auth-note">Dieses Wiki hat keinen eigenen Server: Das Wiki-Konto ist eine <strong>lokale Komfortfunktion</strong>. E-Mail und Passwort-Hash bleiben nur in diesem Browser und werden nirgendwohin übertragen. Deshalb erhältst du statt einer E-Mail einen <strong>Wiederherstellungs-Code</strong>.</p>
       </div>
     </section>
 
     <!-- Ansicht 2: Wiederherstellungs-Code nach Registrierung -->
     <section id="view-recovery" hidden>
       <div class="auth-card">
-        <h2>Konto erstellt — sichere deinen Code!</h2>
-        <p style="color:var(--muted);">Da dieses Fan-Wiki keine E-Mails verschicken kann, ist dieser <strong>Wiederherstellungs-Code</strong> dein einziger Weg, ein vergessenes Passwort zurückzusetzen. Schreib ihn dir auf oder speichere ihn im Passwort-Manager — er wird nur dieses eine Mal angezeigt:</p>
-        <p style="font-family:var(--font-display);font-size:30px;letter-spacing:.12em;color:var(--brass-bright);text-align:center;margin:22px 0;" id="recovery-code">XXXX-XXXX-XXXX</p>
+        <h2 id="recovery-heading">Konto erstellt — sichere deinen Code!</h2>
+        <p style="color:var(--muted);">Dieser <strong>Wiederherstellungs-Code</strong> ist dein einziger Weg, ein vergessenes Passwort zurückzusetzen. Er wird nur einmal angezeigt und ersetzt nach einer Wiederherstellung alle früheren Codes.</p>
+        <p class="recovery-code" id="recovery-code">XXXX-XXXX-XXXX</p>
         <div class="btn-row">
           <button class="btn btn--solid" id="btn-code-done" type="button">Ich habe den Code gesichert — weiter zum Profil</button>
         </div>
@@ -98,16 +101,18 @@
     <!-- Ansicht 3: Passwort vergessen -->
     <section id="view-reset" hidden>
       <div class="auth-card">
-        <h2>Passwort zurücksetzen</h2>
+        <h2>Neues Passwort vergeben</h2>
         <p style="color:var(--muted);">Gib deine E-Mail und den <strong>Wiederherstellungs-Code</strong> ein, den du bei der Registrierung erhalten hast. Danach kannst du ein neues Passwort vergeben.</p>
         <form id="form-reset">
           <label for="reset-email">E-Mail-Adresse</label>
-          <input class="auth-input" id="reset-email" type="email" placeholder="du@beispiel.de" autocomplete="email">
+          <input class="auth-input" id="reset-email" type="email" placeholder="du@beispiel.de" autocomplete="email" required>
           <label for="reset-code">Wiederherstellungs-Code</label>
-          <input class="auth-input" id="reset-code" type="text" placeholder="XXXX-XXXX-XXXX" autocomplete="off" style="text-transform:uppercase;">
+          <input class="auth-input" id="reset-code" type="text" placeholder="XXXX-XXXX-XXXX" autocomplete="off" style="text-transform:uppercase;" required>
           <label for="reset-pw">Neues Passwort <span style="text-transform:none;letter-spacing:0;color:var(--faint);">(mind. 8 Zeichen)</span></label>
-          <input class="auth-input" id="reset-pw" type="password" placeholder="••••••••" autocomplete="new-password">
-          <p class="link-status" id="reset-status" role="alert"></p>
+          <input class="auth-input" id="reset-pw" type="password" minlength="8" placeholder="••••••••" autocomplete="new-password" required>
+          <label for="reset-pw2">Neues Passwort wiederholen</label>
+          <input class="auth-input" id="reset-pw2" type="password" minlength="8" placeholder="••••••••" autocomplete="new-password" required>
+          <p class="link-status" id="reset-status" role="status" aria-live="polite"></p>
           <div class="btn-row">
             <button class="btn btn--solid" type="submit">Passwort setzen &amp; anmelden</button>
             <button class="btn btn--ghost" id="btn-reset-back" type="button">Zurück zur Anmeldung</button>
@@ -120,7 +125,7 @@
     <section id="view-profile" hidden>
       <div class="profile-head">
         <img class="profile-avatar" id="prof-avatar" src="assets/heroes/sm/abrams.webp" alt="Dein Avatar">
-        <div>
+        <div class="profile-identity">
           <div class="profile-name" id="prof-name"></div>
           <div class="profile-meta" id="prof-meta"></div>
         </div>
@@ -144,7 +149,7 @@
           <div class="btn-row">
             <button class="btn btn--solid" id="btn-link" type="button">Verknüpfen &amp; Statistiken laden</button>
           </div>
-          <p class="link-status" id="link-status"></p>
+          <p class="link-status" id="link-status" role="status" aria-live="polite"></p>
         </div>
       </div>
 
@@ -159,6 +164,7 @@
         <h3>Deine meistgespielten Helden</h3>
         <div class="wikitable-wrap">
           <table class="wikitable">
+            <caption class="sr-only">Meistgespielte Helden</caption>
             <thead><tr><th scope="col">Held</th><th scope="col">Matches</th><th scope="col">Siege</th><th scope="col">Siegquote</th></tr></thead>
             <tbody id="top-heroes"></tbody>
           </table>
@@ -167,6 +173,7 @@
         <h3>Deine letzten 10 Matches</h3>
         <div class="wikitable-wrap">
           <table class="wikitable">
+            <caption class="sr-only">Letzte zehn Matches</caption>
             <thead><tr><th scope="col">Held</th><th scope="col">Ergebnis</th><th scope="col">K / D / A</th><th scope="col">Seelen</th><th scope="col">Dauer</th><th scope="col">Datum</th></tr></thead>
             <tbody id="last-matches"></tbody>
           </table>
@@ -179,10 +186,12 @@
         <div class="build-body">
           <form id="form-pwchange">
             <label for="pwc-old">Aktuelles Passwort</label>
-            <input class="auth-input" id="pwc-old" type="password" autocomplete="current-password">
+            <input class="auth-input" id="pwc-old" type="password" autocomplete="current-password" required>
             <label for="pwc-new">Neues Passwort <span style="text-transform:none;letter-spacing:0;color:var(--faint);">(mind. 8 Zeichen)</span></label>
-            <input class="auth-input" id="pwc-new" type="password" autocomplete="new-password">
-            <p class="link-status" id="pwc-status" role="alert"></p>
+            <input class="auth-input" id="pwc-new" type="password" minlength="8" autocomplete="new-password" required>
+            <label for="pwc-new2">Neues Passwort wiederholen</label>
+            <input class="auth-input" id="pwc-new2" type="password" minlength="8" autocomplete="new-password" required>
+            <p class="link-status" id="pwc-status" role="status" aria-live="polite"></p>
             <div class="btn-row" style="margin-bottom:8px;">
               <button class="btn btn--solid" type="submit">Passwort ändern</button>
             </div>
@@ -209,7 +218,7 @@
   <div class="wikifoot-inner">
     <p><strong>Deadlock Wiki</strong> ist ein inoffizielles Fan-Projekt und steht in keiner Verbindung zur Valve Corporation.</p>
     <p>Deadlock sowie alle zugehörigen Grafiken und Namen sind Eigentum der Valve Corporation. Inhalte der Community stehen unter CC&nbsp;BY-SA, sofern nicht anders angegeben.</p>
-    <p><a href="index.html">Hauptseite</a> · <a href="helden.html">Helden</a> · <a href="items.html">Items</a> · <a href="gameplay.html">Gameplay</a> · <a href="karte.html">Karte</a> · <a href="#">Impressum</a></p>
+    <p><a href="index.html">Hauptseite</a> · <a href="helden.html">Helden</a> · <a href="items.html">Items</a> · <a href="gameplay.html">Gameplay</a> · <a href="karte.html">Karte</a> · <span class="footer-note">Impressum noch nicht hinterlegt</span></p>
   </div>
 </footer>
 
@@ -224,10 +233,13 @@
   var W = window.DLWiki;
 
   var views = ["auth", "recovery", "reset", "profile"];
-  function showView(name) {
+  function showView(name, focusHeading) {
     views.forEach(function (v) { document.getElementById("view-" + v).hidden = v !== name; });
-    document.getElementById("page-title").textContent =
-      name === "profile" ? "Dein Profil" : name === "reset" ? "Passwort zurücksetzen" : "Anmelden";
+    var pageTitle = document.getElementById("page-title");
+    pageTitle.textContent = name === "profile" ? "Dein Profil" :
+      name === "reset" ? "Passwort zurücksetzen" :
+      name === "recovery" ? "Wiederherstellungs-Code" : "Anmelden";
+    if (focusHeading) pageTitle.focus();
   }
 
   function fmtNum(n) { return n.toLocaleString("de-DE"); }
@@ -236,7 +248,13 @@
     return acc.email + " · Mitglied seit " + d.toLocaleDateString("de-DE", { day: "numeric", month: "long", year: "numeric" });
   }
   function setStatus(id, msg, ok) {
-    document.getElementById(id).innerHTML = msg ? '<span class="' + (ok ? "ok" : "err") + '">' + msg + "</span>" : "";
+    var status = document.getElementById(id);
+    status.replaceChildren();
+    if (!msg) return;
+    var text = document.createElement("span");
+    text.className = ok ? "ok" : "err";
+    text.textContent = msg;
+    status.appendChild(text);
   }
 
   // ---------- Avatar-Picker ----------
@@ -261,22 +279,46 @@
   var tabLogin = document.getElementById("tab-login");
   var tabRegister = document.getElementById("tab-register");
   function showTab(which) {
-    tabLogin.setAttribute("aria-pressed", which === "login" ? "true" : "false");
-    tabRegister.setAttribute("aria-pressed", which === "register" ? "true" : "false");
+    tabLogin.setAttribute("aria-selected", which === "login" ? "true" : "false");
+    tabRegister.setAttribute("aria-selected", which === "register" ? "true" : "false");
+    tabLogin.tabIndex = which === "login" ? 0 : -1;
+    tabRegister.tabIndex = which === "register" ? 0 : -1;
     document.getElementById("form-login").hidden = which !== "login";
     document.getElementById("form-register").hidden = which !== "register";
   }
   tabLogin.addEventListener("click", function () { showTab("login"); });
   tabRegister.addEventListener("click", function () { showTab("register"); });
+  [tabLogin, tabRegister].forEach(function (tab) {
+    tab.addEventListener("keydown", function (e) {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight" && e.key !== "Home" && e.key !== "End") return;
+      e.preventDefault();
+      var next = (e.key === "ArrowLeft" || e.key === "Home") ? tabLogin : tabRegister;
+      showTab(next === tabLogin ? "login" : "register");
+      next.focus();
+    });
+  });
+
+  function showRecovery(code, heading) {
+    document.getElementById("recovery-heading").textContent = heading;
+    document.getElementById("recovery-code").textContent = code;
+    showView("recovery", true);
+  }
+
+  function clearFields(ids) {
+    ids.forEach(function (id) {
+      var field = document.getElementById(id);
+      if (field) field.value = "";
+    });
+  }
 
   // ---------- Routing ----------
-  function route() {
+  function route(focusHeading) {
     W.refreshNav();
-    if (W.isLoggedIn()) { renderProfile(W.getAccount()); showView("profile"); }
+    if (W.isLoggedIn()) { renderProfile(W.getAccount()); showView("profile", focusHeading); }
     else {
       // Gibt es hier schon Konten? Dann Login-Tab, sonst Registrieren.
       showTab(W.knownEmails().length ? "login" : "register");
-      showView("auth");
+      showView("auth", focusHeading);
     }
   }
 
@@ -287,7 +329,8 @@
     W.login(document.getElementById("login-email").value, document.getElementById("login-pw").value)
       .then(function (r) {
         if (r.error) { setStatus("login-status", r.error); return; }
-        route();
+        clearFields(["login-pw"]);
+        route(true);
       });
   });
 
@@ -306,47 +349,69 @@
       avatar: chosenAvatar
     }).then(function (r) {
       if (r.error) { setStatus("reg-status", r.error); return; }
-      document.getElementById("recovery-code").textContent = r.recoveryCode;
-      showView("recovery");
+      clearFields(["reg-pw", "reg-pw2"]);
+      showRecovery(r.recoveryCode, "Konto erstellt — sichere deinen Code!");
     });
   });
-  document.getElementById("btn-code-done").addEventListener("click", route);
+  document.getElementById("btn-code-done").addEventListener("click", function () {
+    document.getElementById("recovery-code").textContent = "XXXX-XXXX-XXXX";
+    route(true);
+  });
 
   // ---------- Passwort vergessen ----------
   document.getElementById("link-forgot").addEventListener("click", function (e) {
     e.preventDefault();
     document.getElementById("reset-email").value = document.getElementById("login-email").value;
-    showView("reset");
+    clearFields(["reset-code", "reset-pw", "reset-pw2"]);
+    showView("reset", true);
   });
-  document.getElementById("btn-reset-back").addEventListener("click", function () { showView("auth"); showTab("login"); });
+  document.getElementById("btn-reset-back").addEventListener("click", function () {
+    clearFields(["reset-code", "reset-pw", "reset-pw2"]);
+    showView("auth", true);
+    showTab("login");
+  });
   document.getElementById("form-reset").addEventListener("submit", function (e) {
     e.preventDefault();
     setStatus("reset-status", "");
+    var resetPassword = document.getElementById("reset-pw").value;
+    if (resetPassword !== document.getElementById("reset-pw2").value) {
+      setStatus("reset-status", "Die Passwörter stimmen nicht überein."); return;
+    }
     W.resetPassword(
       document.getElementById("reset-email").value,
       document.getElementById("reset-code").value,
-      document.getElementById("reset-pw").value
+      resetPassword
     ).then(function (r) {
       if (r.error) { setStatus("reset-status", r.error); return; }
-      route();
+      clearFields(["reset-code", "reset-pw", "reset-pw2"]);
+      showRecovery(r.recoveryCode, "Passwort geändert — neuer Wiederherstellungs-Code");
     });
   });
 
   // ---------- Passwort ändern / Konto löschen / Abmelden ----------
   document.getElementById("form-pwchange").addEventListener("submit", function (e) {
     e.preventDefault();
-    W.changePassword(document.getElementById("pwc-old").value, document.getElementById("pwc-new").value)
+    var newPassword = document.getElementById("pwc-new").value;
+    if (newPassword !== document.getElementById("pwc-new2").value) {
+      setStatus("pwc-status", "Die neuen Passwörter stimmen nicht überein."); return;
+    }
+    W.changePassword(document.getElementById("pwc-old").value, newPassword)
       .then(function (r) {
         if (r.error) { setStatus("pwc-status", r.error); return; }
         setStatus("pwc-status", "Passwort geändert ✓", true);
-        document.getElementById("pwc-old").value = "";
-        document.getElementById("pwc-new").value = "";
+        clearFields(["pwc-old", "pwc-new", "pwc-new2"]);
       });
   });
   document.getElementById("btn-delete").addEventListener("click", function () {
-    if (confirm("Konto wirklich unwiderruflich löschen?")) { W.deleteAccount(); route(); }
+    if (confirm("Konto wirklich unwiderruflich löschen?")) {
+      clearFields(["login-pw", "reg-pw", "reg-pw2", "reset-code", "reset-pw", "reset-pw2", "pwc-old", "pwc-new", "pwc-new2"]);
+      W.deleteAccount(); route(true);
+    }
   });
-  document.getElementById("btn-logout").addEventListener("click", function () { W.logout(); route(); });
+  document.getElementById("btn-logout").addEventListener("click", function () {
+    clearFields(["login-pw", "reg-pw", "reg-pw2", "reset-code", "reset-pw", "reset-pw2", "pwc-old", "pwc-new", "pwc-new2"]);
+    W.logout(); route(true);
+  });
 
   // ---------- Profil ----------
   function renderProfile(acc) {
@@ -357,6 +422,7 @@
     var grid = document.getElementById("fav-grid");
     grid.innerHTML = "";
     var favs = acc.favorites || [];
+    favs = favs.filter(function (slug) { return Object.prototype.hasOwnProperty.call(HEROES_BY_SLUG, slug); });
     document.getElementById("fav-empty").hidden = favs.length > 0;
     favs.forEach(function (slug) {
       var name = HEROES_BY_SLUG[slug] || slug;
@@ -379,41 +445,65 @@
   }
 
   // ---------- Deadlock-Verknüpfung ----------
+  var linkRequestToken = 0;
+  var statsRequestToken = 0;
+
   function parseAccountId(raw) {
-    var digits = (raw || "").replace(/\D/g, "");
-    if (!digits) return null;
+    var input = (raw || "").trim();
+    var profileMatch = input.match(/^(?:https?:\/\/)?steamcommunity\.com\/profiles\/(\d{17})\/?$/i);
+    var digits = profileMatch ? profileMatch[1] : input;
+    if (!/^\d+$/.test(digits)) return null;
     if (digits.length >= 17 && digits.indexOf("7656") === 0) {
-      try { return (BigInt(digits) - 76561197960265728n).toString(); } catch (e) { return null; }
+      try {
+        var converted = BigInt(digits) - 76561197960265728n;
+        return converted > 0n && converted <= 4294967295n ? converted.toString() : null;
+      } catch (e) { return null; }
     }
-    return digits;
+    try {
+      var accountId = BigInt(digits);
+      return accountId > 0n && accountId <= 4294967295n ? accountId.toString() : null;
+    } catch (e) { return null; }
   }
 
   document.getElementById("btn-link").addEventListener("click", function () {
     var status = document.getElementById("link-status");
     var id = parseAccountId(document.getElementById("steam-id").value);
     if (!id) { status.innerHTML = '<span class="err">Bitte gib eine gültige ID ein.</span>'; return; }
+    var account = W.getAccount();
+    if (!account) { route(true); return; }
+    var requestedFor = account.email;
+    var requestToken = ++linkRequestToken;
     status.textContent = "Prüfe Account …";
     fetch("https://api.deadlock-api.com/v1/players/" + id + "/match-history")
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (r) { if (!r.ok && r.status !== 429) throw new Error(r.status); return r.json(); })
       .then(function (data) {
+        var current = W.getAccount();
+        if (requestToken !== linkRequestToken || !current || current.email !== requestedFor) return;
         if (!Array.isArray(data) || data.length === 0) {
           status.innerHTML = '<span class="err">Keine Matches gefunden.</span> Prüfe die ID — oder das Match-Verlauf-Teilen ist in Deadlock deaktiviert.';
           return;
         }
-        var acc = W.getAccount();
-        acc.steamId = id;
-        W.saveAccount(acc);
-        renderProfile(acc);
+        current.steamId = id;
+        W.saveAccount(current);
+        renderProfile(current);
       })
       .catch(function () {
+        var current = W.getAccount();
+        if (requestToken !== linkRequestToken || !current || current.email !== requestedFor) return;
         status.innerHTML = '<span class="err">Account nicht gefunden oder API nicht erreichbar.</span> Prüfe die ID und versuche es erneut.';
       });
   });
 
   document.getElementById("btn-unlink").addEventListener("click", function () {
+    linkRequestToken++;
+    statsRequestToken++;
     var acc = W.getAccount();
+    if (!acc) { route(true); return; }
     acc.steamId = null;
     W.saveAccount(acc);
+    document.getElementById("top-heroes").replaceChildren();
+    document.getElementById("last-matches").replaceChildren();
+    document.getElementById("stat-tiles").replaceChildren();
     renderProfile(acc);
   });
   document.getElementById("btn-refresh").addEventListener("click", function () {
@@ -424,13 +514,47 @@
     return HEROES[id] || { n: "Held #" + id, s: null };
   }
 
+  function safeNumber(value, fallback) {
+    var number = Number(value);
+    return Number.isFinite(number) ? number : fallback;
+  }
+
+  function normalizeMatches(data) {
+    if (!Array.isArray(data)) return [];
+    return data.map(function (match) {
+      return {
+        hero_id: Math.trunc(safeNumber(match.hero_id, 0)),
+        match_result: Math.trunc(safeNumber(match.match_result, -1)),
+        player_team: Math.trunc(safeNumber(match.player_team, -2)),
+        player_kills: Math.max(0, Math.trunc(safeNumber(match.player_kills, 0))),
+        player_deaths: Math.max(0, Math.trunc(safeNumber(match.player_deaths, 0))),
+        player_assists: Math.max(0, Math.trunc(safeNumber(match.player_assists, 0))),
+        net_worth: Math.max(0, Math.trunc(safeNumber(match.net_worth, 0))),
+        match_duration_s: Math.max(0, safeNumber(match.match_duration_s, 0)),
+        start_time: Math.max(0, safeNumber(match.start_time, 0))
+      };
+    }).filter(function (match) { return match.hero_id > 0; });
+  }
+
   function loadStats(id) {
     var tiles = document.getElementById("stat-tiles");
+    var account = W.getAccount();
+    if (!account || account.steamId !== id) return;
+    var requestedFor = account.email;
+    var requestToken = ++statsRequestToken;
+    document.getElementById("top-heroes").replaceChildren();
+    document.getElementById("last-matches").replaceChildren();
     tiles.innerHTML = '<div class="stat-tile"><span class="st-num">…</span><span class="st-label">Lade Statistiken</span></div>';
     fetch("https://api.deadlock-api.com/v1/players/" + id + "/match-history")
-      .then(function (r) { return r.json(); })
-      .then(function (matches) {
-        if (!Array.isArray(matches) || matches.length === 0) return;
+      .then(function (r) { if (!r.ok && r.status !== 429) throw new Error(r.status); return r.json(); })
+      .then(function (data) {
+        var current = W.getAccount();
+        if (requestToken !== statsRequestToken || !current || current.email !== requestedFor || current.steamId !== id) return;
+        var matches = normalizeMatches(data);
+        if (matches.length === 0) {
+          tiles.innerHTML = '<div class="stat-tile"><span class="st-num">0</span><span class="st-label">Keine öffentlichen Matches gefunden</span></div>';
+          return;
+        }
         var wins = 0, kills = 0, deaths = 0, assists = 0;
         var perHero = {};
         matches.forEach(function (m) {
@@ -476,6 +600,8 @@
         }).join("");
       })
       .catch(function () {
+        var current = W.getAccount();
+        if (requestToken !== statsRequestToken || !current || current.email !== requestedFor || current.steamId !== id) return;
         tiles.innerHTML = '<div class="stat-tile"><span class="st-num" style="color:var(--redlink);">!</span><span class="st-label">API nicht erreichbar — später erneut versuchen</span></div>';
       });
   }

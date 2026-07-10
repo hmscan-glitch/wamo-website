@@ -65,11 +65,11 @@
   --line-soft: #332a1d;
   --paper: #ebdfc7;
   --muted: #a08e76;
-  --faint: #7c6d58;
+  --faint: #a08e76;
   --brass: #d9a03c;
   --brass-bright: #f0be62;
   --brass-dim: #8a6524;
-  --redlink: #d06a55;
+  --redlink: #e28974;
   --weapon: #e8963f;
   --vitality: #84c761;
   --spirit: #c084f5;
@@ -117,7 +117,7 @@ input:focus-visible {
 
 /* Nicht existierende Artikel — der klassische MediaWiki-Rotlink */
 a.redlink { color: var(--redlink); }
-a.redlink:hover { color: #e28974; }
+a.redlink:hover { color: #f0a08d; }
 
 ::selection { background: var(--brass); color: var(--night-deep); }
 
@@ -250,7 +250,10 @@ a.redlink:hover { color: #e28974; }
   align-items: stretch;
   gap: 4px;
   overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
 }
+.localnav-inner::-webkit-scrollbar { display: none; }
 
 .localnav a {
   display: flex;
@@ -710,7 +713,8 @@ p { margin: 0 0 14px; max-width: 72ch; }
   cursor: pointer;
 }
 .filter-chip:hover { color: var(--paper); border-color: var(--brass-dim); }
-.filter-chip[aria-pressed="true"] {
+.filter-chip[aria-pressed="true"],
+.filter-chip[aria-selected="true"] {
   background: var(--brass);
   border-color: var(--brass);
   color: var(--night-deep);
@@ -1281,6 +1285,38 @@ p { margin: 0 0 14px; max-width: 72ch; }
   object-fit: cover;
 }
 
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  transform: translateY(-160%);
+  padding: 9px 13px;
+  border: 2px solid var(--brass-bright);
+  border-radius: 4px;
+  background: var(--night-deep);
+  color: var(--paper);
+  font-weight: 700;
+}
+.skip-link:focus { transform: translateY(0); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.footer-note { color: var(--muted); }
+
+button, .btn, .aa-btn { font-family: inherit; }
+button:not(:disabled), .btn:not(:disabled), .aa-btn:not(:disabled) { cursor: pointer; }
+
 .auth-card {
   max-width: 560px;
   background: var(--panel);
@@ -1357,8 +1393,10 @@ p { margin: 0 0 14px; max-width: 72ch; }
   font-size: 30px;
   letter-spacing: 0.06em;
   line-height: 1.1;
+  overflow-wrap: anywhere;
 }
-.profile-meta { color: var(--muted); font-size: 13.5px; }
+.profile-identity { min-width: 0; flex: 1 1 190px; }
+.profile-meta { color: var(--muted); font-size: 13.5px; overflow-wrap: anywhere; }
 .profile-head .btn-row { margin: 0 0 0 auto; }
 
 .stat-tiles {
@@ -1419,6 +1457,33 @@ p { margin: 0 0 14px; max-width: 72ch; }
 .link-status .ok { color: var(--vitality); font-weight: 700; }
 .link-status .err { color: var(--redlink); font-weight: 700; }
 
+.recovery-code {
+  margin: 22px 0;
+  color: var(--brass-bright);
+  font-family: var(--font-display);
+  font-size: clamp(20px, 5vw, 30px);
+  letter-spacing: .1em;
+  line-height: 1.35;
+  text-align: center;
+  white-space: nowrap;
+}
+
 @media (max-width: 720px) {
+  .masthead-inner { padding: 38px 16px 24px; }
+  .wordmark {
+    max-width: 100%;
+    font-size: clamp(29px, 9vw, 38px);
+    letter-spacing: .07em;
+    white-space: nowrap;
+  }
+  .wordmark-rule { width: min(190px, 58vw); }
+  .localnav-inner { padding: 0 12px; }
+  .localnav .nav-stats { display: none; }
+  .auth-card { padding: 22px 18px 20px; }
+  .profile-name { font-size: clamp(23px, 8vw, 30px); letter-spacing: .035em; }
   .profile-head .btn-row { margin-left: 0; }
+}
+
+@media (max-width: 360px) {
+  .recovery-code { font-size: 18px; letter-spacing: .06em; }
 }
