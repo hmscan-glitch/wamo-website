@@ -9,6 +9,8 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
 <header class="masthead">
   <div class="masthead-inner">
     <a class="wordmark" href="index.html">DEADLOCK<span class="wm-wiki">&nbsp;WIKI</span></a>
@@ -26,58 +28,85 @@
       <a href="items.html">Items</a>
       <a href="gameplay.html">Gameplay</a>
       <a href="karte.html" aria-current="page">Karte</a>
-      <a href="#" class="redlink" title="Diese Seite existiert noch nicht – hilf mit, sie zu schreiben!">Community</a>
+      <a href="patchnotes.html">Patchnotes</a>
+      <a href="https://github.com/hmscan-glitch/wamo-website/issues">Community</a>
       <a class="nav-account" href="profil.html" data-nav-account>Anmelden</a>
-      <span class="nav-stats">1.284 Artikel &middot; 4.107 Dateien</span>
+      <span class="nav-stats">38 Helden &middot; Fanprojekt</span>
     </div>
   </nav>
 </header>
 
 <div class="shell">
-  <main>
-    <div class="article-actions">
-      <a class="aa-btn aa-btn--primary" href="#">Bearbeiten</a>
-      <a class="aa-btn" href="#">Versionsgeschichte</a>
-      <a class="aa-btn" href="#">Diskussion (11)</a>
-      <span class="aa-meta">Zuletzt bearbeitet von <a href="#">PatronSaint</a> heute um 10:31</span>
-    </div>
-
+  <main id="main-content">
     <p class="page-sub">Spielwelt</p>
     <h1 class="page-title">Die Karte</h1>
     <p class="lead">Gekämpft wird in den Straßen eines okkulten New York: Drei <strong>Lanes</strong> verbinden die beiden Basen, dazwischen liegen Seitengassen, Dächer, unterirdische Gänge — und eine Handvoll Orte, die jedes Match entscheiden können. <strong>Fahre mit der Maus über die Markierungen</strong> (oder tippe sie an), um Details und einen vergrößerten Kartenausschnitt zu sehen.</p>
 
-    <div class="map-stage" id="map-stage">
-      <img src="assets/map/minimap.png" alt="Übersichtskarte von Deadlock mit drei Lanes zwischen den beiden Basen" id="map-img">
-
-      <button class="hotspot hotspot--danger" style="left:45%;top:11%" data-title="Patron (Bernstein-Hand)" data-desc="Das oberste Ziel: Wer den gegnerischen Patron zerstört, gewinnt das Match. Er wehrt sich — angeschlagen zieht er sich geschwächt in die Basis zurück."></button>
-      <button class="hotspot" style="left:35%;top:5%" data-title="Basis &amp; Schreine" data-desc="Spawn, Basis-Shop und die beiden Schreine. Erst wenn mindestens ein Schrein fällt, wird der Patron verwundbar."></button>
-      <button class="hotspot hotspot--objective" style="left:25%;top:25%" data-title="Walker (linke Lane)" data-desc="Die zweite Verteidigungslinie jeder Lane. Ein zerstörter Walker schaltet einen Flex-Slot für dein Team frei und öffnet die gegnerische Kartenhälfte."></button>
-      <button class="hotspot hotspot--objective" style="left:45%;top:25%" data-title="Walker (mittlere Lane)" data-desc="Walker stampfen und schlagen zurück — unterschätze sie nicht ohne Trooper-Unterstützung."></button>
-      <button class="hotspot hotspot--objective" style="left:65%;top:25%" data-title="Walker (rechte Lane)" data-desc="Jede Lane hat ihren eigenen Walker. Fällt er, rückt die Front bis vor die gegnerische Basis."></button>
-      <button class="hotspot hotspot--objective" style="left:21%;top:41%" data-title="Guardian (linke Lane)" data-desc="Der erste Turm jeder Lane. Er bestraft Gegner, die unter ihm angreifen — dein sicherer Rückzugsort in der Lane-Phase. Sein Fall schaltet einen Flex-Slot frei."></button>
-      <button class="hotspot hotspot--objective" style="left:45%;top:41%" data-title="Guardian (mittlere Lane)" data-desc="Die Mitte ist die kürzeste Lane — hier fällt der erste Guardian oft am schnellsten."></button>
-      <button class="hotspot hotspot--objective" style="left:65%;top:41%" data-title="Guardian (rechte Lane)" data-desc="Gegner unter dem eigenen Guardian zu erledigen ist riskant für sie — nutze das aus."></button>
-      <button class="hotspot hotspot--danger" style="left:50%;top:46%" data-title="Mid-Boss-Grube" data-desc="Im Untergeschoss der Kartenmitte haust der Mid-Boss. Wer ihn besiegt, sichert seinem Team den Rejuvenator — einen mächtigen Team-Buff, der Matches dreht."></button>
-      <button class="hotspot" style="left:30%;top:47%" data-title="Kuriositätenladen (West)" data-desc="Einer der Läden im Niemandsland: Hier kaufst du Items, ohne in die Basis zurückzukehren. Merke dir die Positionen — sie sparen wertvolle Zeit."></button>
-      <button class="hotspot" style="left:70%;top:47%" data-title="Kuriositätenladen (Ost)" data-desc="Das östliche Gegenstück. Vorsicht: Gegner wissen auch, wo die Läden sind — und lauern dort gern."></button>
-      <button class="hotspot" style="left:84%;top:46%" data-title="Sünderopfer (Urne)" data-desc="Die Urne erscheint im Mittelspiel am Kartenrand. Wer sie aufnimmt, wird auf der Karte sichtbar und muss sie zum Altar auf der Gegenseite tragen — die Belohnung: Seelen fürs ganze Team."></button>
-      <button class="hotspot" style="left:16%;top:54%" data-title="Abgabe-Altar" data-desc="Hier wird die Urne abgeliefert. Der Träger ist auf dem Weg verwundbar — eskortiere ihn oder fange den gegnerischen Träger ab."></button>
-      <button class="hotspot" style="left:45%;top:88%" data-title="Zipline-Terminal" data-desc="Ziplines verlaufen entlang jeder Lane und bringen dich in Sekunden an die Front. Nach dem Tod erhältst du kurzzeitig einen Zipline-Boost."></button>
-      <button class="hotspot hotspot--danger" style="left:45%;top:82%" data-title="Patron (Saphir-Hand)" data-desc="Der eigene Patron. Verteidige ihn bis zuletzt — solange die Schreine stehen, ist er unverwundbar."></button>
-
-      <div class="map-tip" id="map-tip" role="status">
-        <div class="tip-img" id="tip-img"></div>
-        <div class="tip-body">
-          <span class="tip-title" id="tip-title"></span>
-          <span class="tip-desc" id="tip-desc"></span>
+    <section class="map-explorer" aria-label="Interaktive Deadlock-Karte">
+      <div class="map-toolbar">
+        <div>
+          <span class="map-toolbar-label">Kartenebenen</span>
+          <div class="map-filters" role="group" aria-label="Orte auf der Karte filtern">
+            <button class="filter-chip" type="button" data-map-filter="all" aria-pressed="true">Alle</button>
+            <button class="filter-chip" type="button" data-map-filter="lanes" aria-pressed="false">Lanes</button>
+            <button class="filter-chip" type="button" data-map-filter="objectives" aria-pressed="false">Objectives</button>
+            <button class="filter-chip" type="button" data-map-filter="shops" aria-pressed="false">Shops</button>
+            <button class="filter-chip" type="button" data-map-filter="travel" aria-pressed="false">Urne &amp; Reise</button>
+            <button class="filter-chip" type="button" data-map-filter="bases" aria-pressed="false">Basen</button>
+          </div>
         </div>
+        <p class="map-toolbar-help">Mit Maus, Tastatur oder Tippen erkunden.</p>
       </div>
-    </div>
 
-    <ul class="map-legend">
-      <li><span class="lg-dot" aria-hidden="true"></span>Orte &amp; Einrichtungen</li>
-      <li><span class="lg-dot lg-dot--objective" aria-hidden="true"></span>Zerstörbare Objectives</li>
-      <li><span class="lg-dot lg-dot--danger" aria-hidden="true"></span>Bosse &amp; Patrone</li>
+      <div class="map-layout">
+        <div class="map-stage" id="map-stage">
+          <img src="assets/map/minimap.png" alt="Übersichtskarte von Deadlock mit drei Lanes zwischen den beiden Basen" id="map-img">
+
+          <svg class="map-lane-overlay" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M35 5 C26 20 20 36 19 52 C19 70 26 84 35 95"></path>
+            <path d="M45 5 C45 28 45 72 45 95"></path>
+            <path d="M55 5 C65 20 70 36 70 52 C70 70 63 84 55 95"></path>
+          </svg>
+          <span class="map-lane-label" style="left:18%;top:63%">West</span>
+          <span class="map-lane-label" style="left:45%;top:61%">Mitte</span>
+          <span class="map-lane-label" style="left:69%;top:63%">Ost</span>
+
+          <button class="hotspot hotspot--base" style="left:45%;top:11%" data-category="bases" data-icon="P" data-title="Patron (Bernstein-Hand)" data-desc="Das oberste Ziel: Wer den gegnerischen Patron zerstört, gewinnt das Match. Angeschlagen zieht er sich geschwächt in die Basis zurück." aria-label="Patron der Bernstein-Hand" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">P</span></button>
+          <button class="hotspot hotspot--base" style="left:35%;top:5%" data-category="bases" data-icon="B" data-title="Basis, Spawn &amp; Schreine" data-desc="Hier liegen Spawn, Basis-Shop und die beiden Schreine. Erst wenn mindestens ein Schrein fällt, wird der Patron verwundbar." aria-label="Basis, Spawn und Schreine der Bernstein-Hand" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">B</span></button>
+          <button class="hotspot hotspot--objective" style="left:25%;top:25%" data-category="objectives" data-icon="W" data-title="Walker (West-Lane)" data-desc="Die zweite Verteidigungslinie der Lane. Ein zerstörter Walker öffnet die gegnerische Kartenhälfte und bringt das Team seinem nächsten Flex-Slot näher." aria-label="Walker auf der West-Lane" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">W</span></button>
+          <button class="hotspot hotspot--objective" style="left:45%;top:25%" data-category="objectives" data-icon="W" data-title="Walker (Mitte)" data-desc="Der mittlere Walker bewacht den kürzesten Weg zwischen den Basen. Ohne Trooper-Unterstützung ist ein Angriff besonders riskant." aria-label="Walker auf der mittleren Lane" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">W</span></button>
+          <button class="hotspot hotspot--objective" style="left:65%;top:25%" data-category="objectives" data-icon="W" data-title="Walker (Ost-Lane)" data-desc="Fällt dieser Walker, rückt die Front auf der Ost-Lane bis vor die gegnerische Basis." aria-label="Walker auf der Ost-Lane" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">W</span></button>
+          <button class="hotspot hotspot--objective" style="left:21%;top:41%" data-category="objectives" data-icon="G" data-title="Guardian (West-Lane)" data-desc="Der erste Turm der Lane und ein sicherer Rückzugsort in der Lane-Phase. Gegnerische Angriffe unter ihm werden hart bestraft." aria-label="Guardian auf der West-Lane" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">G</span></button>
+          <button class="hotspot hotspot--objective" style="left:45%;top:41%" data-category="objectives" data-icon="G" data-title="Guardian (Mitte)" data-desc="Die Mitte ist die kürzeste Lane. Dadurch wird dieser Guardian häufig früh unter Druck gesetzt." aria-label="Guardian auf der mittleren Lane" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">G</span></button>
+          <button class="hotspot hotspot--objective" style="left:65%;top:41%" data-category="objectives" data-icon="G" data-title="Guardian (Ost-Lane)" data-desc="Der erste große Schutzpunkt auf der Ost-Lane. Nutze seine Reichweite, um frühe Angriffe abzuwehren." aria-label="Guardian auf der Ost-Lane" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">G</span></button>
+          <button class="hotspot hotspot--danger" style="left:50%;top:46%" data-category="objectives" data-icon="M" data-title="Mid-Boss-Grube" data-desc="In der Kartenmitte wartet der Mid-Boss. Sein Rejuvenator kann einen Teamkampf oder den entscheidenden Push drehen." aria-label="Mid-Boss-Grube" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">M</span></button>
+          <button class="hotspot hotspot--shop" style="left:30%;top:47%" data-category="shops" data-icon="$" data-title="Kuriositätenladen West" data-desc="Hier kaufst du Items, ohne in die Basis zurückzukehren. Der offene Standort spart Zeit, ist aber ein beliebter Hinterhaltspunkt." aria-label="Kuriositätenladen West" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">$</span></button>
+          <button class="hotspot hotspot--shop" style="left:70%;top:47%" data-category="shops" data-icon="$" data-title="Kuriositätenladen Ost" data-desc="Das östliche Gegenstück zum West-Shop. Plane Rotationen und Einkäufe so, dass du nicht allein überrascht wirst." aria-label="Kuriositätenladen Ost" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">$</span></button>
+          <button class="hotspot hotspot--travel" style="left:84%;top:46%" data-category="travel" data-icon="U" data-title="Sünderopfer (Urne)" data-desc="Die Urne erscheint am Kartenrand. Der Träger wird sichtbar und muss sie zum gegenüberliegenden Altar bringen." aria-label="Spawnpunkt des Sünderopfers" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">U</span></button>
+          <button class="hotspot hotspot--travel" style="left:16%;top:54%" data-category="travel" data-icon="A" data-title="Urnen-Altar" data-desc="Hier wird die Urne abgeliefert. Eskortiere den Träger oder kontrolliere diesen Bereich, um den gegnerischen Lauf zu stoppen." aria-label="Abgabealtar für das Sünderopfer" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">A</span></button>
+          <button class="hotspot hotspot--travel" style="left:45%;top:88%" data-category="travel" data-icon="Z" data-title="Zipline-Terminal" data-desc="Ziplines verlaufen entlang der Lanes und bringen dich schnell an die Front. Auf der Fahrt bleibst du jedoch angreifbar." aria-label="Zipline-Terminal" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">Z</span></button>
+          <button class="hotspot hotspot--base" style="left:45%;top:82%" data-category="bases" data-icon="P" data-title="Patron (Saphir-Hand)" data-desc="Der eigene Patron ist das letzte Verteidigungsziel. Solange seine Schreine stehen, bleibt er geschützt." aria-label="Patron der Saphir-Hand" aria-controls="map-detail" aria-pressed="false"><span aria-hidden="true">P</span></button>
+        </div>
+
+        <aside class="map-detail" id="map-detail" aria-live="polite" aria-atomic="true">
+          <div class="map-detail-image" id="map-detail-image">
+            <span class="map-detail-icon" id="map-detail-icon" aria-hidden="true">MAP</span>
+          </div>
+          <div class="map-detail-body">
+            <span class="map-detail-category" id="map-detail-category">Übersicht</span>
+            <h2 id="map-detail-title">Karte erkunden</h2>
+            <p id="map-detail-desc">Bewege die Maus über eine Markierung, fokussiere sie mit der Tastatur oder tippe sie an. Der passende Kartenausschnitt und die Erklärung erscheinen hier.</p>
+          </div>
+        </aside>
+      </div>
+      <p class="map-filter-status" id="map-filter-status" role="status" aria-live="polite">15 Orte werden angezeigt.</p>
+    </section>
+
+    <ul class="map-legend" aria-label="Legende der Kartensymbole">
+      <li><span class="lg-dot lg-dot--objective" aria-hidden="true"></span>Objectives</li>
+      <li><span class="lg-dot lg-dot--shop" aria-hidden="true"></span>Shops</li>
+      <li><span class="lg-dot lg-dot--travel" aria-hidden="true"></span>Urne &amp; Reise</li>
+      <li><span class="lg-dot lg-dot--base" aria-hidden="true"></span>Basen &amp; Patrone</li>
     </ul>
 
     <h2 id="lanes"><span class="h-deco" aria-hidden="true"></span>Die drei Lanes</h2>
@@ -123,41 +152,75 @@
 <script>
 (function () {
   var stage = document.getElementById("map-stage");
-  var tip = document.getElementById("map-tip");
-  var tipImg = document.getElementById("tip-img");
-  var tipTitle = document.getElementById("tip-title");
-  var tipDesc = document.getElementById("tip-desc");
-  var hotspots = stage.querySelectorAll(".hotspot");
+  var detailImg = document.getElementById("map-detail-image");
+  var detailIcon = document.getElementById("map-detail-icon");
+  var detailCategory = document.getElementById("map-detail-category");
+  var detailTitle = document.getElementById("map-detail-title");
+  var detailDesc = document.getElementById("map-detail-desc");
+  var status = document.getElementById("map-filter-status");
+  var hotspots = Array.prototype.slice.call(stage.querySelectorAll(".hotspot"));
+  var filters = Array.prototype.slice.call(document.querySelectorAll("[data-map-filter]"));
+  var lanes = Array.prototype.slice.call(stage.querySelectorAll(".map-lane-overlay, .map-lane-label"));
+  var categoryNames = { objectives: "Objective", shops: "Shop", travel: "Urne & Reise", bases: "Basis" };
 
   function show(spot) {
     var x = parseFloat(spot.style.left);
     var y = parseFloat(spot.style.top);
-    tipTitle.textContent = spot.dataset.title;
-    tipDesc.textContent = spot.dataset.desc;
-    // Gezoomter Kartenausschnitt: background-position in % zentriert
-    // denselben Punkt der Karte im Vorschaufenster.
-    tipImg.style.backgroundPosition = x + "% " + y + "%";
-
-    var W = stage.clientWidth, H = stage.clientHeight;
-    var px = x / 100 * W, py = y / 100 * H;
-    var left = px + 18, top = py - 40;
-    if (left + 250 > W) left = px - 258;
-    if (top < 8) top = 8;
-    if (top + 200 > H) top = H - 200;
-    tip.style.left = left + "px";
-    tip.style.top = top + "px";
-    tip.classList.add("visible");
+    hotspots.forEach(function (item) {
+      var selected = item === spot;
+      item.classList.toggle("is-active", selected);
+      item.setAttribute("aria-pressed", String(selected));
+    });
+    detailImg.style.backgroundPosition = x + "% " + y + "%";
+    detailIcon.textContent = spot.dataset.icon;
+    detailCategory.textContent = categoryNames[spot.dataset.category] || "Ort";
+    detailTitle.textContent = spot.dataset.title;
+    detailDesc.textContent = spot.dataset.desc;
   }
-  function hide() { tip.classList.remove("visible"); }
+
+  function showLanes() {
+    hotspots.forEach(function (item) {
+      item.classList.remove("is-active");
+      item.setAttribute("aria-pressed", "false");
+    });
+    detailImg.style.backgroundPosition = "50% 50%";
+    detailIcon.textContent = "3";
+    detailCategory.textContent = "Lanes";
+    detailTitle.textContent = "West, Mitte und Ost";
+    detailDesc.textContent = "Drei Lanes verbinden die Basen. Guardians und Walker sichern jede Route; Ziplines erlauben schnelle Wege zurück an die Front.";
+  }
+
+  function applyFilter(filter) {
+    var visible = 0;
+    hotspots.forEach(function (spot) {
+      var showSpot = filter === "all" || (filter !== "lanes" && spot.dataset.category === filter);
+      spot.hidden = !showSpot;
+      if (showSpot) visible += 1;
+    });
+    lanes.forEach(function (lane) { lane.hidden = filter !== "all" && filter !== "lanes"; });
+    filters.forEach(function (button) { button.setAttribute("aria-pressed", String(button.dataset.mapFilter === filter)); });
+    if (filter === "lanes") {
+      showLanes();
+      status.textContent = "Die drei Lanes werden hervorgehoben.";
+    } else {
+      status.textContent = visible + (visible === 1 ? " Ort wird angezeigt." : " Orte werden angezeigt.");
+      var firstVisible = hotspots.filter(function (spot) { return !spot.hidden; })[0];
+      if (firstVisible) show(firstVisible);
+    }
+  }
 
   hotspots.forEach(function (spot) {
     spot.addEventListener("mouseenter", function () { show(spot); });
     spot.addEventListener("focus", function () { show(spot); });
-    spot.addEventListener("mouseleave", hide);
-    spot.addEventListener("blur", hide);
     spot.addEventListener("click", function (e) { e.preventDefault(); show(spot); });
   });
-  stage.addEventListener("mouseleave", hide);
+  filters.forEach(function (button) {
+    button.addEventListener("click", function () { applyFilter(button.dataset.mapFilter); });
+  });
+  stage.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") applyFilter("all");
+  });
+  applyFilter("all");
 })();
 </script>
 
