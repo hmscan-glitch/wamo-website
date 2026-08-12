@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community – Deadlock Wiki</title>
+<meta name="description" content="Diskutiere mit anderen Fans über Valves Deadlock. Beiträge sind öffentlich lesbar; bestätigte Mitglieder können mitschreiben.">
+<link rel="stylesheet" href="style.css?v=20260812-community2">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="index.html">DEADLOCK<span class="wm-wiki">&nbsp;WIKI</span></a>
+    <div class="wordmark-rule" aria-hidden="true"><span class="wm-diamond"></span></div>
+    <p class="tagline">Stimmen aus der Cursed Apple – Builds, Entdeckungen und Diskussionen aus der Community.</p>
+    <form class="searchform" action="helden.html" role="search">
+      <input type="search" name="q" placeholder="Deadlock Wiki durchsuchen …" aria-label="Wiki durchsuchen">
+      <button type="submit">Suchen</button>
+    </form>
+  </div>
+</header>
+
+<nav class="localnav" aria-label="Wiki-Navigation">
+  <div class="localnav-inner">
+    <a href="index.html">Hauptseite</a>
+    <a href="helden.html">Helden</a>
+    <a href="items.html">Items</a>
+    <a href="gameplay.html">Gameplay</a>
+    <a href="karte.html">Karte</a>
+    <a href="patchnotes.html">Patchnotes</a>
+    <a href="community.html" aria-current="page">Community</a>
+    <a class="nav-account" href="profil.html" data-nav-account>Anmelden</a>
+    <span class="nav-stats">Öffentlich lesen &middot; angemeldet schreiben</span>
+  </div>
+</nav>
+
+<div class="shell community-shell">
+  <main id="main-content">
+    <p class="page-sub">Diskussionsplatz</p>
+    <h1 class="page-title">Deadlock-Community</h1>
+    <p class="lead">Lies mit, teile Entdeckungen und tausche dich mit anderen Fans aus. Bitte bleib freundlich und veröffentliche keine persönlichen Daten.</p>
+
+    <div class="community-alert" id="community-alert" role="status" aria-live="polite" hidden></div>
+
+    <section class="community-compose-card" aria-labelledby="community-compose-title">
+      <div class="community-section-head">
+        <div>
+          <p class="community-kicker">Neuer Beitrag</p>
+          <h2 id="community-compose-title">Was gibt es Neues?</h2>
+        </div>
+        <span class="community-session" id="community-session" aria-live="polite">Anmeldung wird geprüft …</span>
+      </div>
+
+      <div id="community-auth-loading" class="community-gate" role="status">
+        <span class="community-spinner" aria-hidden="true"></span>
+        <span>Anmeldung wird geprüft …</span>
+      </div>
+
+      <div id="community-signed-out" class="community-gate" hidden>
+        <div>
+          <strong>Du möchtest mitschreiben?</strong>
+          <p>Zum Veröffentlichen brauchst du ein bestätigtes Konto. Lesen kannst du auch ohne Anmeldung.</p>
+        </div>
+        <a class="btn btn--solid" href="profil.html">Anmelden oder registrieren</a>
+      </div>
+
+      <div id="community-unconfirmed" class="community-gate community-gate--warning" hidden>
+        <div>
+          <strong>Bitte bestätige zuerst deine E-Mail-Adresse.</strong>
+          <p>Danach kannst du Beiträge schreiben, bearbeiten, löschen und melden.</p>
+        </div>
+        <a class="btn btn--ghost" href="profil.html">Zum Konto</a>
+      </div>
+
+      <form id="community-compose-form" class="community-form" hidden>
+        <label for="community-content">Dein Beitrag</label>
+        <textarea id="community-content" name="content" rows="5" minlength="1" maxlength="1000" required aria-describedby="community-content-help community-content-count" placeholder="Teile einen Tipp, eine Frage oder eine Entdeckung …"></textarea>
+        <div class="community-form-meta">
+          <span id="community-content-help">1–1000 Zeichen, nur Text. Keine persönlichen Daten veröffentlichen.</span>
+          <output id="community-content-count" for="community-content">0 / 1000</output>
+        </div>
+        <div class="community-form-actions">
+          <button class="btn btn--solid" id="community-submit" type="submit">Beitrag veröffentlichen</button>
+          <span class="community-rate-note">Zum Schutz vor Spam gilt eine kurze Wartezeit zwischen Beiträgen.</span>
+        </div>
+      </form>
+    </section>
+
+    <section class="community-feed" aria-labelledby="community-feed-title">
+      <div class="community-feed-head">
+        <div>
+          <p class="community-kicker">Öffentliche Beiträge</p>
+          <h2 id="community-feed-title">Aus der Community</h2>
+        </div>
+        <button class="community-refresh" id="community-refresh" type="button" aria-describedby="community-feed-status">Aktualisieren</button>
+      </div>
+
+      <p class="community-feed-status" id="community-feed-status" role="status" aria-live="polite">Beiträge werden geladen …</p>
+      <div class="community-feed-error" id="community-feed-error" role="alert" hidden>
+        <strong>Die Beiträge konnten nicht geladen werden.</strong>
+        <p>Prüfe deine Verbindung und versuche es erneut.</p>
+        <button class="btn btn--ghost" id="community-retry" type="button">Erneut versuchen</button>
+      </div>
+      <div class="community-empty" id="community-empty" hidden>
+        <span aria-hidden="true">✦</span>
+        <h3>Noch ist es still in der Cursed Apple.</h3>
+        <p>Sei das erste bestätigte Mitglied, das einen Beitrag veröffentlicht.</p>
+      </div>
+      <ol class="community-post-list" id="community-post-list" aria-label="Community-Beiträge" hidden></ol>
+    </section>
+  </main>
+</div>
+
+<dialog class="community-dialog" id="community-edit-dialog" aria-labelledby="community-edit-title">
+  <form id="community-edit-form" method="dialog" class="community-dialog-form">
+    <div class="community-dialog-head">
+      <div>
+        <p class="community-kicker">Eigener Beitrag</p>
+        <h2 id="community-edit-title">Beitrag bearbeiten</h2>
+      </div>
+      <button class="community-dialog-close" type="button" data-close-dialog="community-edit-dialog" aria-label="Dialog schließen">×</button>
+    </div>
+    <label for="community-edit-content">Beitragstext</label>
+    <textarea id="community-edit-content" rows="6" minlength="1" maxlength="1000" required aria-describedby="community-edit-count"></textarea>
+    <div class="community-form-meta"><span>1–1000 Zeichen, nur Text</span><output id="community-edit-count" for="community-edit-content">0 / 1000</output></div>
+    <div class="community-dialog-actions">
+      <button class="btn btn--ghost" type="button" data-close-dialog="community-edit-dialog">Abbrechen</button>
+      <button class="btn btn--solid" id="community-edit-submit" type="submit">Änderungen speichern</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog class="community-dialog" id="community-report-dialog" aria-labelledby="community-report-title">
+  <form id="community-report-form" method="dialog" class="community-dialog-form">
+    <div class="community-dialog-head">
+      <div>
+        <p class="community-kicker">Moderation</p>
+        <h2 id="community-report-title">Beitrag melden</h2>
+      </div>
+      <button class="community-dialog-close" type="button" data-close-dialog="community-report-dialog" aria-label="Dialog schließen">×</button>
+    </div>
+    <label for="community-report-reason">Grund</label>
+    <select id="community-report-reason" required>
+      <option value="">Bitte auswählen</option>
+      <option value="Spam oder Werbung">Spam oder Werbung</option>
+      <option value="Beleidigung oder Hassrede">Beleidigung oder Hassrede</option>
+      <option value="Gefährlicher oder unangemessener Inhalt">Gefährlicher oder unangemessener Inhalt</option>
+      <option value="Anderer Regelverstoß">Anderer Regelverstoß</option>
+    </select>
+    <label for="community-report-details">Kurze Erläuterung <span>(optional)</span></label>
+    <textarea id="community-report-details" rows="3" maxlength="240" aria-describedby="community-report-count" placeholder="Was sollte die Moderation wissen?"></textarea>
+    <div class="community-form-meta"><span>Die Meldung ist nicht öffentlich sichtbar.</span><output id="community-report-count" for="community-report-details">0 / 240</output></div>
+    <div class="community-dialog-actions">
+      <button class="btn btn--ghost" type="button" data-close-dialog="community-report-dialog">Abbrechen</button>
+      <button class="btn btn--solid" id="community-report-submit" type="submit">Meldung senden</button>
+    </div>
+  </form>
+</dialog>
+
+<footer class="wikifoot">
+  <div class="wikifoot-inner">
+    <p><strong>Deadlock Wiki</strong> ist ein inoffizielles Fan-Projekt und steht in keiner Verbindung zur Valve Corporation.</p>
+    <p>Beiträge stammen von Mitgliedern der Community. Bitte melde Inhalte, die gegen die Regeln verstoßen.</p>
+    <p><a href="index.html">Hauptseite</a> · <a href="helden.html">Helden</a> · <a href="items.html">Items</a> · <a href="gameplay.html">Gameplay</a> · <a href="karte.html">Karte</a> · <a href="patchnotes.html">Patchnotes</a> · <a href="community.html">Community</a> · <a href="datenschutz.html">Datenschutz</a></p>
+  </div>
+</footer>
+
+<script src="assets/vendor/supabase-2.112.3.min.js" integrity="sha384-l8ah+VgaWtk1mvOe9VC+OirC6qHFF4yH7l7mKRidV9MSti3E9F463bMp6ZVN4kuC"></script>
+<script src="assets/community.js?v=20260812-community3" defer></script>
+</body>
+</html>
