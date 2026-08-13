@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutz – Deadlock Wiki</title>
+<meta name="description" content="Technische Datenschutzhinweise für Konten, Community-Beiträge und externe Dienste der Deadlock-Wiki.">
+<link rel="stylesheet" href="style.css?v=20260812-community2">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="index.html">DEADLOCK<span class="wm-wiki">&nbsp;WIKI</span></a>
+    <div class="wordmark-rule" aria-hidden="true"><span class="wm-diamond"></span></div>
+    <p class="tagline">Transparente Informationen darüber, welche Daten das Fanprojekt verarbeitet.</p>
+    <form class="searchform" action="helden.html" role="search">
+      <input type="search" name="q" placeholder="Deadlock Wiki durchsuchen …" aria-label="Wiki durchsuchen">
+      <button type="submit">Suchen</button>
+    </form>
+  </div>
+</header>
+
+<nav class="localnav" aria-label="Wiki-Navigation">
+  <div class="localnav-inner">
+    <a href="index.html">Hauptseite</a>
+    <a href="helden.html">Helden</a>
+    <a href="items.html">Items</a>
+    <a href="gameplay.html">Gameplay</a>
+    <a href="karte.html">Karte</a>
+    <a href="patchnotes.html">Patchnotes</a>
+    <a href="community.html">Community</a>
+    <a class="nav-account" href="profil.html" data-nav-account>Anmelden</a>
+    <span class="nav-stats">Datenschutz &middot; Stand 11. August 2026</span>
+  </div>
+</nav>
+
+<div class="shell">
+  <main id="main-content">
+    <p class="page-sub">Konto &amp; Community</p>
+    <h1 class="page-title">Datenschutz &amp; Datenverarbeitung</h1>
+    <p class="lead">Diese Seite erklärt verständlich, welche Daten die Deadlock-Wiki technisch verarbeitet, wofür sie benötigt werden und welche Wahlmöglichkeiten du hast.</p>
+
+    <div class="notice">
+      <span aria-hidden="true" style="color:var(--brass);font-weight:700;">✦</span>
+      <span><strong>Testphase:</strong> Die vollständigen Betreiber- und Kontaktangaben sowie ein eigener Mail-Absender müssen vor der öffentlichen Freischaltung der Registrierung ergänzt werden.</span>
+    </div>
+
+    <nav class="toc" aria-label="Inhaltsverzeichnis">
+      <div class="toc-title">Inhaltsverzeichnis</div>
+      <ol>
+        <li><a href="#verantwortung">Verantwortung und Kontakt</a></li>
+        <li><a href="#konto">Konto und Anmeldung</a></li>
+        <li><a href="#community">Öffentliche Community-Beiträge</a></li>
+        <li><a href="#dienste">Technische Dienste</a></li>
+        <li><a href="#speicherung">Speicherung und Löschung</a></li>
+        <li><a href="#rechte">Deine Möglichkeiten</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="verantwortung"><span class="h-deco" aria-hidden="true"></span>Verantwortung und Kontakt</h2>
+    <p>Die Deadlock-Wiki ist ein privates, inoffizielles Fanprojekt. Die rechtlich erforderlichen Angaben zur verantwortlichen Person und eine nicht öffentliche Kontaktadresse sind noch nicht hinterlegt. Bis diese Angaben ergänzt sind, befindet sich das Kontosystem in einer technischen Testphase und ist nicht für den öffentlichen Betrieb vorgesehen.</p>
+
+    <h2 id="konto"><span class="h-deco" aria-hidden="true"></span>Konto und Anmeldung</h2>
+    <p>Für Registrierung und Anmeldung nutzt die Wiki <strong>Supabase Auth</strong>. Dabei werden deine E-Mail-Adresse, eine technische Benutzer-ID, der Zeitpunkt der Kontoerstellung und der Bestätigungsstatus verarbeitet. Klartextpasswörter werden niemals gespeichert; Supabase verwaltet ausschließlich einen sicheren Einweg-Hash.</p>
+    <p>Im Profil können zusätzlich Anzeigename, Avatar, Favoriten und optional eine Deadlock-Account-ID gespeichert werden. Die E-Mail-Adresse, Favoriten und die verknüpfte Account-ID sind nicht öffentlich abrufbar.</p>
+
+    <h2 id="community"><span class="h-deco" aria-hidden="true"></span>Öffentliche Community-Beiträge</h2>
+    <p>Veröffentlichte Beiträge sind zusammen mit Anzeigename, Avatar und Zeitstempel öffentlich lesbar. Deine Benutzer-ID und deine E-Mail-Adresse werden im öffentlichen Feed nicht ausgegeben. Meldungen zu Beiträgen sind nur für die Moderation bestimmt und nicht öffentlich sichtbar.</p>
+    <p>Bitte veröffentliche keine privaten Daten über dich oder andere Personen. Eigene Beiträge kannst du bearbeiten und löschen; dein vollständiges Konto kannst du im Profil entfernen.</p>
+
+    <h2 id="dienste"><span class="h-deco" aria-hidden="true"></span>Technische Dienste</h2>
+    <div class="wikitable-wrap">
+      <table class="wikitable">
+        <thead><tr><th scope="col">Dienst</th><th scope="col">Zweck und übertragene Daten</th></tr></thead>
+        <tbody>
+          <tr><td><strong>GitHub Pages</strong></td><td>Stellt die statischen Wiki-Seiten bereit. Beim Abruf werden technisch notwendige Verbindungsdaten wie IP-Adresse und Browserinformationen an GitHub übertragen.</td></tr>
+          <tr><td><strong>Supabase</strong></td><td>Verwaltet Anmeldung, Sitzungen, Profile, Beiträge und Meldungen. Das Projekt nutzt die Region Paris (EU).</td></tr>
+          <tr><td><strong>Supabase-Browserbibliothek</strong></td><td>Liegt fest versioniert direkt in diesem Projekt und wird durch eine Integritätsprüfung gegen unbeabsichtigte Veränderungen geschützt.</td></tr>
+          <tr><td><strong>Deadlock API</strong></td><td>Wird nur genutzt, wenn du freiwillig eine Deadlock-Account-ID verknüpfst oder Statistiken aktualisierst. Dabei werden die Account-ID und technisch notwendige Verbindungsdaten an deadlock-api.com übertragen.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Die Wiki verwendet derzeit keine eigene Werbung und kein eigenes Analyse- oder Tracking-System. Für die sichere Anmeldung speichert Supabase eine Sitzung im lokalen Speicher deines Browsers.</p>
+
+    <h2 id="speicherung"><span class="h-deco" aria-hidden="true"></span>Speicherung und Löschung</h2>
+    <p>Profil und Community-Daten bleiben gespeichert, solange dein Konto besteht oder sie für Moderation und Sicherheit benötigt werden. Bei der Kontolöschung werden das Profil, eigene Beiträge und zugehörige Meldungen über die Datenbankbeziehungen mit entfernt. Sicherheitskopien des Dienstanbieters können technisch bedingt erst zeitversetzt überschrieben werden.</p>
+    <p>Falls du bereits die frühere, rein lokale Kontoversion verwendet hast, können deren Daten weiterhin nur im lokalen Speicher dieses Browsers liegen. Dazu können E-Mail-Adresse, Profilangaben, Favoriten, Deadlock-Account-ID sowie Passwort-Hash und Wiederherstellungscode gehören. Diese Altdaten werden weder automatisch an Supabase übertragen noch automatisch gelöscht; du kannst sie durch Löschen der Website-Daten im Browser entfernen.</p>
+
+    <h2 id="rechte"><span class="h-deco" aria-hidden="true"></span>Deine Möglichkeiten</h2>
+    <ul>
+      <li>Profilangaben und Favoriten im Konto ansehen und ändern</li>
+      <li>eigene Community-Beiträge bearbeiten oder löschen</li>
+      <li>Passwort über einen E-Mail-Link zurücksetzen</li>
+      <li>Deadlock-Account-Verknüpfung jederzeit entfernen</li>
+      <li>Konto und zugehörige Daten im Profil endgültig löschen</li>
+    </ul>
+    <p>Eine Kontaktmöglichkeit für darüber hinausgehende Datenschutzanfragen wird vor dem öffentlichen Start an dieser Stelle ergänzt. Diese technische Übersicht ersetzt keine individuelle Rechtsberatung.</p>
+  </main>
+</div>
+
+<footer class="wikifoot">
+  <div class="wikifoot-inner">
+    <p><strong>Deadlock Wiki</strong> ist ein inoffizielles Fan-Projekt und steht in keiner Verbindung zur Valve Corporation.</p>
+    <p><a href="index.html">Hauptseite</a> · <a href="community.html">Community</a> · <a href="profil.html">Konto</a> · <a href="datenschutz.html">Datenschutz</a></p>
+  </div>
+</footer>
+
+<script src="assets/wiki-account.js?v=20260812-auth4" defer></script>
+</body>
+</html>
