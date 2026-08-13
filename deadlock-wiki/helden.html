@@ -5,9 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Helden – Deadlock Wiki</title>
 <meta name="description" content="Alle 38 spielbaren Helden in Deadlock mit Rolle, Spielstil und Komplexität.">
-<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#16110c">
+<link rel="canonical" href="https://hmscan-glitch.github.io/wamo-website/deadlock-wiki/helden.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Deadlock Wiki">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Helden – Deadlock Wiki">
+<meta property="og:description" content="Alle 38 spielbaren Helden in Deadlock mit Rolle, Spielstil und Komplexität.">
+<meta property="og:url" content="https://hmscan-glitch.github.io/wamo-website/deadlock-wiki/helden.html">
+<meta property="og:image" content="https://hmscan-glitch.github.io/wamo-website/deadlock-wiki/assets/keyart.jpg">
+<meta property="og:image:alt" content="Deadlock Wiki — okkultes New York bei Nacht">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Helden – Deadlock Wiki">
+<meta name="twitter:description" content="Alle 38 spielbaren Helden in Deadlock mit Rolle, Spielstil und Komplexität.">
+<meta name="twitter:image" content="https://hmscan-glitch.github.io/wamo-website/deadlock-wiki/assets/keyart.jpg">
+<link rel="stylesheet" href="style.css?v=20260813-polish1">
 </head>
-<body>
+<body class="wiki-inner">
+
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 
 <header class="masthead">
   <div class="masthead-inner">
@@ -19,31 +36,30 @@
       <button type="submit">Suchen</button>
     </form>
   </div>
-  <nav class="localnav" aria-label="Wiki-Navigation">
+</header>
+<nav class="localnav" aria-label="Wiki-Navigation">
     <div class="localnav-inner">
       <a href="index.html">Hauptseite</a>
       <a href="helden.html" aria-current="page">Helden</a>
       <a href="items.html">Items</a>
       <a href="gameplay.html">Gameplay</a>
       <a href="karte.html">Karte</a>
+      <a href="patchnotes.html">Patchnotes</a>
       <a href="community.html">Community</a>
       <a class="nav-account" href="profil.html" data-nav-account>Anmelden</a>
-      <span class="nav-stats">1.284 Artikel &middot; 4.107 Dateien</span>
+      <span class="nav-stats">38 Helden &middot; Fanprojekt</span>
     </div>
   </nav>
-</header>
 
 <div class="shell">
-  <main>
-    <div class="article-actions">
-      <a class="aa-btn aa-btn--primary" href="#">Bearbeiten</a>
-      <a class="aa-btn" href="#">Versionsgeschichte</a>
-      <a class="aa-btn" href="#">Diskussion (14)</a>
-      <span class="aa-meta">Zuletzt bearbeitet von <a href="#">CursedApple</a> gestern um 21:47</span>
-    </div>
+  <main id="main-content">
 
     <p class="page-sub">Kategorie</p>
     <h1 class="page-title">Helden</h1>
+    <div class="article-actions" aria-label="Artikelaktionen">
+      <a class="aa-btn" href="https://github.com/hmscan-glitch/wamo-website/edit/master/deadlock-wiki/helden.html" target="_blank" rel="noopener noreferrer">Auf GitHub verbessern</a>
+      <a class="aa-btn" href="https://github.com/hmscan-glitch/wamo-website/issues/new?title=Hinweis%20zu%20Helden" target="_blank" rel="noopener noreferrer">Fehler melden</a>
+    </div>
     <p class="lead">In Deadlock treten zwei Teams aus je sechs Helden gegeneinander an. Jeder Held bringt eine eigene Waffe, vier Signaturfähigkeiten und eine Geschichte aus der okkulten Unterwelt New&nbsp;Yorks mit. Derzeit sind <strong>38 Helden</strong> spielbar. Die Sterne geben die Einstiegskomplexität an — von ★ (einsteigerfreundlich) bis ★★★ (anspruchsvoll).</p>
 
     <div class="filter-row" role="group" aria-label="Nach Komplexität filtern">
@@ -52,6 +68,7 @@
       <button class="filter-chip" type="button" data-filter="2" aria-pressed="false">★★ Fortgeschritten</button>
       <button class="filter-chip" type="button" data-filter="3" aria-pressed="false">★★★ Experte</button>
     </div>
+    <p class="filter-status" id="hero-filter-status" role="status" aria-live="polite">38 Helden werden angezeigt.</p>
 
     <ul class="hero-grid" id="hero-grid">
       <li data-complexity="1" data-name="abrams">
@@ -482,8 +499,8 @@
     <div class="cat-footer">
       <span class="cat-label">Kategorien:</span>
       <a class="cat-pill" href="helden.html">Helden</a>
-      <a class="cat-pill redlink" href="#" title="Diese Seite existiert noch nicht">Spielmechanik</a>
-      <a class="cat-pill redlink" href="#" title="Diese Seite existiert noch nicht">Charaktere</a>
+      <span class="cat-pill cat-pill--planned" title="Diese Seite existiert noch nicht">Spielmechanik</span>
+      <span class="cat-pill cat-pill--planned" title="Diese Seite existiert noch nicht">Charaktere</span>
     </div>
   </main>
 </div>
@@ -492,7 +509,8 @@
   <div class="wikifoot-inner">
     <p><strong>Deadlock Wiki</strong> ist ein inoffizielles Fan-Projekt und steht in keiner Verbindung zur Valve Corporation.</p>
     <p>Deadlock sowie alle zugehörigen Grafiken und Namen sind Eigentum der Valve Corporation. Inhalte der Community stehen unter CC&nbsp;BY-SA, sofern nicht anders angegeben.</p>
-    <p><a href="index.html">Hauptseite</a> · <a href="helden.html">Helden</a> · <a href="items.html">Items</a> · <a href="gameplay.html">Gameplay</a> · <a href="karte.html">Karte</a> · <a href="#">Impressum</a></p>
+
+    <p><a href="index.html">Hauptseite</a> &middot; <a href="helden.html">Helden</a> &middot; <a href="items.html">Items</a> &middot; <a href="gameplay.html">Gameplay</a> &middot; <a href="karte.html">Karte</a> &middot; <a href="patchnotes.html">Patchnotes</a> &middot; <a href="community.html">Community</a> &middot; <a href="datenschutz.html">Datenschutz</a> &middot; <a href="https://github.com/hmscan-glitch/wamo-website/issues/new" target="_blank" rel="noopener noreferrer">Kontakt</a></p>
   </div>
 </footer>
 
@@ -502,14 +520,19 @@
   var cards = document.querySelectorAll("#hero-grid > li");
   var search = document.getElementById("hero-search");
   var active = "all";
+  var status = document.getElementById("hero-filter-status");
 
   function apply() {
     var q = (search.value || "").trim().toLowerCase();
+    var visible = 0;
     cards.forEach(function (li) {
       var okFilter = active === "all" || li.dataset.complexity === active;
       var okSearch = !q || li.dataset.name.indexOf(q) !== -1;
-      li.style.display = okFilter && okSearch ? "" : "none";
+      var show = okFilter && okSearch;
+      li.style.display = show ? "" : "none";
+      if (show) visible += 1;
     });
+    status.textContent = visible === 1 ? "1 Held wird angezeigt." : visible + " Helden werden angezeigt.";
   }
 
   chips.forEach(function (chip) {
@@ -529,5 +552,6 @@
 </script>
 
 <script src="assets/wiki-account.js?v=20260812-auth4" defer></script>
+<script src="assets/wiki-ui.js?v=20260813-polish1" defer></script>
 </body>
 </html>
