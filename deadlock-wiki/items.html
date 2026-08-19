@@ -1260,6 +1260,8 @@
     });
   });
 
+  var initialQuery = new URLSearchParams(window.location.search).get("q");
+  if (initialQuery) input.value = initialQuery;
   input.addEventListener("input", apply);
   apply();
 })();
