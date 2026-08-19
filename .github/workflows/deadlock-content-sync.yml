@@ -1,0 +1,92 @@
+name: Deadlock-Inhalte abgleichen
+
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: deadlock-content-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository laden
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Offenen Prüf-PR erkennen
+        id: open_pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          count=$(gh pr list --head "automation/deadlock-content-sync" --state open --json number --jq 'length')
+          if [ "$count" -gt 0 ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Ein Prüf-PR ist bereits offen; dieser Lauf überschreibt ihn nicht."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Offizielle Deadlock-Daten abgleichen
+        if: steps.open_pr.outputs.skip == 'false'
+        run: node scripts/sync-deadlock-content.mjs
+
+      - name: Daten und JavaScript prüfen
+        if: steps.open_pr.outputs.skip == 'false'
+        run: |
+          node scripts/sync-deadlock-content.mjs --validate-only
+          node --check deadlock-wiki/assets/patchnotes.js
+
+      - name: Änderungen erkennen
+        if: steps.open_pr.outputs.skip == 'false'
+        id: changes
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Update-Branch veröffentlichen
+        if: steps.changes.outputs.found == 'true'
+        shell: bash
+        run: |
+          branch="automation/deadlock-content-sync"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin "$branch:refs/remotes/origin/$branch" || true
+          git checkout -B "$branch"
+          git add deadlock-wiki/assets/patches.json deadlock-wiki/assets/pending-roster.json
+          git commit -m "chore: prepare Deadlock content update"
+          git push --force-with-lease --set-upstream origin "$branch"
+
+      - name: Prüfbaren Entwurfs-PR öffnen
+        if: steps.changes.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          branch="automation/deadlock-content-sync"
+          if gh pr list --head "$branch" --state open --json number --jq 'length' | grep -q '^0$'; then
+            gh pr create \
+              --draft \
+              --base "${{ github.event.repository.default_branch }}" \
+              --head "$branch" \
+              --title "chore: Deadlock-Inhalte aktualisieren" \
+              --body "Automatisch erkannte Änderungen aus Valves offiziellem Feed und dem Deadlock-Assets-API. Bitte Buff/Nerf-Zuordnung sowie neue Helden kurz prüfen; erst ein Merge macht die Daten auf der Website sichtbar."
+          fi

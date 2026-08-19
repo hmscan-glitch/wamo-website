@@ -20,7 +20,7 @@
 <meta name="twitter:title" content="Deadlock Wiki – Hauptseite">
 <meta name="twitter:description" content="Das deutschsprachige Fan-Wiki zu Valves Deadlock: alle 38 Helden, Items, Lore und Gameplay-Wissen aus der Cursed Apple.">
 <meta name="twitter:image" content="https://hmscan-glitch.github.io/wamo-website/deadlock-wiki/assets/keyart.jpg">
-<link rel="stylesheet" href="style.css?v=20260813-polish1">
+<link rel="stylesheet" href="style.css?v=20260819-patch1">
 </head>
 <body class="wiki-home">
 
@@ -53,6 +53,22 @@
 
 <div class="shell shell--rail">
   <main id="main-content">
+
+    <section class="home-patch-panel" aria-labelledby="latest-patch-title">
+      <div class="home-patch-heading">
+        <div>
+          <p class="featured-kicker">Direkt aus Valves Changelog</p>
+          <h2 id="latest-patch-title"><span class="h-deco" aria-hidden="true"></span>Was hat sich geändert?</h2>
+        </div>
+        <span class="home-patch-updated" data-patch-updated>Stand: 19. August 2026.</span>
+      </div>
+      <div id="latest-patch-preview" aria-live="polite" aria-busy="true">
+        <p class="patch-loading">Neueste Änderungen werden geladen …</p>
+      </div>
+      <noscript>
+        <p class="patch-load-error">Für die visuelle Patchübersicht muss JavaScript aktiviert sein. <a href="patchnotes.html">Zu den Patchnotes</a>.</p>
+      </noscript>
+    </section>
 
     <section class="welcome">
       <h1>Willkommen im Deadlock&nbsp;Wiki</h1>
@@ -265,7 +281,7 @@
 
     <div class="rail-box">
       <h4>Aktuelle Updates</h4>
-      <ul class="patch-list">
+      <ul class="patch-list" id="recent-patch-list">
         <li><a href="patchnotes.html#patch-2026-06-30">Patchnotes vom 30. Juni</a><span class="patch-date">30. Juni 2026</span></li>
         <li><a href="patchnotes.html#patch-2026-04-30">Gameplay-Update im Wiki</a><span class="patch-date">30. April 2026</span></li>
         <li><a href="patchnotes.html#patch-2026-03-06">Patchnotes vom 6. März</a><span class="patch-date">6. März 2026</span></li>
@@ -293,6 +309,7 @@
   </div>
 </footer>
 
+<script src="assets/patchnotes.js?v=20260819-patch1" defer></script>
 <script src="assets/wiki-account.js?v=20260812-auth4" defer></script>
 <script src="assets/wiki-ui.js?v=20260813-polish1" defer></script>
 </body>

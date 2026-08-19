@@ -1,0 +1,392 @@
+{
+  "updated": "2026-08-19",
+  "updatedLabel": "19. August 2026",
+  "patches": [
+    {
+      "id": "patch-2026-08-12",
+      "date": "2026-08-12",
+      "displayDate": "12. August 2026",
+      "shortDate": "12.08.2026",
+      "kicker": "Minor Update",
+      "summary": "Der jüngste Balance-Patch justiert 13 Helden. Apollo und Vyper gewinnen deutlich an Stärke, während unter anderem Drifter, Ivy, Lash, Vindicta und Wraith abgeschwächt werden.",
+      "source": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183775204",
+      "sourceLabel": "Offizielle Patchnotes bei Steam",
+      "categories": ["heroes"],
+      "tags": ["Helden", "Balance"],
+      "featured": true,
+      "homepage": true,
+      "changeSummary": "Alle 13 betroffenen Helden auf einen Blick",
+      "changes": [
+        {
+          "entityType": "hero",
+          "slug": "apollo",
+          "name": "Apollo",
+          "effect": "buff",
+          "summary": "Riposte wird gefährlicher: stärkere Resistenzsenkung, längerer T2-Stun und 75 % Lebensraub für 13 Sekunden auf T3."
+        },
+        {
+          "entityType": "hero",
+          "slug": "billy",
+          "name": "Billy",
+          "effect": "rework",
+          "summary": "Weniger Regeneration und Chain-Gang-Skalierung; Rising Ram T3 gewährt nach Heldentreffern vorübergehend maximales Leben."
+        },
+        {
+          "entityType": "hero",
+          "slug": "the-doorman",
+          "name": "The Doorman",
+          "effect": "nerf",
+          "summary": "Die Reichweite von Doorway sinkt von 70 auf 65 Meter; Walker und Basistürme reagieren später auf abgesetzte Cart-Ziele."
+        },
+        {
+          "entityType": "hero",
+          "slug": "drifter",
+          "name": "Drifter",
+          "effect": "nerf",
+          "summary": "Rend skaliert schwächer und Stalker's Mark hat zwei Sekunden mehr Grund-Cooldown."
+        },
+        {
+          "entityType": "hero",
+          "slug": "holliday",
+          "name": "Holliday",
+          "effect": "rework",
+          "summary": "Powder Keg verursacht nun die Hälfte sofort und die andere Hälfte als stapelbaren Brand über drei Sekunden."
+        },
+        {
+          "entityType": "hero",
+          "slug": "ivy",
+          "name": "Ivy",
+          "effect": "nerf",
+          "summary": "Der zusätzliche Stone-Form-Stun auf T3 fällt von 1,0 auf 0,75 Sekunden."
+        },
+        {
+          "entityType": "hero",
+          "slug": "lash",
+          "name": "Lash",
+          "effect": "nerf",
+          "summary": "Sein Waffen-Falloff beginnt früher und erreicht die maximale Abschwächung bereits auf 54 statt 58 Metern."
+        },
+        {
+          "entityType": "hero",
+          "slug": "mcginnis",
+          "name": "McGinnis",
+          "effect": "adjustment",
+          "summary": "Waffenschaden und Geistresistenz sinken. Mini Turrets verlieren ihre Startresistenz, erhalten dafür mehr Leben."
+        },
+        {
+          "entityType": "hero",
+          "slug": "paige",
+          "name": "Paige",
+          "effect": "buff",
+          "summary": "Die Waffenschaden-Skalierung von Plot Armor steigt von 0,2 auf 0,3."
+        },
+        {
+          "entityType": "hero",
+          "slug": "seven",
+          "name": "Seven",
+          "effect": "buff",
+          "summary": "Lightning Ball T3 erhält einen etwas größeren Radius: +1,75 statt +1,5 Meter."
+        },
+        {
+          "entityType": "hero",
+          "slug": "vindicta",
+          "name": "Vindicta",
+          "effect": "nerf",
+          "summary": "Der Schadensbonus von Stake T1 sinkt von +65 auf +45."
+        },
+        {
+          "entityType": "hero",
+          "slug": "vyper",
+          "name": "Vyper",
+          "effect": "buff",
+          "summary": "Petrifying Bola wächst von 8 auf 12 Meter Radius und versteinert 0,2 Sekunden länger."
+        },
+        {
+          "entityType": "hero",
+          "slug": "wraith",
+          "name": "Wraith",
+          "effect": "nerf",
+          "summary": "Card Trick heilt mit Geistkraft schwächer; auch die T3-Skalierung von Full Auto wird reduziert."
+        }
+      ]
+    },
+    {
+      "id": "patch-2026-07-30",
+      "date": "2026-07-30",
+      "displayDate": "30. Juli 2026",
+      "shortDate": "30.07.2026",
+      "kicker": "Matchmaking Update",
+      "summary": "Deadlock trennt Standard- und Ranked-Modus. Ranked startet mit Seasons, sichtbaren Rangpunkten, strengeren Teilnahmebedingungen und einer neuen Vorbereitungsphase vor dem Match.",
+      "source": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839676055886206",
+      "sourceLabel": "Offizielle Ankündigung bei Steam",
+      "categories": ["systems", "gameplay"],
+      "tags": ["Ranked", "Matchmaking", "Systeme"],
+      "changeSummary": "Die wichtigsten Regeln des neuen Ranked-Modus",
+      "changes": [
+        {
+          "entityType": "system",
+          "slug": "ranked",
+          "name": "Ranked-Modus",
+          "effect": "new",
+          "iconText": "R",
+          "summary": "Solo oder Duo, acht Kalibrierungsspiele und Seasons. Die erste Season läuft bis zum 7. Oktober."
+        },
+        {
+          "entityType": "system",
+          "slug": "eligibility",
+          "name": "Freischaltung",
+          "effect": "adjustment",
+          "iconText": "60",
+          "summary": "Benötigt werden 60 Standard-Siege sowie 15 Siege mit jedem für Ranked ausgewählten Helden."
+        },
+        {
+          "entityType": "system",
+          "slug": "rank-points",
+          "name": "Rangpunkte",
+          "effect": "new",
+          "iconText": "RP",
+          "summary": "Siege und Niederlagen bewegen den Wert im Schnitt um 250 Punkte; Aufstiege brauchen 1.000 beziehungsweise 2.000 Punkte."
+        },
+        {
+          "entityType": "system",
+          "slug": "pregame",
+          "name": "Vor dem Match",
+          "effect": "new",
+          "iconText": "6v6",
+          "summary": "Teams dürfen einmal den Helden wechseln und Lanes anpassen. In Ranked werden drei Helden gebannt."
+        }
+      ]
+    },
+    {
+      "id": "patch-2026-07-28",
+      "date": "2026-07-28",
+      "displayDate": "28. Juli 2026",
+      "shortDate": "28.07.2026",
+      "kicker": "Minor Update",
+      "summary": "Ein großer Balance-Pass verändert 21 Helden und 17 Items. Die Übersicht hebt die stärksten Buffs, Nerfs und Umbauten hervor; sämtliche Einzelwerte stehen in Valves Original.",
+      "source": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839041357039193",
+      "sourceLabel": "Vollständige Patchnotes bei Steam",
+      "categories": ["heroes", "items", "gameplay"],
+      "tags": ["21 Helden", "17 Items", "Balance"],
+      "changeSummary": "Ausgewählte große Änderungen mit Helden- und Item-Icons",
+      "changes": [
+        {
+          "entityType": "item",
+          "slug": "crushing-fists",
+          "name": "Crushing Fists",
+          "effect": "buff",
+          "summary": "Mehr Stun bei maximalen Stapeln und stärkere Kugelresistenz-Senkung pro Stapel."
+        },
+        {
+          "entityType": "item",
+          "slug": "diviner-s-kevlar",
+          "name": "Diviner's Kevlar",
+          "effect": "buff",
+          "summary": "Die Geistkraft steigt von +35 auf +40."
+        },
+        {
+          "entityType": "item",
+          "slug": "echo-shard",
+          "name": "Echo Shard",
+          "effect": "rework",
+          "summary": "Neuer Nachcast, kein Feuerratenbonus mehr und ein Cooldown abhängig von der gewählten Fähigkeit."
+        },
+        {
+          "entityType": "item",
+          "slug": "frenzy",
+          "name": "Frenzy",
+          "effect": "buff",
+          "summary": "Erhält dauerhaft +10 % Kugel-Lebensraub."
+        },
+        {
+          "entityType": "item",
+          "slug": "restorative-locket",
+          "name": "Restorative Locket",
+          "effect": "buff",
+          "summary": "Die Heilung pro Boon steigt deutlich von 0,32 auf 0,5."
+        },
+        {
+          "entityType": "item",
+          "slug": "spirit-burn",
+          "name": "Spirit Burn",
+          "effect": "nerf",
+          "summary": "Trifft nur noch das Hauptziel; Explosionsschaden sinkt von 110 auf 50 und der Cooldown wird zielgebunden."
+        },
+        {
+          "entityType": "item",
+          "slug": "weighted-shots",
+          "name": "Weighted Shots",
+          "effect": "nerf",
+          "summary": "Der Waffenschaden sinkt von +40 % auf +30 %."
+        },
+        {
+          "entityType": "hero",
+          "slug": "apollo",
+          "name": "Apollo",
+          "effect": "buff",
+          "summary": "Riposte betäubt länger und T3 gewährt starken Lebensraub gegen das getroffene Ziel."
+        },
+        {
+          "entityType": "hero",
+          "slug": "celeste",
+          "name": "Celeste",
+          "effect": "buff",
+          "summary": "Shining Wonder erhält mehr Radius, zehn Prozent mehr Schaden und ein längeres Trefferfenster."
+        },
+        {
+          "entityType": "hero",
+          "slug": "the-doorman",
+          "name": "The Doorman",
+          "effect": "nerf",
+          "summary": "Doorway und Luggage Cart verlieren Dauer, Reichweite und Grundschaden; Talente gleichen Teile davon aus."
+        },
+        {
+          "entityType": "hero",
+          "slug": "haze",
+          "name": "Haze",
+          "effect": "adjustment",
+          "summary": "Sleep Dagger und Fixation werden neu verteilt: weniger Skalierung, aber umgeordnete T2-/T3-Boni."
+        },
+        {
+          "entityType": "hero",
+          "slug": "lady-geist",
+          "name": "Lady Geist",
+          "effect": "rework",
+          "summary": "Life Drain wandelt nun 100 % des Schadens in Heilung um, verursacht dafür weniger DPS."
+        },
+        {
+          "entityType": "hero",
+          "slug": "viscous",
+          "name": "Viscous",
+          "effect": "adjustment",
+          "summary": "Splatter, Puddle Punch und Goo Ball tauschen Schaden gegen mehr Bounces, Slow und Resistenzen."
+        }
+      ]
+    },
+    {
+      "id": "patch-2026-07-09",
+      "date": "2026-07-09",
+      "displayDate": "9. Juli 2026",
+      "shortDate": "09.07.2026",
+      "kicker": "Minor Update",
+      "summary": "Der Rift wird leichter lesbar, seine Comeback-Hilfe wächst und zahlreiche Helden erhalten Nachkorrekturen. Besonders Shiv und Drifter verlieren Kraft, Silver und Victor gewinnen deutlich.",
+      "source": "https://store.steampowered.com/news/app/1422450/view/688635449342696590",
+      "sourceLabel": "Vollständige Patchnotes bei Steam",
+      "categories": ["objectives", "heroes", "items", "gameplay"],
+      "tags": ["Unstable Rift", "Helden", "Items"],
+      "changeSummary": "Ausgewählte Helden- und Item-Anpassungen",
+      "changes": [
+        {
+          "entityType": "item",
+          "slug": "scourge",
+          "name": "Scourge",
+          "effect": "nerf",
+          "summary": "Maximaler Lebensschaden pro Sekunde sinkt von 2,6 % auf 2,5 %."
+        },
+        {
+          "entityType": "hero",
+          "slug": "drifter",
+          "name": "Drifter",
+          "effect": "nerf",
+          "summary": "Waffenskalierung, Bloodscent und Stalker's Mark werden abgeschwächt."
+        },
+        {
+          "entityType": "hero",
+          "slug": "graves",
+          "name": "Graves",
+          "effect": "buff",
+          "summary": "Jar of Dead, Essence Theft und Borrowed Decree erhalten mehrere neue oder stärkere Effekte."
+        },
+        {
+          "entityType": "hero",
+          "slug": "shiv",
+          "name": "Shiv",
+          "effect": "nerf",
+          "summary": "Mehrere Skalierungen sinken, Bloodletting lädt länger und Killing Blow startet erst bei 18 % Leben."
+        },
+        {
+          "entityType": "hero",
+          "slug": "silver",
+          "name": "Silver",
+          "effect": "buff",
+          "summary": "Der Cooldown von Lycan Curse fällt von 80 auf 60 Sekunden."
+        },
+        {
+          "entityType": "hero",
+          "slug": "victor",
+          "name": "Victor",
+          "effect": "buff",
+          "summary": "Shocking Reanimation lädt 35 Sekunden schneller."
+        }
+      ]
+    },
+    {
+      "id": "patch-2026-06-30",
+      "date": "2026-06-30",
+      "displayDate": "30. Juni 2026",
+      "shortDate": "30.06.2026",
+      "kicker": "Minor Update",
+      "summary": "Das King-of-the-Hill-Ziel wurde in Unstable Rift umbenannt und neu inszeniert. Der Rift startet nun unabhängig von der Urne und schickt nach der Eroberung eigene Trooper auf die Lane.",
+      "source": "https://forums.playdeadlock.com/threads/06-30-2026-update.146261/",
+      "sourceLabel": "Vollständige offizielle Patchnotes bei Valve",
+      "categories": ["objectives", "gameplay", "heroes", "items"],
+      "tags": ["Objectives", "Gameplay", "Helden"],
+      "highlights": [
+        "Urnen- und Rift-Ablauf wurden grundlegend voneinander getrennt.",
+        "Boon-Belohnungen, Kopfgelder, Ultimates und Respawn-Zeiten wurden global neu abgestimmt.",
+        "Der offizielle Thread enthält zusätzliche Hotfixes vom 1. und 9. Juli."
+      ]
+    },
+    {
+      "id": "patch-2026-04-30",
+      "date": "2026-04-30",
+      "displayDate": "30. April 2026",
+      "shortDate": "30.04.2026",
+      "kicker": "Gameplay Update",
+      "summary": "Valve hat die Skalierung von Lebenspunkten, Waffen- und Vitalitäts-Investitionen neu abgestimmt. Dazu kommen umfangreiche Änderungen an Helden und Items sowie ein kleiner Nachtrag vom 1. Mai.",
+      "source": "https://forums.playdeadlock.com/threads/04-30-2026-update.129989/",
+      "sourceLabel": "Vollständige offizielle Patchnotes bei Valve",
+      "categories": ["gameplay", "heroes", "items", "systems"],
+      "tags": ["Gameplay", "Helden", "Items"],
+      "highlights": [
+        "Weniger Lebenspunkte pro Boon, dafür höhere Vitalitäts-Investitionsboni.",
+        "Waffen-Investitionen und das Wachstum des Kugelschadens wurden neu skaliert.",
+        "Viele Einzeländerungen betreffen Builds, NPC-Schaden und Helden-Balance."
+      ]
+    },
+    {
+      "id": "patch-2026-03-06",
+      "date": "2026-03-06",
+      "displayDate": "6. März 2026",
+      "shortDate": "06.03.2026",
+      "kicker": "Gameplay Update",
+      "summary": "Das Update erweitert die Bewegung und verändert die Basisverteidigung. Spieler können nun während des Rutschens springen; Dash-Jumps erhalten kurzzeitig mehr Luftkontrolle.",
+      "source": "https://forums.playdeadlock.com/threads/03-06-2026-update.114328/",
+      "sourceLabel": "Vollständige offizielle Patchnotes bei Valve",
+      "categories": ["gameplay", "objectives", "heroes", "items"],
+      "tags": ["Bewegung", "Objectives", "Balance"],
+      "highlights": [
+        "Slide-Jumps und ein kurzes Luftkontroll-Fenster verändern Rotationen und Verfolgungen.",
+        "Der erste Schrein wurde leichter, der zweite schwerer zu zerstören.",
+        "Weitere Abschnitte behandeln Items, Helden und nachgereichte Balancekorrekturen."
+      ]
+    },
+    {
+      "id": "patch-2026-01-30",
+      "date": "2026-01-30",
+      "displayDate": "30. Januar 2026",
+      "shortDate": "30.01.2026",
+      "kicker": "System Update",
+      "summary": "Standard Mode und Street Brawl erhielten Helden-Bans. Außerdem wurden die Anforderungen an Helden-Roster größerer Gruppen sowie zahlreiche globale Kampfwerte angepasst.",
+      "source": "https://forums.playdeadlock.com/threads/01-30-2026-update.102822/",
+      "sourceLabel": "Vollständige offizielle Patchnotes bei Valve",
+      "categories": ["systems", "gameplay", "heroes"],
+      "tags": ["Systeme", "Matchmaking", "Gameplay"],
+      "highlights": [
+        "Spieler können einen Helden markieren, den das Matchmaking nach Möglichkeit vermeiden soll.",
+        "Gruppen ab drei Spielern benötigen einen zusätzlichen Helden im Roster.",
+        "Feuerraten-Erhöhungen und -Reduzierungen vieler Fähigkeiten und Items wurden global abgeschwächt."
+      ]
+    }
+  ]
+}
