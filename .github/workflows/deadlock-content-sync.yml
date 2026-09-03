@@ -48,6 +48,7 @@ jobs:
       - name: Daten und JavaScript prüfen
         if: steps.open_pr.outputs.skip == 'false'
         run: |
+          node scripts/sync-deadlock-content.mjs --test-parser
           node scripts/sync-deadlock-content.mjs --validate-only
           node --check deadlock-wiki/assets/patchnotes.js
 
